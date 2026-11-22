@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema Kanban: Código-Fonte de controladoras/ControladoraProjetos.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema Kanban<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_controladora_projetos_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ControladoraProjetos.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_controladora_projetos_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef CONTROLADORA_PROJETOS_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CONTROLADORA_PROJETOS_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_i_projetos_8hpp.html">../interfaces/IProjetos.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="papel_8hpp.html">../dominio/papel.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html">   27</a></span><span class="keyword">class </span><a class="code hl_function" href="class_controladora_projetos.html#a2786c834786a285b34e1f6b6b4e79b22">ControladoraProjetos</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">   33</a></span>    <a class="code hl_class" href="class_i_projetos.html">IProjetos</a> &amp;<a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#aa026fd0a3024fd32c416cd4926887017">   40</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controladora_projetos.html#aa026fd0a3024fd32c416cd4926887017">exigirGestor</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (papel.<a class="code hl_function" href="class_papel.html#abb37844cbd149bcd5673f5382d6893b4">getPapel</a>() != <span class="stringliteral">&quot;GESTOR&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">throw</span> std::runtime_error(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="stringliteral">&quot;Operacao permitida somente para o gestor.&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a302399c07474a767e539a918527e9ec2">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controladora_projetos.html#a302399c07474a767e539a918527e9ec2">exigirUsuarioValido</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">if</span> (papel.<a class="code hl_function" href="class_papel.html#abb37844cbd149bcd5673f5382d6893b4">getPapel</a>() != <span class="stringliteral">&quot;GESTOR&quot;</span> &amp;&amp;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            papel.<a class="code hl_function" href="class_papel.html#abb37844cbd149bcd5673f5382d6893b4">getPapel</a>() != <span class="stringliteral">&quot;DESENVOLVEDOR&quot;</span>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Usuario sem permissao.&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a2786c834786a285b34e1f6b6b4e79b22">   68</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_controladora_projetos.html#a2786c834786a285b34e1f6b6b4e79b22">ControladoraProjetos</a>(<a class="code hl_class" href="class_i_projetos.html">IProjetos</a> &amp;servicoProjetos)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        : <a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>(servicoProjetos) {}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a02d9dd8e502113761715428a258e22bc">   77</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controladora_projetos.html#a02d9dd8e502113761715428a258e22bc">cadastrar</a>(</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a> &amp;projeto)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_function" href="class_controladora_projetos.html#aa026fd0a3024fd32c416cd4926887017">exigirGestor</a>(papel);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>.<a class="code hl_function" href="class_i_projetos.html#a3ef60506f500239f8ae3c5941a06c97e">cadastrar</a>(projeto);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a20667563a198f3e6b9e399a8da5fb18c">   92</a></span>    <a class="code hl_class" href="class_projeto.html">Projeto</a> <a class="code hl_function" href="class_controladora_projetos.html#a20667563a198f3e6b9e399a8da5fb18c">consultar</a>(</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_identificador.html">Identificador</a> &amp;identificador)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_function" href="class_controladora_projetos.html#a302399c07474a767e539a918527e9ec2">exigirUsuarioValido</a>(papel);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>.<a class="code hl_function" href="class_i_projetos.html#a41571699b9aeed0a9183c73d32250a01">consultar</a>(identificador);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a7ce1387326cb4d17a2fa31ebecc470ff">  106</a></span>    std::vector&lt;Projeto&gt; <a class="code hl_function" href="class_controladora_projetos.html#a7ce1387326cb4d17a2fa31ebecc470ff">listar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_function" href="class_controladora_projetos.html#a302399c07474a767e539a918527e9ec2">exigirUsuarioValido</a>(papel);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>.<a class="code hl_function" href="class_i_projetos.html#ac3eaf3ff6a99caf0331320da6f21d725">listar</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a461af5f5457cae50633dad09c693294b">  118</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controladora_projetos.html#a461af5f5457cae50633dad09c693294b">atualizar</a>(</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a> &amp;projeto)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_function" href="class_controladora_projetos.html#aa026fd0a3024fd32c416cd4926887017">exigirGestor</a>(papel);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>.<a class="code hl_function" href="class_i_projetos.html#a925c462da3df80c76adc0d56d7c7e973">atualizar</a>(projeto);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_controladora_projetos.html#a47e9e19e30ae5f046a905f8e49f8d91d">  132</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controladora_projetos.html#a47e9e19e30ae5f046a905f8e49f8d91d">remover</a>(</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_papel.html">Papel</a> &amp;papel,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_identificador.html">Identificador</a> &amp;identificador)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_function" href="class_controladora_projetos.html#aa026fd0a3024fd32c416cd4926887017">exigirGestor</a>(papel);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_variable" href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">servico</a>.<a class="code hl_function" href="class_i_projetos.html#a58cbc7cbc84fc0cfac7e549f78e50078">remover</a>(identificador);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_i_projetos_8hpp_html"><div class="ttname"><a href="_i_projetos_8hpp.html">IProjetos.hpp</a></div><div class="ttdoc">Interface do servico de projetos.</div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a02d9dd8e502113761715428a258e22bc"><div class="ttname"><a href="class_controladora_projetos.html#a02d9dd8e502113761715428a258e22bc">ControladoraProjetos::cadastrar</a></div><div class="ttdeci">void cadastrar(const Papel &amp;papel, const Projeto &amp;projeto)</div><div class="ttdoc">Cadastra um novo projeto.</div><div class="ttdef"><b>Definição</b> <a href="#l00077">ControladoraProjetos.hpp:77</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a20667563a198f3e6b9e399a8da5fb18c"><div class="ttname"><a href="class_controladora_projetos.html#a20667563a198f3e6b9e399a8da5fb18c">ControladoraProjetos::consultar</a></div><div class="ttdeci">Projeto consultar(const Papel &amp;papel, const Identificador &amp;identificador)</div><div class="ttdoc">Consulta um projeto pelo identificador.</div><div class="ttdef"><b>Definição</b> <a href="#l00092">ControladoraProjetos.hpp:92</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a2786c834786a285b34e1f6b6b4e79b22"><div class="ttname"><a href="class_controladora_projetos.html#a2786c834786a285b34e1f6b6b4e79b22">ControladoraProjetos::ControladoraProjetos</a></div><div class="ttdeci">ControladoraProjetos(IProjetos &amp;servicoProjetos)</div><div class="ttdoc">Construtor da controladora de projetos.</div><div class="ttdef"><b>Definição</b> <a href="#l00068">ControladoraProjetos.hpp:68</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a302399c07474a767e539a918527e9ec2"><div class="ttname"><a href="class_controladora_projetos.html#a302399c07474a767e539a918527e9ec2">ControladoraProjetos::exigirUsuarioValido</a></div><div class="ttdeci">void exigirUsuarioValido(const Papel &amp;papel)</div><div class="ttdoc">Verifica se o usuário possui um papel válido.</div><div class="ttdef"><b>Definição</b> <a href="#l00054">ControladoraProjetos.hpp:54</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a461af5f5457cae50633dad09c693294b"><div class="ttname"><a href="class_controladora_projetos.html#a461af5f5457cae50633dad09c693294b">ControladoraProjetos::atualizar</a></div><div class="ttdeci">void atualizar(const Papel &amp;papel, const Projeto &amp;projeto)</div><div class="ttdoc">Atualiza os dados de um projeto.</div><div class="ttdef"><b>Definição</b> <a href="#l00118">ControladoraProjetos.hpp:118</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a47e9e19e30ae5f046a905f8e49f8d91d"><div class="ttname"><a href="class_controladora_projetos.html#a47e9e19e30ae5f046a905f8e49f8d91d">ControladoraProjetos::remover</a></div><div class="ttdeci">void remover(const Papel &amp;papel, const Identificador &amp;identificador)</div><div class="ttdoc">Remove um projeto pelo identificador.</div><div class="ttdef"><b>Definição</b> <a href="#l00132">ControladoraProjetos.hpp:132</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a523da81ee2c879f2bf3660fe4be909b2"><div class="ttname"><a href="class_controladora_projetos.html#a523da81ee2c879f2bf3660fe4be909b2">ControladoraProjetos::servico</a></div><div class="ttdeci">IProjetos &amp; servico</div><div class="ttdoc">Referência para a interface do serviço de projetos.</div><div class="ttdef"><b>Definição</b> <a href="#l00033">ControladoraProjetos.hpp:33</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_a7ce1387326cb4d17a2fa31ebecc470ff"><div class="ttname"><a href="class_controladora_projetos.html#a7ce1387326cb4d17a2fa31ebecc470ff">ControladoraProjetos::listar</a></div><div class="ttdeci">std::vector&lt; Projeto &gt; listar(const Papel &amp;papel)</div><div class="ttdoc">Lista os projetos cadastrados.</div><div class="ttdef"><b>Definição</b> <a href="#l00106">ControladoraProjetos.hpp:106</a></div></div>
+<div class="ttc" id="aclass_controladora_projetos_html_aa026fd0a3024fd32c416cd4926887017"><div class="ttname"><a href="class_controladora_projetos.html#aa026fd0a3024fd32c416cd4926887017">ControladoraProjetos::exigirGestor</a></div><div class="ttdeci">void exigirGestor(const Papel &amp;papel)</div><div class="ttdoc">Verifica se o usuário possui papel de gestor.</div><div class="ttdef"><b>Definição</b> <a href="#l00040">ControladoraProjetos.hpp:40</a></div></div>
+<div class="ttc" id="aclass_i_projetos_html"><div class="ttname"><a href="class_i_projetos.html">IProjetos</a></div><div class="ttdoc">Interface para operacoes relacionadas a projetos.</div><div class="ttdef"><b>Definição</b> <a href="_i_projetos_8hpp_source.html#l00016">IProjetos.hpp:16</a></div></div>
+<div class="ttc" id="aclass_i_projetos_html_a3ef60506f500239f8ae3c5941a06c97e"><div class="ttname"><a href="class_i_projetos.html#a3ef60506f500239f8ae3c5941a06c97e">IProjetos::cadastrar</a></div><div class="ttdeci">virtual void cadastrar(const Projeto &amp;projeto)=0</div><div class="ttdoc">Cadastra um projeto.</div></div>
+<div class="ttc" id="aclass_i_projetos_html_a41571699b9aeed0a9183c73d32250a01"><div class="ttname"><a href="class_i_projetos.html#a41571699b9aeed0a9183c73d32250a01">IProjetos::consultar</a></div><div class="ttdeci">virtual Projeto consultar(const Identificador &amp;identificador)=0</div><div class="ttdoc">Consulta um projeto pelo identificador.</div></div>
+<div class="ttc" id="aclass_i_projetos_html_a58cbc7cbc84fc0cfac7e549f78e50078"><div class="ttname"><a href="class_i_projetos.html#a58cbc7cbc84fc0cfac7e549f78e50078">IProjetos::remover</a></div><div class="ttdeci">virtual void remover(const Identificador &amp;identificador)=0</div><div class="ttdoc">Remove um projeto pelo identificador.</div></div>
+<div class="ttc" id="aclass_i_projetos_html_a925c462da3df80c76adc0d56d7c7e973"><div class="ttname"><a href="class_i_projetos.html#a925c462da3df80c76adc0d56d7c7e973">IProjetos::atualizar</a></div><div class="ttdeci">virtual void atualizar(const Projeto &amp;projeto)=0</div><div class="ttdoc">Atualiza os dados de um projeto.</div></div>
+<div class="ttc" id="aclass_i_projetos_html_ac3eaf3ff6a99caf0331320da6f21d725"><div class="ttname"><a href="class_i_projetos.html#ac3eaf3ff6a99caf0331320da6f21d725">IProjetos::listar</a></div><div class="ttdeci">virtual std::vector&lt; Projeto &gt; listar()=0</div><div class="ttdoc">Lista todos os projetos cadastrados.</div></div>
+<div class="ttc" id="aclass_identificador_html"><div class="ttname"><a href="class_identificador.html">Identificador</a></div><div class="ttdoc">Dominio que representa o identificador de projetos, quadros e cartoes.</div><div class="ttdef"><b>Definição</b> <a href="identificador_8hpp_source.html#l00019">identificador.hpp:19</a></div></div>
+<div class="ttc" id="aclass_papel_html"><div class="ttname"><a href="class_papel.html">Papel</a></div><div class="ttdoc">Dominio que representa o papel de uma pessoa no sistema.</div><div class="ttdef"><b>Definição</b> <a href="papel_8hpp_source.html#l00020">papel.hpp:20</a></div></div>
+<div class="ttc" id="aclass_papel_html_abb37844cbd149bcd5673f5382d6893b4"><div class="ttname"><a href="class_papel.html#abb37844cbd149bcd5673f5382d6893b4">Papel::getPapel</a></div><div class="ttdeci">string getPapel() const</div><div class="ttdoc">Retorna o papel armazenado.</div><div class="ttdef"><b>Definição</b> <a href="papel_8hpp_source.html#l00045">papel.hpp:45</a></div></div>
+<div class="ttc" id="aclass_projeto_html"><div class="ttname"><a href="class_projeto.html">Projeto</a></div><div class="ttdoc">Representa um projeto cadastrado no sistema Kanban.</div><div class="ttdef"><b>Definição</b> <a href="_projeto_8hpp_source.html#l00024">Projeto.hpp:24</a></div></div>
+<div class="ttc" id="apapel_8hpp_html"><div class="ttname"><a href="papel_8hpp.html">papel.hpp</a></div><div class="ttdoc">Declaracao do dominio Papel.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_fe2615942cf9d99e81360c74290ff3da.html">controladoras</a></li><li class="navelem"><a href="_controladora_projetos_8hpp.html">ControladoraProjetos.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

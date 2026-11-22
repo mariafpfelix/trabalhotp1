@@ -1,0 +1,67 @@
+\doxysection{Referência do Arquivo main.\+cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Ponto de entrada do sistema Kanban.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$exception$>$}\newline
+{\ttfamily \+\#include "{}sqlite/\+sqlite3.\+h"{}}\newline
+{\ttfamily \+\#include "{}dominio/\+identificador.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}dominio/\+nome.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}dominio/\+texto.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}dominio/\+timestamp.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}dominio/\+email.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}entidades/\+\+Projeto.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}entidades/\+\+Quadro.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}containers/\+\+Pessoas.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}containers/\+\+Projetos.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}containers/\+\+Quadros.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}containers/\+\+Cartoes\+Atividades.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}servicos/\+\+Servico\+Cartoes\+Atividades.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}servicos/\+\+Servico\+Pessoas.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}servicos/\+\+Servico\+Projetos.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}servicos/\+\+Servico\+Quadros.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}controladoras/\+\+Controladora\+Pessoas.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}controladoras/\+\+Controladora\+Projetos.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}controladoras/\+\+Controladora\+Quadros.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}controladoras/\+\+Controladora\+Cartoes\+Atividades.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}apresentacao/\+\+Tela\+Principal.\+hpp"{}}\newline
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Funcao principal do sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Ponto de entrada do sistema Kanban. 
+
+Abre o banco SQLite, cria containers, servicos e controladoras, realiza login ou cadastro e exibe os menus de \doxylink{class_pessoas}{Pessoas}, \doxylink{class_projetos}{Projetos}, \doxylink{class_quadros}{Quadros} e Cartoes de Atividade. 
+
+Definição no arquivo \doxymbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\label{main_8cpp_doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Funcao principal do sistema. 
+
+\begin{DoxyReturn}{Retorna}
+0 em execucao normal; 1 se houver erro ao abrir o banco ou ao ativar as chaves estrangeiras. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{main_8cpp_source_l00047}{47}} do arquivo \doxymbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+

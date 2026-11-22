@@ -1,0 +1,108 @@
+\doxysection{Referência da Classe Email}
+\hypertarget{class_email}{}\label{class_email}\index{Email@{Email}}
+
+
+Dominio que representa um endereco de email.  
+
+
+
+
+{\ttfamily \+\#include $<$email.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_email_a6820ae380bbcc891e2654310e7371fc3}{set\+Email}} (string novo\+Email)
+\begin{DoxyCompactList}\small\item\em Valida e armazena o email informado. \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_email_a6c314589c2042bf2234a9b5781d50def}{get\+Email}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o email armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_email_abdbcd2680b361c3f3e925281d04e4ad1}{valor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_email}{Email} armazenado apos validacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Dominio que representa um endereco de email. 
+
+Regras de formato:
+\begin{DoxyItemize}
+\item Deve conter o caractere \textquotesingle{}@\textquotesingle{}.
+\item A parte local (antes do \textquotesingle{}@\textquotesingle{}) deve ter entre 1 e 64 caracteres.
+\item A parte local aceita letras, digitos e \textquotesingle{}\_\textquotesingle{}, podendo ter \textquotesingle{}.\textquotesingle{} ou \textquotesingle{}-\/\textquotesingle{} desde que seguidos de letra ou digito.
+\item O dominio (apos o \textquotesingle{}@\textquotesingle{}) e formado por rotulos separados por \textquotesingle{}.\textquotesingle{}, cada um iniciando e terminando com letra ou digito. 
+\end{DoxyItemize}
+
+Definição na linha \doxymbox{\hyperlink{email_8hpp_source_l00026}{26}} do arquivo \doxymbox{\hyperlink{email_8hpp_source}{email.\+hpp}}.
+
+
+
+\label{class_email_doc-func-members}
+\Hypertarget{class_email_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_email_a6c314589c2042bf2234a9b5781d50def}\index{Email@{Email}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily \label{class_email_a6c314589c2042bf2234a9b5781d50def} 
+string Email::\+get\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o email armazenado. 
+
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_email}{Email} valido previamente definido. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{email_8hpp_source_l00075}{75}} do arquivo \doxymbox{\hyperlink{email_8hpp_source}{email.\+hpp}}.
+
+\Hypertarget{class_email_a6820ae380bbcc891e2654310e7371fc3}\index{Email@{Email}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily \label{class_email_a6820ae380bbcc891e2654310e7371fc3} 
+void Email::\+set\+Email (\begin{DoxyParamCaption}\item[{string}]{novo\+Email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida e armazena o email informado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Email} & \doxylink{class_email}{Email} a ser validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se o email estiver vazio, nao tiver \textquotesingle{}@\textquotesingle{}, tiver parte local invalida ou formato incorreto. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{email_8hpp_source_l00037}{37}} do arquivo \doxymbox{\hyperlink{email_8hpp_source}{email.\+hpp}}.
+
+
+
+\label{class_email_doc-variable-members}
+\Hypertarget{class_email_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_email_abdbcd2680b361c3f3e925281d04e4ad1}\index{Email@{Email}!valor@{valor}}
+\index{valor@{valor}!Email@{Email}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily \label{class_email_abdbcd2680b361c3f3e925281d04e4ad1} 
+string Email::\+valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_email}{Email} armazenado apos validacao. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{email_8hpp_source_l00028}{28}} do arquivo \doxymbox{\hyperlink{email_8hpp_source}{email.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+dominio/\doxymbox{\hyperlink{email_8hpp}{email.\+hpp}}\end{DoxyCompactItemize}

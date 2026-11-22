@@ -1,0 +1,102 @@
+\doxysection{Referência da Classe Identificador}
+\hypertarget{class_identificador}{}\label{class_identificador}\index{Identificador@{Identificador}}
+
+
+Dominio que representa o identificador de projetos, quadros e cartoes.  
+
+
+
+
+{\ttfamily \+\#include $<$identificador.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_identificador_ab4907a248bb56bcd46a4f4da5069b6fb}{set\+Identificador}} (std::\+string novo\+Identificador)
+\begin{DoxyCompactList}\small\item\em Valida e armazena o identificador informado. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_identificador_a2ee16740185087d0f1d87702caa7d776}{get\+Identificador}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o identificador armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_identificador_a04fdebb9b5f94fd9b391a57f44cbbc13}{valor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_identificador}{Identificador} armazenado apos validacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Dominio que representa o identificador de projetos, quadros e cartoes. 
+
+Formato: exatamente 6 caracteres, sendo 3 letras (A-\/Z ou a-\/z) seguidas de 3 digitos (0-\/9). Exemplo: "{}\+PRJ001"{}. 
+
+Definição na linha \doxymbox{\hyperlink{identificador_8hpp_source_l00019}{19}} do arquivo \doxymbox{\hyperlink{identificador_8hpp_source}{identificador.\+hpp}}.
+
+
+
+\label{class_identificador_doc-func-members}
+\Hypertarget{class_identificador_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_identificador_a2ee16740185087d0f1d87702caa7d776}\index{Identificador@{Identificador}!getIdentificador@{getIdentificador}}
+\index{getIdentificador@{getIdentificador}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{getIdentificador()}{getIdentificador()}}
+{\footnotesize\ttfamily \label{class_identificador_a2ee16740185087d0f1d87702caa7d776} 
+std::\+string Identificador::\+get\+Identificador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o identificador armazenado. 
+
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_identificador}{Identificador} valido previamente definido. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{identificador_8hpp_source_l00063}{63}} do arquivo \doxymbox{\hyperlink{identificador_8hpp_source}{identificador.\+hpp}}.
+
+\Hypertarget{class_identificador_ab4907a248bb56bcd46a4f4da5069b6fb}\index{Identificador@{Identificador}!setIdentificador@{setIdentificador}}
+\index{setIdentificador@{setIdentificador}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{setIdentificador()}{setIdentificador()}}
+{\footnotesize\ttfamily \label{class_identificador_ab4907a248bb56bcd46a4f4da5069b6fb} 
+void Identificador::\+set\+Identificador (\begin{DoxyParamCaption}\item[{std::\+string}]{novo\+Identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida e armazena o identificador informado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Identificador} & \doxylink{class_identificador}{Identificador} a ser validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se nao tiver 6 caracteres ou nao seguir o formato LLLDDD. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{identificador_8hpp_source_l00030}{30}} do arquivo \doxymbox{\hyperlink{identificador_8hpp_source}{identificador.\+hpp}}.
+
+
+
+\label{class_identificador_doc-variable-members}
+\Hypertarget{class_identificador_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_identificador_a04fdebb9b5f94fd9b391a57f44cbbc13}\index{Identificador@{Identificador}!valor@{valor}}
+\index{valor@{valor}!Identificador@{Identificador}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily \label{class_identificador_a04fdebb9b5f94fd9b391a57f44cbbc13} 
+std::\+string Identificador::\+valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_identificador}{Identificador} armazenado apos validacao. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{identificador_8hpp_source_l00021}{21}} do arquivo \doxymbox{\hyperlink{identificador_8hpp_source}{identificador.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+dominio/\doxymbox{\hyperlink{identificador_8hpp}{identificador.\+hpp}}\end{DoxyCompactItemize}

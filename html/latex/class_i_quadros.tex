@@ -1,0 +1,160 @@
+\doxysection{Referência da Classe IQuadros}
+\hypertarget{class_i_quadros}{}\label{class_i_quadros}\index{IQuadros@{IQuadros}}
+
+
+Interface para operacoes relacionadas a quadros.  
+
+
+
+
+{\ttfamily \+\#include $<$IQuadros.\+hpp$>$}
+
+Diagrama de hierarquia da classe IQuadros:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_quadros}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_i_quadros_af4447d86d763937c0bbc10609d2f88e7}{\texorpdfstring{$\sim$}{\string~}\+IQuadros}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_quadros_a9debffb502365e17ae6c887fa1532452}{cadastrar}} (const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro)=0
+\begin{DoxyCompactList}\small\item\em Cadastra um quadro. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_quadro}{Quadro}} \doxymbox{\hyperlink{class_i_quadros_af7df3301339c13db82597df9e8dd7799}{consultar}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)=0
+\begin{DoxyCompactList}\small\item\em Consulta um quadro pelo identificador. \end{DoxyCompactList}\item 
+virtual std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ \doxymbox{\hyperlink{class_i_quadros_a66395009265255fa256d8aad5e5cd489}{listar}} ()=0
+\begin{DoxyCompactList}\small\item\em Lista todos os quadros cadastrados. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_quadros_a654d155051e9a81c931dc24c6ec1f0a7}{atualizar}} (const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro)=0
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um quadro. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_quadros_a6e38c9b43a629a5d4700b581cdfffd4e}{remover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)=0
+\begin{DoxyCompactList}\small\item\em Remove um quadro pelo identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Interface para operacoes relacionadas a quadros. 
+
+Definição na linha \doxymbox{\hyperlink{_i_quadros_8hpp_source_l00016}{16}} do arquivo \doxymbox{\hyperlink{_i_quadros_8hpp_source}{IQuadros.\+hpp}}.
+
+
+
+\label{class_i_quadros_doc-constructors}
+\Hypertarget{class_i_quadros_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_i_quadros_af4447d86d763937c0bbc10609d2f88e7}\index{IQuadros@{IQuadros}!````~IQuadros@{\texorpdfstring{$\sim$}{\string~}IQuadros}}
+\index{````~IQuadros@{\texorpdfstring{$\sim$}{\string~}IQuadros}!IQuadros@{IQuadros}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IQuadros()}{\string~IQuadros()}}
+{\footnotesize\ttfamily \label{class_i_quadros_af4447d86d763937c0bbc10609d2f88e7} 
+virtual IQuadros::\+\texorpdfstring{$\sim$}{\string~}\+IQuadros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual. 
+
+
+
+\label{class_i_quadros_doc-func-members}
+\Hypertarget{class_i_quadros_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_i_quadros_a654d155051e9a81c931dc24c6ec1f0a7}\index{IQuadros@{IQuadros}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!IQuadros@{IQuadros}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_i_quadros_a654d155051e9a81c931dc24c6ec1f0a7} 
+virtual void IQuadros::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Atualiza os dados de um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & \doxylink{class_quadro}{Quadro} com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_quadros_a546757b51195b23bf895ee7808b51dac}{Servico\+Quadros}}.
+
+\Hypertarget{class_i_quadros_a9debffb502365e17ae6c887fa1532452}\index{IQuadros@{IQuadros}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!IQuadros@{IQuadros}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_i_quadros_a9debffb502365e17ae6c887fa1532452} 
+virtual void IQuadros::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Cadastra um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & \doxylink{class_quadro}{Quadro} a ser cadastrado. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_quadros_a2bb9ed731c3ed5a39e1cfff5984e3307}{Servico\+Quadros}}.
+
+\Hypertarget{class_i_quadros_af7df3301339c13db82597df9e8dd7799}\index{IQuadros@{IQuadros}!consultar@{consultar}}
+\index{consultar@{consultar}!IQuadros@{IQuadros}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_i_quadros_af7df3301339c13db82597df9e8dd7799} 
+virtual \doxymbox{\hyperlink{class_quadro}{Quadro}} IQuadros::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_quadro}{Quadro} encontrado. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_quadros_a28a04f0c16eb9d672cfefa0dcb9a1fd0}{Servico\+Quadros}}.
+
+\Hypertarget{class_i_quadros_a66395009265255fa256d8aad5e5cd489}\index{IQuadros@{IQuadros}!listar@{listar}}
+\index{listar@{listar}!IQuadros@{IQuadros}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_i_quadros_a66395009265255fa256d8aad5e5cd489} 
+virtual std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ IQuadros::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Lista todos os quadros cadastrados. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor com os quadros cadastrados. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_quadros_aef2602527c7eaf56f6d416f88a535eea}{Servico\+Quadros}}.
+
+\Hypertarget{class_i_quadros_a6e38c9b43a629a5d4700b581cdfffd4e}\index{IQuadros@{IQuadros}!remover@{remover}}
+\index{remover@{remover}!IQuadros@{IQuadros}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_i_quadros_a6e38c9b43a629a5d4700b581cdfffd4e} 
+virtual void IQuadros::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_quadros_a1b67e78a6bd82a121de40d06964f30cc}{Servico\+Quadros}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+interfaces/\doxymbox{\hyperlink{_i_quadros_8hpp}{IQuadros.\+hpp}}\end{DoxyCompactItemize}

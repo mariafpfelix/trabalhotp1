@@ -1,0 +1,238 @@
+\doxysection{Referência da Classe Quadros}
+\hypertarget{class_quadros}{}\label{class_quadros}\index{Quadros@{Quadros}}
+
+
+Gerencia o armazenamento de quadros Kanban.  
+
+
+
+
+{\ttfamily \+\#include $<$Quadros.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_quadros_a33c284a886f1475701e4a68f629aba4b}{Quadros}} (sqlite3 \texorpdfstring{$\ast$}{*}conexao)
+\begin{DoxyCompactList}\small\item\em Inicializa o container. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_quadros_aa65885794512831498e626e67c9edeeb}{criar\+Tabela}} ()
+\begin{DoxyCompactList}\small\item\em Cria a tabela de quadros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_quadros_abb008842adf2918bc33ec75d62723b9f}{inserir}} (const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Insere um quadro no banco. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_quadro}{Quadro}} \doxymbox{\hyperlink{class_quadros_ab835ed40405b3bfd0f70e530c63ceef7}{consultar}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Consulta um quadro pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ \doxymbox{\hyperlink{class_quadros_a571f1bed0df26dc80ac715bd0cebb270}{listar}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os quadros cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_quadros_a1f6bba5d5f2400619d3c04778829998f}{atualizar}} (const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um quadro. O identificador nao pode ser alterado. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_quadros_a14001be133a7dbcd12dbccee1eabccd4}{remover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um quadro pelo identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_quadros_afcc7806684db3d4cd8d4dab0cdd39d9d}{banco}}
+\begin{DoxyCompactList}\small\item\em Conexao compartilhada com o banco de dados SQLite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia o armazenamento de quadros Kanban. 
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00020}{20}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+
+
+\label{class_quadros_doc-constructors}
+\Hypertarget{class_quadros_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_quadros_a33c284a886f1475701e4a68f629aba4b}\index{Quadros@{Quadros}!Quadros@{Quadros}}
+\index{Quadros@{Quadros}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{Quadros()}{Quadros()}}
+{\footnotesize\ttfamily \label{class_quadros_a33c284a886f1475701e4a68f629aba4b} 
+Quadros::\+\+Quadros (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{conexao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Inicializa o container. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em conexao} & Ponteiro para a conexao SQLite aberta. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se a conexao for nula. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00035}{35}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+
+
+\label{class_quadros_doc-func-members}
+\Hypertarget{class_quadros_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_quadros_a1f6bba5d5f2400619d3c04778829998f}\index{Quadros@{Quadros}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_quadros_a1f6bba5d5f2400619d3c04778829998f} 
+void Quadros::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de um quadro. O identificador nao pode ser alterado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & Entidade \doxylink{class_quadro}{Quadro} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00318}{318}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+\Hypertarget{class_quadros_ab835ed40405b3bfd0f70e530c63ceef7}\index{Quadros@{Quadros}!consultar@{consultar}}
+\index{consultar@{consultar}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_quadros_ab835ed40405b3bfd0f70e530c63ceef7} 
+\doxymbox{\hyperlink{class_quadro}{Quadro}} Quadros::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Entidade encontrada. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00165}{165}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+\Hypertarget{class_quadros_aa65885794512831498e626e67c9edeeb}\index{Quadros@{Quadros}!criarTabela@{criarTabela}}
+\index{criarTabela@{criarTabela}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{criarTabela()}{criarTabela()}}
+{\footnotesize\ttfamily \label{class_quadros_aa65885794512831498e626e67c9edeeb} 
+void Quadros::\+criar\+Tabela (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cria a tabela de quadros. 
+
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00051}{51}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+\Hypertarget{class_quadros_abb008842adf2918bc33ec75d62723b9f}\index{Quadros@{Quadros}!inserir@{inserir}}
+\index{inserir@{inserir}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}}
+{\footnotesize\ttfamily \label{class_quadros_abb008842adf2918bc33ec75d62723b9f} 
+void Quadros::\+inserir (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insere um quadro no banco. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & Entidade \doxylink{class_quadro}{Quadro} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00087}{87}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+\Hypertarget{class_quadros_a571f1bed0df26dc80ac715bd0cebb270}\index{Quadros@{Quadros}!listar@{listar}}
+\index{listar@{listar}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_quadros_a571f1bed0df26dc80ac715bd0cebb270} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ Quadros::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todos os quadros cadastrados. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor com os registros encontrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00247}{247}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+\Hypertarget{class_quadros_a14001be133a7dbcd12dbccee1eabccd4}\index{Quadros@{Quadros}!remover@{remover}}
+\index{remover@{remover}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_quadros_a14001be133a7dbcd12dbccee1eabccd4} 
+void Quadros::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00393}{393}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+
+
+\label{class_quadros_doc-variable-members}
+\Hypertarget{class_quadros_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_quadros_afcc7806684db3d4cd8d4dab0cdd39d9d}\index{Quadros@{Quadros}!banco@{banco}}
+\index{banco@{banco}!Quadros@{Quadros}}
+\doxysubsubsection{\texorpdfstring{banco}{banco}}
+{\footnotesize\ttfamily \label{class_quadros_afcc7806684db3d4cd8d4dab0cdd39d9d} 
+sqlite3\texorpdfstring{$\ast$}{*} Quadros::\+banco\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conexao compartilhada com o banco de dados SQLite. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_quadros_8hpp_source_l00027}{27}} do arquivo \doxymbox{\hyperlink{_quadros_8hpp_source}{Quadros.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+containers/\doxymbox{\hyperlink{_quadros_8hpp}{Quadros.\+hpp}}\end{DoxyCompactItemize}

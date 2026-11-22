@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema Kanban: Referência da Classe CartoesAtividades</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema Kanban<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_cartoes_atividades.html','','class_cartoes_atividades-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referência da Classe CartoesAtividades</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gerencia os cartoes de atividades no banco SQLite.  
+ <a href="#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a865a75bef9658a2520e1a12069257c0c" id="r_a865a75bef9658a2520e1a12069257c0c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a865a75bef9658a2520e1a12069257c0c">CartoesAtividades</a> (sqlite3 *conexao)</td></tr>
+<tr class="memdesc:a865a75bef9658a2520e1a12069257c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa o container.  <br /></td></tr>
+<tr class="memitem:a5318a8f23f38d3faa8765911386f431d" id="r_a5318a8f23f38d3faa8765911386f431d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5318a8f23f38d3faa8765911386f431d">criarTabela</a> ()</td></tr>
+<tr class="memdesc:a5318a8f23f38d3faa8765911386f431d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria a tabela de cartões.  <br /></td></tr>
+<tr class="memitem:a557926a33560bf5025bb3865d9b32380" id="r_a557926a33560bf5025bb3865d9b32380"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a557926a33560bf5025bb3865d9b32380">inserir</a> (const <a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> &amp;cartao)</td></tr>
+<tr class="memdesc:a557926a33560bf5025bb3865d9b32380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere um cartão no banco.  <br /></td></tr>
+<tr class="memitem:ac8b58b4b65958a0a50808a487dce0e07" id="r_ac8b58b4b65958a0a50808a487dce0e07"><td class="memItemLeft"><a class="el" href="class_cartao_atividade.html">CartaoAtividade</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac8b58b4b65958a0a50808a487dce0e07">consultar</a> (const <a class="el" href="class_identificador.html">Identificador</a> &amp;identificador)</td></tr>
+<tr class="memdesc:ac8b58b4b65958a0a50808a487dce0e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta um cartão pelo identificador.  <br /></td></tr>
+<tr class="memitem:a7d47753aa0a06127772fb7a8835462a8" id="r_a7d47753aa0a06127772fb7a8835462a8"><td class="memItemLeft">std::vector&lt; <a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7d47753aa0a06127772fb7a8835462a8">listar</a> ()</td></tr>
+<tr class="memdesc:a7d47753aa0a06127772fb7a8835462a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os cartões cadastrados.  <br /></td></tr>
+<tr class="memitem:aba2f3b73348c585e88cc210f6c1032e1" id="r_aba2f3b73348c585e88cc210f6c1032e1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aba2f3b73348c585e88cc210f6c1032e1">atualizar</a> (const <a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> &amp;cartao)</td></tr>
+<tr class="memdesc:aba2f3b73348c585e88cc210f6c1032e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um cartão sem alterar sua chave primária.  <br /></td></tr>
+<tr class="memitem:a42dea8e73d65f2c4dc813b838fdab37f" id="r_a42dea8e73d65f2c4dc813b838fdab37f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a42dea8e73d65f2c4dc813b838fdab37f">remover</a> (const <a class="el" href="class_identificador.html">Identificador</a> &amp;identificador)</td></tr>
+<tr class="memdesc:a42dea8e73d65f2c4dc813b838fdab37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um cartão pelo identificador.  <br /></td></tr>
+<tr class="memitem:a5cf5ee9e49f1ffc9b19f6e88c952ec6d" id="r_a5cf5ee9e49f1ffc9b19f6e88c952ec6d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5cf5ee9e49f1ffc9b19f6e88c952ec6d">mover</a> (const <a class="el" href="class_identificador.html">Identificador</a> &amp;identificador, const <a class="el" href="class_estado.html">Estado</a> &amp;novoEstado, const <a class="el" href="class_timestamp.html">Timestamp</a> &amp;momento)</td></tr>
+<tr class="memdesc:a5cf5ee9e49f1ffc9b19f6e88c952ec6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move um cartão para o próximo estado permitido.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Membros privados</h2></td></tr>
+<tr class="memitem:a9fdbec9651b153de537eea00d032c801" id="r_a9fdbec9651b153de537eea00d032c801"><td class="memItemLeft"><a class="el" href="class_cartao_atividade.html">CartaoAtividade</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9fdbec9651b153de537eea00d032c801">construirEntidade</a> (sqlite3_stmt *comando)</td></tr>
+<tr class="memdesc:a9fdbec9651b153de537eea00d032c801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconstrói uma entidade a partir de uma linha do SQLite.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-methods" class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Membros privados estáticos</h2></td></tr>
+<tr class="memitem:a75bff202ebdd09f2d969261bc87dc838" id="r_a75bff202ebdd09f2d969261bc87dc838"><td class="memItemLeft">static const char *&#160;</td><td class="memItemRight"><a class="el" href="#a75bff202ebdd09f2d969261bc87dc838">consultaCompleta</a> ()</td></tr>
+<tr class="memdesc:a75bff202ebdd09f2d969261bc87dc838"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQL utilizado para recuperar os dados dos cartões.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:a80086f17e0747c256dd8097f2908fab8" id="r_a80086f17e0747c256dd8097f2908fab8"><td class="memItemLeft">sqlite3 *&#160;</td><td class="memItemRight"><a class="el" href="#a80086f17e0747c256dd8097f2908fab8">banco</a></td></tr>
+<tr class="memdesc:a80086f17e0747c256dd8097f2908fab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conexao compartilhada com o banco de dados SQLite.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Gerencia os cartoes de atividades no banco SQLite. </p>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00020">20</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Construtores e Destrutores</h2>
+<a id="a865a75bef9658a2520e1a12069257c0c" name="a865a75bef9658a2520e1a12069257c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865a75bef9658a2520e1a12069257c0c">&#9670;&#160;</a></span>CartoesAtividades()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CartoesAtividades::CartoesAtividades </td>
+          <td>(</td>
+          <td class="paramtype">sqlite3 *</td>          <td class="paramname"><span class="paramname"><em>conexao</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicializa o container. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conexao</td><td>Ponteiro para a conexao SQLite aberta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Se a conexao for nula. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00127">127</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentação das funções</h2>
+<a id="aba2f3b73348c585e88cc210f6c1032e1" name="aba2f3b73348c585e88cc210f6c1032e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2f3b73348c585e88cc210f6c1032e1">&#9670;&#160;</a></span>atualizar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CartoesAtividades::atualizar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cartao</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atualiza os dados de um cartão sem alterar sua chave primária. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cartao</td><td>Entidade <a class="el" href="class_cartao_atividade.html" title="Representa uma atividade de um quadro Kanban.">CartaoAtividade</a> com os dados a serem gravados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Em caso de falha no banco de dados ou registro nao encontrado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00374">374</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9fdbec9651b153de537eea00d032c801" name="a9fdbec9651b153de537eea00d032c801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdbec9651b153de537eea00d032c801">&#9670;&#160;</a></span>construirEntidade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> CartoesAtividades::construirEntidade </td>
+          <td>(</td>
+          <td class="paramtype">sqlite3_stmt *</td>          <td class="paramname"><span class="paramname"><em>comando</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reconstrói uma entidade a partir de uma linha do SQLite. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comando</td><td>Comando SQLite posicionado na linha a ser lida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Cartao montado com os dados da linha atual. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00034">34</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a75bff202ebdd09f2d969261bc87dc838" name="a75bff202ebdd09f2d969261bc87dc838"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75bff202ebdd09f2d969261bc87dc838">&#9670;&#160;</a></span>consultaCompleta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * CartoesAtividades::consultaCompleta </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQL utilizado para recuperar os dados dos cartões. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Comando SELECT sem a clausula WHERE. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00114">114</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac8b58b4b65958a0a50808a487dce0e07" name="ac8b58b4b65958a0a50808a487dce0e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b58b4b65958a0a50808a487dce0e07">&#9670;&#160;</a></span>consultar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> CartoesAtividades::consultar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_identificador.html">Identificador</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>identificador</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consulta um cartão pelo identificador. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td><a class="el" href="class_identificador.html" title="Dominio que representa o identificador de projetos, quadros e cartoes.">Identificador</a> do cartao. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Entidade encontrada. </dd></dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Em caso de falha no banco de dados ou registro nao encontrado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00280">280</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5318a8f23f38d3faa8765911386f431d" name="a5318a8f23f38d3faa8765911386f431d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5318a8f23f38d3faa8765911386f431d">&#9670;&#160;</a></span>criarTabela()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CartoesAtividades::criarTabela </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cria a tabela de cartões. </p>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Em caso de falha no banco de dados ou registro nao encontrado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00143">143</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a557926a33560bf5025bb3865d9b32380" name="a557926a33560bf5025bb3865d9b32380"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a557926a33560bf5025bb3865d9b32380">&#9670;&#160;</a></span>inserir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CartoesAtividades::inserir </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cartao</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Insere um cartão no banco. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cartao</td><td>Entidade <a class="el" href="class_cartao_atividade.html" title="Representa uma atividade de um quadro Kanban.">CartaoAtividade</a> com os dados a serem gravados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Em caso de falha no banco de dados ou registro nao encontrado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00188">188</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d47753aa0a06127772fb7a8835462a8" name="a7d47753aa0a06127772fb7a8835462a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d47753aa0a06127772fb7a8835462a8">&#9670;&#160;</a></span>listar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_cartao_atividade.html">CartaoAtividade</a> &gt; CartoesAtividades::listar </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lista todos os cartões cadastrados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Vetor com os registros encontrados. </dd></dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Em caso de falha no banco de dados ou registro nao encontrado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00333">333</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5cf5ee9e49f1ffc9b19f6e88c952ec6d" name="a5cf5ee9e49f1ffc9b19f6e88c952ec6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf5ee9e49f1ffc9b19f6e88c952ec6d">&#9670;&#160;</a></span>mover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CartoesAtividades::mover </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_identificador.html">Identificador</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>identificador</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_estado.html">Estado</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>novoEstado</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_timestamp.html">Timestamp</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>momento</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move um cartão para o próximo estado permitido. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td><a class="el" href="class_identificador.html" title="Dominio que representa o identificador de projetos, quadros e cartoes.">Identificador</a> do cartão. </td></tr>
+    <tr><td class="paramname">novoEstado</td><td>Novo estado do cartão. </td></tr>
+    <tr><td class="paramname">momento</td><td><a class="el" href="class_timestamp.html" title="Dominio que representa uma data e hora.">Timestamp</a> da movimentação. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>Se a operacao nao for permitida ou os dados forem invalidos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00532">532</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a42dea8e73d65f2c4dc813b838fdab37f" name="a42dea8e73d65f2c4dc813b838fdab37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42dea8e73d65f2c4dc813b838fdab37f">&#9670;&#160;</a></span>remover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CartoesAtividades::remover </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_identificador.html">Identificador</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>identificador</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove um cartão pelo identificador. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td><a class="el" href="class_identificador.html" title="Dominio que representa o identificador de projetos, quadros e cartoes.">Identificador</a> do cartao. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Em caso de falha no banco de dados ou registro nao encontrado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00474">474</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Atributos</h2>
+<a id="a80086f17e0747c256dd8097f2908fab8" name="a80086f17e0747c256dd8097f2908fab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80086f17e0747c256dd8097f2908fab8">&#9670;&#160;</a></span>banco</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sqlite3* CartoesAtividades::banco</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Conexao compartilhada com o banco de dados SQLite. </p>
+
+<p class="definition">Definição na linha <a class="el" href="_cartoes_atividades_8hpp_source.html#l00027">27</a> do arquivo <a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>containers/<a class="el" href="_cartoes_atividades_8hpp_source.html">CartoesAtividades.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_cartoes_atividades.html">CartoesAtividades</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

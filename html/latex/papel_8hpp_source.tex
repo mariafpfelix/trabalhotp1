@@ -1,0 +1,37 @@
+\doxysection{papel.\+hpp}
+\hypertarget{papel_8hpp_source}{}\label{papel_8hpp_source}\index{dominio/papel.hpp@{dominio/papel.hpp}}
+\doxymbox{\hyperlink{papel_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ PAPEL\_HPP}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ PAPEL\_HPP}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00020}\doxymbox{\hyperlink{class_papel}{00020}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_papel}{Papel}}\ \{}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00021}00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00022}\doxymbox{\hyperlink{class_papel_a5e87ad0b6685c8e9e7e2851da450985d}{00022}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_papel_a5e87ad0b6685c8e9e7e2851da450985d}{valor}};\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00024}00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00031}\doxymbox{\hyperlink{class_papel_a22d8c4d5cb1146828a9a69ebb8183ac5}{00031}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_papel_a22d8c4d5cb1146828a9a69ebb8183ac5}{setPapel}}(\textcolor{keywordtype}{string}\ novoPapel)\ \{}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoPapel\ !=\ \textcolor{stringliteral}{"{}GESTOR"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ novoPapel\ !=\ \textcolor{stringliteral}{"{}DESENVOLVEDOR"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ invalid\_argument(\textcolor{stringliteral}{"{}Papel\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_papel_a5e87ad0b6685c8e9e7e2851da450985d}{valor}}\ =\ novoPapel;}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00045}\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{00045}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_papel_a5e87ad0b6685c8e9e7e2851da450985d}{valor}};}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00048}00048\ \};}
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{papel_8hpp_source_l00050}00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

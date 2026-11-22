@@ -1,0 +1,414 @@
+\doxysection{Referência da Classe Controladora\+Cartoes\+Atividades}
+\hypertarget{class_controladora_cartoes_atividades}{}\label{class_controladora_cartoes_atividades}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+
+
+Controla as operacoes relacionadas aos cartoes de atividade.  
+
+
+
+
+{\ttfamily \+\#include $<$Controladora\+Cartoes\+Atividades.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a8053fc9d421da04a084c9d636d9f156c}{Controladora\+Cartoes\+Atividades}} (\doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoes\+Atividades}} \&servico\+Cartoes)
+\begin{DoxyCompactList}\small\item\em Construtor da controladora de cartoes. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a1c3a82212a76a149f6da5092b2439168}{cadastrar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&cartao)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo cartao. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \doxymbox{\hyperlink{class_controladora_cartoes_atividades_ad2e03dbf4290a536f69775fe25f7988f}{consultar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Consulta um cartao pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} $>$ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_ab6f25507eadd289f3efe8064a3bd4725}{listar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Lista os cartoes cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_cartoes_atividades_aab21984ba195065588db722808d48564}{atualizar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&cartao)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um cartao. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a354c360d56bc6901c9fe63adb7c4c6a1}{remover}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um cartao pelo identificador. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a75907cbe4d463887d2861ee2428f5741}{mover}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador, const \doxymbox{\hyperlink{class_estado}{Estado}} \&novo\+Estado, const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&momento)
+\begin{DoxyCompactList}\small\item\em Move um cartao para outro estado. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a1263c03176ce7f6526e9246337bcf00d}{calcular\+WIP}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Calcula o WIP atual de um quadro. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_controladora_cartoes_atividades_ab3fdeb844c5656980f69f99485d9c72b}{calcular\+Lead\+Time\+Medio}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Calcula o lead time medio de um quadro. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a3060d9c0bad873e7b316fb913459407f}{calcular\+Cycle\+Time\+Medio}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Calcula o cycle time medio de um quadro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}{exigir\+Gestor}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuario possui papel de gestor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{exigir\+Desenvolvedor}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuario possui papel de desenvolvedor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoes\+Atividades}} \& \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}
+\begin{DoxyCompactList}\small\item\em Referencia para a interface do servico de cartoes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controla as operacoes relacionadas aos cartoes de atividade. 
+
+Verifica as permissoes do usuario e encaminha as operacoes para o servico de cartoes.
+
+
+\begin{DoxyItemize}
+\item O gestor pode cadastrar, atualizar e remover cartoes.
+\item O desenvolvedor pode mover cartoes e consultar os indicadores.
+\item Ambos podem consultar e listar cartoes. 
+\end{DoxyItemize}
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00026}{26}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_controladora_cartoes_atividades_doc-constructors}
+\Hypertarget{class_controladora_cartoes_atividades_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_controladora_cartoes_atividades_a8053fc9d421da04a084c9d636d9f156c}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{ControladoraCartoesAtividades()}{ControladoraCartoesAtividades()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a8053fc9d421da04a084c9d636d9f156c} 
+Controladora\+Cartoes\+Atividades::\+\+Controladora\+Cartoes\+Atividades (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoes\+Atividades}} \&}]{servico\+Cartoes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construtor da controladora de cartoes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em servico\+Cartoes} & Interface do servico de cartoes. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00067}{67}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_controladora_cartoes_atividades_doc-func-members}
+\Hypertarget{class_controladora_cartoes_atividades_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_controladora_cartoes_atividades_aab21984ba195065588db722808d48564}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_aab21984ba195065588db722808d48564} 
+void Controladora\+Cartoes\+Atividades::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de um cartao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em cartao} & Cartao com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00127}{127}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_a1c3a82212a76a149f6da5092b2439168}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a1c3a82212a76a149f6da5092b2439168} 
+void Controladora\+Cartoes\+Atividades::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cadastra um novo cartao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em cartao} & Cartao que sera cadastrado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00076}{76}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_a3060d9c0bad873e7b316fb913459407f}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!calcularCycleTimeMedio@{calcularCycleTimeMedio}}
+\index{calcularCycleTimeMedio@{calcularCycleTimeMedio}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{calcularCycleTimeMedio()}{calcularCycleTimeMedio()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a3060d9c0bad873e7b316fb913459407f} 
+double Controladora\+Cartoes\+Atividades::\+calcular\+Cycle\+Time\+Medio (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula o cycle time medio de um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em quadro} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cycle time medio em minutos. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja desenvolvedor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00204}{204}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_ab3fdeb844c5656980f69f99485d9c72b}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!calcularLeadTimeMedio@{calcularLeadTimeMedio}}
+\index{calcularLeadTimeMedio@{calcularLeadTimeMedio}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{calcularLeadTimeMedio()}{calcularLeadTimeMedio()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_ab3fdeb844c5656980f69f99485d9c72b} 
+double Controladora\+Cartoes\+Atividades::\+calcular\+Lead\+Time\+Medio (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula o lead time medio de um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em quadro} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Lead time medio em minutos. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja desenvolvedor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00189}{189}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_a1263c03176ce7f6526e9246337bcf00d}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!calcularWIP@{calcularWIP}}
+\index{calcularWIP@{calcularWIP}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{calcularWIP()}{calcularWIP()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a1263c03176ce7f6526e9246337bcf00d} 
+int Controladora\+Cartoes\+Atividades::\+calcular\+WIP (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcula o WIP atual de um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em quadro} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Quantidade de cartoes no estado FAZENDO. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja desenvolvedor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00174}{174}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_ad2e03dbf4290a536f69775fe25f7988f}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!consultar@{consultar}}
+\index{consultar@{consultar}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_ad2e03dbf4290a536f69775fe25f7988f} 
+\doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} Controladora\+Cartoes\+Atividades::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta um cartao pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cartao encontrado. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o papel nao tenha permissao. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00091}{91}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!exigirDesenvolvedor@{exigirDesenvolvedor}}
+\index{exigirDesenvolvedor@{exigirDesenvolvedor}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{exigirDesenvolvedor()}{exigirDesenvolvedor()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c} 
+void Controladora\+Cartoes\+Atividades::\+exigir\+Desenvolvedor (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuario possui papel de desenvolvedor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja desenvolvedor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00053}{53}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!exigirGestor@{exigirGestor}}
+\index{exigirGestor@{exigirGestor}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{exigirGestor()}{exigirGestor()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149} 
+void Controladora\+Cartoes\+Atividades::\+exigir\+Gestor (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuario possui papel de gestor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00039}{39}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_ab6f25507eadd289f3efe8064a3bd4725}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!listar@{listar}}
+\index{listar@{listar}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_ab6f25507eadd289f3efe8064a3bd4725} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} $>$ Controladora\+Cartoes\+Atividades::\+listar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista os cartoes cadastrados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vetor com os cartoes cadastrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o papel nao tenha permissao. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00110}{110}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_a75907cbe4d463887d2861ee2428f5741}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!mover@{mover}}
+\index{mover@{mover}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{mover()}{mover()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a75907cbe4d463887d2861ee2428f5741} 
+void Controladora\+Cartoes\+Atividades::\+mover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{, }\item[{const \doxymbox{\hyperlink{class_estado}{Estado}} \&}]{novo\+Estado}{, }\item[{const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&}]{momento}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move um cartao para outro estado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+{\em novo\+Estado} & \doxylink{class_estado}{Estado} de destino (FAZENDO ou FEITO). \\
+\hline
+{\em momento} & Data e hora da movimentacao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja desenvolvedor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00157}{157}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_controladora_cartoes_atividades_a354c360d56bc6901c9fe63adb7c4c6a1}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!remover@{remover}}
+\index{remover@{remover}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a354c360d56bc6901c9fe63adb7c4c6a1} 
+void Controladora\+Cartoes\+Atividades::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um cartao pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuario nao seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00141}{141}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_controladora_cartoes_atividades_doc-variable-members}
+\Hypertarget{class_controladora_cartoes_atividades_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}\index{ControladoraCartoesAtividades@{ControladoraCartoesAtividades}!servico@{servico}}
+\index{servico@{servico}!ControladoraCartoesAtividades@{ControladoraCartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{servico}{servico}}
+{\footnotesize\ttfamily \label{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5} 
+\doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoes\+Atividades}}\& Controladora\+Cartoes\+Atividades::\+servico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referencia para a interface do servico de cartoes. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source_l00032}{32}} do arquivo \doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp_source}{Controladora\+Cartoes\+Atividades.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+controladoras/\doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp}{Controladora\+Cartoes\+Atividades.\+hpp}}\end{DoxyCompactItemize}

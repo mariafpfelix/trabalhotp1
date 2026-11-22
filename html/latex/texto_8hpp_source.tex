@@ -1,0 +1,90 @@
+\doxysection{texto.\+hpp}
+\hypertarget{texto_8hpp_source}{}\label{texto_8hpp_source}\index{dominio/texto.hpp@{dominio/texto.hpp}}
+\doxymbox{\hyperlink{texto_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ TEXTO\_HPP}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ TEXTO\_HPP}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00022}\doxymbox{\hyperlink{class_texto}{00022}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_texto}{Texto}}\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00023}00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00024}\doxymbox{\hyperlink{class_texto_aa2af9d716bf4c6c98d51ba5dad8b0b5b}{00024}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_texto_aa2af9d716bf4c6c98d51ba5dad8b0b5b}{valor}};\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00026}00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00033}\doxymbox{\hyperlink{class_texto_a8d8d44fc332b1d58f038a9cd130b999f}{00033}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_texto_a8d8d44fc332b1d58f038a9cd130b999f}{setTexto}}(std::string\ novoTexto)\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ texto\ esta\ vazio\ ou\ excede\ 30\ caracteres}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoTexto.empty()\ ||\ novoTexto.length()\ >\ 30)\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Texto\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ primeiro\ caractere\ e\ uma\ letra\ maiuscula}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ primeiro\ =\ novoTexto[0];}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (primeiro\ <\ \textcolor{charliteral}{'A'}\ ||\ primeiro\ >\ \textcolor{charliteral}{'Z'})\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Texto\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ ultimo\ caractere\ e\ um\ ponto}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoTexto[novoTexto.length()\ -\/\ 1]\ !=\ \textcolor{charliteral}{'.'})\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Texto\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Percorre\ todos\ os\ caracteres\ do\ texto}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ novoTexto.length();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ novoTexto[i];}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ letras\ maiusculas\ e\ minusculas}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ letra\ =\ (c\ >=\ \textcolor{charliteral}{'A'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'Z'})\ ||}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (c\ >=\ \textcolor{charliteral}{'a'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'z'});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ digitos}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ numero\ =\ (c\ >=\ \textcolor{charliteral}{'0'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'9'});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ espaco\ em\ branco}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ espaco\ =\ (c\ ==\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ sinais\ de\ pontuacao\ permitidos}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ pontuacao\ =\ (c\ ==\ \textcolor{charliteral}{','}\ ||\ c\ ==\ \textcolor{charliteral}{';'}\ ||}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c\ ==\ \textcolor{charliteral}{'.'}\ ||\ c\ ==\ \textcolor{charliteral}{':'}\ ||}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c\ ==\ \textcolor{charliteral}{'?'}\ ||\ c\ ==\ \textcolor{charliteral}{'!'});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rejeita\ caracteres\ nao\ permitidos}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!letra\ \&\&\ !numero\ \&\&\ !espaco\ \&\&\ !pontuacao)\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Texto\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ um\ sinal\ de\ pontuacao}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ e\ seguido\ por\ outro\ sinal\ de\ pontuacao}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pontuacao\ \&\&\ i\ +\ 1\ <\ novoTexto.length())\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ proximo\ =\ novoTexto[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ proximaPontuacao\ =}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (proximo\ ==\ \textcolor{charliteral}{','}\ ||\ proximo\ ==\ \textcolor{charliteral}{';'}\ ||}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ proximo\ ==\ \textcolor{charliteral}{'.'}\ ||\ proximo\ ==\ \textcolor{charliteral}{':'}\ ||}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ proximo\ ==\ \textcolor{charliteral}{'?'}\ ||\ proximo\ ==\ \textcolor{charliteral}{'!'});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (proximaPontuacao)\ \{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Texto\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Armazena\ o\ texto\ caso\ todas\ as\ validacoes\ passem}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_texto_aa2af9d716bf4c6c98d51ba5dad8b0b5b}{valor}}\ =\ novoTexto;}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00102}\doxymbox{\hyperlink{class_texto_abed0b18b7b98526eb0194901ce4736a2}{00102}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_texto_abed0b18b7b98526eb0194901ce4736a2}{getTexto}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_texto_aa2af9d716bf4c6c98d51ba5dad8b0b5b}{valor}};}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00105}00105\ \};}
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{texto_8hpp_source_l00107}00107\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,238 @@
+\doxysection{Referência da Classe Projetos}
+\hypertarget{class_projetos}{}\label{class_projetos}\index{Projetos@{Projetos}}
+
+
+Gerencia o armazenamento de projetos no banco SQLite.  
+
+
+
+
+{\ttfamily \+\#include $<$Projetos.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_projetos_ae94ac06a2f6e3cd45a5633bd2cb73797}{Projetos}} (sqlite3 \texorpdfstring{$\ast$}{*}conexao)
+\begin{DoxyCompactList}\small\item\em Inicializa o container com uma conexao SQLite. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_projetos_a0af1593027d7361f477329b348a0680d}{criar\+Tabela}} ()
+\begin{DoxyCompactList}\small\item\em Cria a tabela de projetos no banco de dados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_projetos_a9e1b556d06e7363ce2efaed8af723ed1}{inserir}} (const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&projeto)
+\begin{DoxyCompactList}\small\item\em Insere um projeto no banco de dados. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_projeto}{Projeto}} \doxymbox{\hyperlink{class_projetos_ae32a644bee128144d5f0bd2099323589}{consultar}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Consulta um projeto pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_projeto}{Projeto}} $>$ \doxymbox{\hyperlink{class_projetos_a06edeb093b034c87cfd271a1548247e9}{listar}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os projetos cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_projetos_af614a08e9f983e7d99dc6b82ff211762}{atualizar}} (const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&projeto)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um projeto existente. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_projetos_ac0c7f9f67bc08ec3ccc88e1f58fc190b}{remover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um projeto pelo identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_projetos_acd4a88ff15dda98309f1e93a227b674f}{banco}}
+\begin{DoxyCompactList}\small\item\em Conexao compartilhada com o banco de dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia o armazenamento de projetos no banco SQLite. 
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00019}{19}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+
+
+\label{class_projetos_doc-constructors}
+\Hypertarget{class_projetos_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_projetos_ae94ac06a2f6e3cd45a5633bd2cb73797}\index{Projetos@{Projetos}!Projetos@{Projetos}}
+\index{Projetos@{Projetos}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{Projetos()}{Projetos()}}
+{\footnotesize\ttfamily \label{class_projetos_ae94ac06a2f6e3cd45a5633bd2cb73797} 
+Projetos::\+\+Projetos (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{conexao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Inicializa o container com uma conexao SQLite. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em conexao} & Ponteiro para uma conexao aberta. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se a conexao for nula. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00035}{35}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+
+
+\label{class_projetos_doc-func-members}
+\Hypertarget{class_projetos_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_projetos_af614a08e9f983e7d99dc6b82ff211762}\index{Projetos@{Projetos}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_projetos_af614a08e9f983e7d99dc6b82ff211762} 
+void Projetos::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&}]{projeto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de um projeto existente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em projeto} & \doxylink{class_projeto}{Projeto} com os novos dados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00392}{392}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+\Hypertarget{class_projetos_ae32a644bee128144d5f0bd2099323589}\index{Projetos@{Projetos}!consultar@{consultar}}
+\index{consultar@{consultar}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_projetos_ae32a644bee128144d5f0bd2099323589} 
+\doxymbox{\hyperlink{class_projeto}{Projeto}} Projetos::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta um projeto pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do projeto procurado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Entidade \doxylink{class_projeto}{Projeto} encontrada. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00187}{187}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+\Hypertarget{class_projetos_a0af1593027d7361f477329b348a0680d}\index{Projetos@{Projetos}!criarTabela@{criarTabela}}
+\index{criarTabela@{criarTabela}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{criarTabela()}{criarTabela()}}
+{\footnotesize\ttfamily \label{class_projetos_a0af1593027d7361f477329b348a0680d} 
+void Projetos::\+criar\+Tabela (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cria a tabela de projetos no banco de dados. 
+
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00048}{48}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+\Hypertarget{class_projetos_a9e1b556d06e7363ce2efaed8af723ed1}\index{Projetos@{Projetos}!inserir@{inserir}}
+\index{inserir@{inserir}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}}
+{\footnotesize\ttfamily \label{class_projetos_a9e1b556d06e7363ce2efaed8af723ed1} 
+void Projetos::\+inserir (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&}]{projeto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insere um projeto no banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em projeto} & Entidade \doxylink{class_projeto}{Projeto} que sera cadastrada. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00089}{89}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+\Hypertarget{class_projetos_a06edeb093b034c87cfd271a1548247e9}\index{Projetos@{Projetos}!listar@{listar}}
+\index{listar@{listar}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_projetos_a06edeb093b034c87cfd271a1548247e9} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_projeto}{Projeto}} $>$ Projetos::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todos os projetos cadastrados. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor contendo os projetos encontrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00293}{293}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+\Hypertarget{class_projetos_ac0c7f9f67bc08ec3ccc88e1f58fc190b}\index{Projetos@{Projetos}!remover@{remover}}
+\index{remover@{remover}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_projetos_ac0c7f9f67bc08ec3ccc88e1f58fc190b} 
+void Projetos::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um projeto pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do projeto. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00490}{490}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+
+
+\label{class_projetos_doc-variable-members}
+\Hypertarget{class_projetos_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_projetos_acd4a88ff15dda98309f1e93a227b674f}\index{Projetos@{Projetos}!banco@{banco}}
+\index{banco@{banco}!Projetos@{Projetos}}
+\doxysubsubsection{\texorpdfstring{banco}{banco}}
+{\footnotesize\ttfamily \label{class_projetos_acd4a88ff15dda98309f1e93a227b674f} 
+sqlite3\texorpdfstring{$\ast$}{*} Projetos::\+banco\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conexao compartilhada com o banco de dados. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_projetos_8hpp_source_l00026}{26}} do arquivo \doxymbox{\hyperlink{_projetos_8hpp_source}{Projetos.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+containers/\doxymbox{\hyperlink{_projetos_8hpp}{Projetos.\+hpp}}\end{DoxyCompactItemize}

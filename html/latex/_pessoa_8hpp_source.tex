@@ -1,0 +1,82 @@
+\doxysection{Pessoa.\+hpp}
+\hypertarget{_pessoa_8hpp_source}{}\label{_pessoa_8hpp_source}\index{entidades/Pessoa.hpp@{entidades/Pessoa.hpp}}
+\doxymbox{\hyperlink{_pessoa_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ PESSOA\_HPP}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ PESSOA\_HPP}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{email_8hpp}{../dominio/email.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{nome_8hpp}{../dominio/nome.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{senha_8hpp}{../dominio/senha.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{papel_8hpp}{../dominio/papel.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00023}\doxymbox{\hyperlink{class_pessoa}{00023}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_pessoa}{Pessoa}}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00029}\doxymbox{\hyperlink{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe}{00029}}\ \ \ \ \ \doxymbox{\hyperlink{class_email}{Email}}\ \doxymbox{\hyperlink{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe}{email}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00034}\doxymbox{\hyperlink{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a}{00034}}\ \ \ \ \ \doxymbox{\hyperlink{class_nome}{Nome}}\ \doxymbox{\hyperlink{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a}{nome}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00039}\doxymbox{\hyperlink{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08}{00039}}\ \ \ \ \ \doxymbox{\hyperlink{class_senha}{Senha}}\ \doxymbox{\hyperlink{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08}{senha}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00044}\doxymbox{\hyperlink{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1}{00044}}\ \ \ \ \ \doxymbox{\hyperlink{class_papel}{Papel}}\ \doxymbox{\hyperlink{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1}{papel}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00049}\doxymbox{\hyperlink{class_pessoa_a955e69ef40c4067102df81a0e980bc1d}{00049}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_pessoa_a955e69ef40c4067102df81a0e980bc1d}{emailDefinido}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00051}00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00057}\doxymbox{\hyperlink{class_pessoa_a33ce7b9e457083f78875a9bfe8df456b}{00057}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pessoa_a33ce7b9e457083f78875a9bfe8df456b}{setEmail}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_email}{Email}}\ \&novoEmail)}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_pessoa_a955e69ef40c4067102df81a0e980bc1d}{emailDefinido}})}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}O\ email\ nao\ pode\ ser\ alterado."{}});}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe}{email}}\ =\ novoEmail;}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_pessoa_a955e69ef40c4067102df81a0e980bc1d}{emailDefinido}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00074}\doxymbox{\hyperlink{class_pessoa_a904654f6a79a0936d0df1cd6c36a7e8d}{00074}}\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_email}{Email}}\ \&\doxymbox{\hyperlink{class_pessoa_a904654f6a79a0936d0df1cd6c36a7e8d}{getEmail}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00075}00075\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe}{email}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00083}\doxymbox{\hyperlink{class_pessoa_a9f87b78d1393493cb167e65ac8c63252}{00083}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pessoa_a9f87b78d1393493cb167e65ac8c63252}{setNome}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_nome}{Nome}}\ \&novoNome)}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a}{nome}}\ =\ novoNome;}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00092}\doxymbox{\hyperlink{class_pessoa_a6332603563e192e1f692fde126a55105}{00092}}\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_nome}{Nome}}\ \&\doxymbox{\hyperlink{class_pessoa_a6332603563e192e1f692fde126a55105}{getNome}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00093}00093\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a}{nome}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00101}\doxymbox{\hyperlink{class_pessoa_a5c61bf857040f7397cf66cc5ac8c5944}{00101}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pessoa_a5c61bf857040f7397cf66cc5ac8c5944}{setSenha}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_senha}{Senha}}\ \&novaSenha)}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08}{senha}}\ =\ novaSenha;}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00110}\doxymbox{\hyperlink{class_pessoa_a622b211563983aa0e520c5c02b18098a}{00110}}\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_senha}{Senha}}\ \&\doxymbox{\hyperlink{class_pessoa_a622b211563983aa0e520c5c02b18098a}{getSenha}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00111}00111\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08}{senha}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00119}\doxymbox{\hyperlink{class_pessoa_aa011dcf17070ee1c18ade538b3e9b3a6}{00119}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_pessoa_aa011dcf17070ee1c18ade538b3e9b3a6}{setPapel}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&novoPapel)}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00120}00120\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1}{papel}}\ =\ novoPapel;}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00128}\doxymbox{\hyperlink{class_pessoa_a54f7ae519388a447626671167f43c8b1}{00128}}\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&\doxymbox{\hyperlink{class_pessoa_a54f7ae519388a447626671167f43c8b1}{getPapel}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00129}00129\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1}{papel}};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00132}00132\ \};}
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_pessoa_8hpp_source_l00134}00134\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

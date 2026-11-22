@@ -1,0 +1,128 @@
+\doxysection{Controladora\+Cartoes\+Atividades.\+hpp}
+\hypertarget{_controladora_cartoes_atividades_8hpp_source}{}\label{_controladora_cartoes_atividades_8hpp_source}\index{controladoras/ControladoraCartoesAtividades.hpp@{controladoras/ControladoraCartoesAtividades.hpp}}
+\doxymbox{\hyperlink{_controladora_cartoes_atividades_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ CONTROLADORA\_CARTOES\_ATIVIDADES\_HPP}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ CONTROLADORA\_CARTOES\_ATIVIDADES\_HPP}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_i_cartoes_atividades_8hpp}{../interfaces/ICartoesAtividades.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{papel_8hpp}{../dominio/papel.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00026}\doxymbox{\hyperlink{class_controladora_cartoes_atividades}{00026}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a8053fc9d421da04a084c9d636d9f156c}{ControladoraCartoesAtividades}}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00028}00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00032}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{00032}}\ \ \ \ \ \doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoesAtividades}}\ \&\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}};}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00039}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}{00039}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}{exigirGestor}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00040}00040\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (papel.\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\ !=\ \textcolor{stringliteral}{"{}GESTOR"{}})}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Operacao\ permitida\ somente\ para\ o\ gestor."{}});}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00053}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{00053}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{exigirDesenvolvedor}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (papel.\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\ !=\ \textcolor{stringliteral}{"{}DESENVOLVEDOR"{}})}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Operacao\ permitida\ somente\ para\ o\ desenvolvedor."{}});}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00062}00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00067}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a8053fc9d421da04a084c9d636d9f156c}{00067}}\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a8053fc9d421da04a084c9d636d9f156c}{ControladoraCartoesAtividades}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoesAtividades}}\ \&servicoCartoes)\ :\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}(servicoCartoes)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00076}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a1c3a82212a76a149f6da5092b2439168}{00076}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a1c3a82212a76a149f6da5092b2439168}{cadastrar}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00079}00079\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}{exigirGestor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_aa3c21d9648ca8a507c641bafe93a0f80}{cadastrar}}(cartao);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00091}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_ad2e03dbf4290a536f69775fe25f7988f}{00091}}\ \ \ \ \ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_ad2e03dbf4290a536f69775fe25f7988f}{consultar}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00094}00094\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (papel.\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\ !=\ \textcolor{stringliteral}{"{}GESTOR"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ papel.\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\ !=\ \textcolor{stringliteral}{"{}DESENVOLVEDOR"{}})}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Papel\ sem\ permissao."{}});}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_a945f78abb738f461d406d219b60a1908}{consultar}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00110}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_ab6f25507eadd289f3efe8064a3bd4725}{00110}}\ \ \ \ \ std::vector<CartaoAtividade>\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_ab6f25507eadd289f3efe8064a3bd4725}{listar}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00111}00111\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (papel.\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\ !=\ \textcolor{stringliteral}{"{}GESTOR"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ papel.\doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{getPapel}}()\ !=\ \textcolor{stringliteral}{"{}DESENVOLVEDOR"{}})}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Papel\ sem\ permissao."{}});}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_a4fdbaec3d5329d684a34eff0bc45db07}{listar}}();}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00127}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_aab21984ba195065588db722808d48564}{00127}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_aab21984ba195065588db722808d48564}{atualizar}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00130}00130\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}{exigirGestor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_ae0df13c9bbc4aee96297509de49ea613}{atualizar}}(cartao);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00141}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a354c360d56bc6901c9fe63adb7c4c6a1}{00141}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a354c360d56bc6901c9fe63adb7c4c6a1}{remover}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00144}00144\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_abd0125b39c860b94887edc33a051b149}{exigirGestor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_ab76f2ff278af6bd4f2606086a9b8acc8}{remover}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00157}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a75907cbe4d463887d2861ee2428f5741}{00157}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a75907cbe4d463887d2861ee2428f5741}{mover}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_estado}{Estado}}\ \&novoEstado,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_timestamp}{Timestamp}}\ \&momento)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00162}00162\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{exigirDesenvolvedor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_a576b1055e9777f2078a3729bcff06e30}{mover}}(identificador,\ novoEstado,\ momento);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00165}00165\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00174}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a1263c03176ce7f6526e9246337bcf00d}{00174}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a1263c03176ce7f6526e9246337bcf00d}{calcularWIP}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00177}00177\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{exigirDesenvolvedor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_af59acb545fbd7e0c3fd406347a9d2586}{calcularWIP}}(quadro);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00180}00180\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00189}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_ab3fdeb844c5656980f69f99485d9c72b}{00189}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_ab3fdeb844c5656980f69f99485d9c72b}{calcularLeadTimeMedio}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00192}00192\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{exigirDesenvolvedor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_a4095d2daf27674c65083fbd92c7a8e0f}{calcularLeadTimeMedio}}(quadro);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00204}\doxymbox{\hyperlink{class_controladora_cartoes_atividades_a3060d9c0bad873e7b316fb913459407f}{00204}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a3060d9c0bad873e7b316fb913459407f}{calcularCycleTimeMedio}}(}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_papel}{Papel}}\ \&papel,}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro)}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00207}00207\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a6f0fb08b43eee056554c62598969667c}{exigirDesenvolvedor}}(papel);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_controladora_cartoes_atividades_a9e81d934e93830a72f87392d993477b5}{servico}}.\doxymbox{\hyperlink{class_i_cartoes_atividades_aa638a3e0af342978aef96818a2f4f82c}{calcularCycleTimeMedio}}(quadro);}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00210}00210\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00211}00211\ \};}
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_controladora_cartoes_atividades_8hpp_source_l00213}00213\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

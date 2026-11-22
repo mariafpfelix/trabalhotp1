@@ -1,0 +1,317 @@
+\doxysection{Referência da Classe Cartoes\+Atividades}
+\hypertarget{class_cartoes_atividades}{}\label{class_cartoes_atividades}\index{CartoesAtividades@{CartoesAtividades}}
+
+
+Gerencia os cartoes de atividades no banco SQLite.  
+
+
+
+
+{\ttfamily \+\#include $<$Cartoes\+Atividades.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cartoes_atividades_a865a75bef9658a2520e1a12069257c0c}{Cartoes\+Atividades}} (sqlite3 \texorpdfstring{$\ast$}{*}conexao)
+\begin{DoxyCompactList}\small\item\em Inicializa o container. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartoes_atividades_a5318a8f23f38d3faa8765911386f431d}{criar\+Tabela}} ()
+\begin{DoxyCompactList}\small\item\em Cria a tabela de cartões. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartoes_atividades_a557926a33560bf5025bb3865d9b32380}{inserir}} (const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&cartao)
+\begin{DoxyCompactList}\small\item\em Insere um cartão no banco. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \doxymbox{\hyperlink{class_cartoes_atividades_ac8b58b4b65958a0a50808a487dce0e07}{consultar}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Consulta um cartão pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} $>$ \doxymbox{\hyperlink{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8}{listar}} ()
+\begin{DoxyCompactList}\small\item\em Lista todos os cartões cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartoes_atividades_aba2f3b73348c585e88cc210f6c1032e1}{atualizar}} (const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&cartao)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um cartão sem alterar sua chave primária. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartoes_atividades_a42dea8e73d65f2c4dc813b838fdab37f}{remover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um cartão pelo identificador. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartoes_atividades_a5cf5ee9e49f1ffc9b19f6e88c952ec6d}{mover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador, const \doxymbox{\hyperlink{class_estado}{Estado}} \&novo\+Estado, const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&momento)
+\begin{DoxyCompactList}\small\item\em Move um cartão para o próximo estado permitido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \doxymbox{\hyperlink{class_cartoes_atividades_a9fdbec9651b153de537eea00d032c801}{construir\+Entidade}} (sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}comando)
+\begin{DoxyCompactList}\small\item\em Reconstrói uma entidade a partir de uma linha do SQLite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_cartoes_atividades_a75bff202ebdd09f2d969261bc87dc838}{consulta\+Completa}} ()
+\begin{DoxyCompactList}\small\item\em SQL utilizado para recuperar os dados dos cartões. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_cartoes_atividades_a80086f17e0747c256dd8097f2908fab8}{banco}}
+\begin{DoxyCompactList}\small\item\em Conexao compartilhada com o banco de dados SQLite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia os cartoes de atividades no banco SQLite. 
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00020}{20}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_cartoes_atividades_doc-constructors}
+\Hypertarget{class_cartoes_atividades_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_cartoes_atividades_a865a75bef9658a2520e1a12069257c0c}\index{CartoesAtividades@{CartoesAtividades}!CartoesAtividades@{CartoesAtividades}}
+\index{CartoesAtividades@{CartoesAtividades}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{CartoesAtividades()}{CartoesAtividades()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a865a75bef9658a2520e1a12069257c0c} 
+Cartoes\+Atividades::\+\+Cartoes\+Atividades (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{conexao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Inicializa o container. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em conexao} & Ponteiro para a conexao SQLite aberta. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se a conexao for nula. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00127}{127}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_cartoes_atividades_doc-func-members}
+\Hypertarget{class_cartoes_atividades_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_cartoes_atividades_aba2f3b73348c585e88cc210f6c1032e1}\index{CartoesAtividades@{CartoesAtividades}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_aba2f3b73348c585e88cc210f6c1032e1} 
+void Cartoes\+Atividades::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de um cartão sem alterar sua chave primária. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cartao} & Entidade \doxylink{class_cartao_atividade}{Cartao\+Atividade} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00374}{374}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a9fdbec9651b153de537eea00d032c801}\index{CartoesAtividades@{CartoesAtividades}!construirEntidade@{construirEntidade}}
+\index{construirEntidade@{construirEntidade}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{construirEntidade()}{construirEntidade()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a9fdbec9651b153de537eea00d032c801} 
+\doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} Cartoes\+Atividades::\+construir\+Entidade (\begin{DoxyParamCaption}\item[{sqlite3\+\_\+stmt \texorpdfstring{$\ast$}{*}}]{comando}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Reconstrói uma entidade a partir de uma linha do SQLite. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em comando} & Comando SQLite posicionado na linha a ser lida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cartao montado com os dados da linha atual. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00034}{34}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a75bff202ebdd09f2d969261bc87dc838}\index{CartoesAtividades@{CartoesAtividades}!consultaCompleta@{consultaCompleta}}
+\index{consultaCompleta@{consultaCompleta}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{consultaCompleta()}{consultaCompleta()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a75bff202ebdd09f2d969261bc87dc838} 
+const char \texorpdfstring{$\ast$}{*} Cartoes\+Atividades::\+consulta\+Completa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+SQL utilizado para recuperar os dados dos cartões. 
+
+\begin{DoxyReturn}{Retorna}
+Comando SELECT sem a clausula WHERE. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00114}{114}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_ac8b58b4b65958a0a50808a487dce0e07}\index{CartoesAtividades@{CartoesAtividades}!consultar@{consultar}}
+\index{consultar@{consultar}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_ac8b58b4b65958a0a50808a487dce0e07} 
+\doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} Cartoes\+Atividades::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta um cartão pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Entidade encontrada. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00280}{280}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a5318a8f23f38d3faa8765911386f431d}\index{CartoesAtividades@{CartoesAtividades}!criarTabela@{criarTabela}}
+\index{criarTabela@{criarTabela}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{criarTabela()}{criarTabela()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a5318a8f23f38d3faa8765911386f431d} 
+void Cartoes\+Atividades::\+criar\+Tabela (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cria a tabela de cartões. 
+
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00143}{143}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a557926a33560bf5025bb3865d9b32380}\index{CartoesAtividades@{CartoesAtividades}!inserir@{inserir}}
+\index{inserir@{inserir}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a557926a33560bf5025bb3865d9b32380} 
+void Cartoes\+Atividades::\+inserir (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insere um cartão no banco. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cartao} & Entidade \doxylink{class_cartao_atividade}{Cartao\+Atividade} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00188}{188}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8}\index{CartoesAtividades@{CartoesAtividades}!listar@{listar}}
+\index{listar@{listar}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} $>$ Cartoes\+Atividades::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todos os cartões cadastrados. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor com os registros encontrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00333}{333}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a5cf5ee9e49f1ffc9b19f6e88c952ec6d}\index{CartoesAtividades@{CartoesAtividades}!mover@{mover}}
+\index{mover@{mover}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{mover()}{mover()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a5cf5ee9e49f1ffc9b19f6e88c952ec6d} 
+void Cartoes\+Atividades::\+mover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{, }\item[{const \doxymbox{\hyperlink{class_estado}{Estado}} \&}]{novo\+Estado}{, }\item[{const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&}]{momento}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move um cartão para o próximo estado permitido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartão. \\
+\hline
+{\em novo\+Estado} & Novo estado do cartão. \\
+\hline
+{\em momento} & \doxylink{class_timestamp}{Timestamp} da movimentação. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se a operacao nao for permitida ou os dados forem invalidos. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00532}{532}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+\Hypertarget{class_cartoes_atividades_a42dea8e73d65f2c4dc813b838fdab37f}\index{CartoesAtividades@{CartoesAtividades}!remover@{remover}}
+\index{remover@{remover}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a42dea8e73d65f2c4dc813b838fdab37f} 
+void Cartoes\+Atividades::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um cartão pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00474}{474}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_cartoes_atividades_doc-variable-members}
+\Hypertarget{class_cartoes_atividades_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_cartoes_atividades_a80086f17e0747c256dd8097f2908fab8}\index{CartoesAtividades@{CartoesAtividades}!banco@{banco}}
+\index{banco@{banco}!CartoesAtividades@{CartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{banco}{banco}}
+{\footnotesize\ttfamily \label{class_cartoes_atividades_a80086f17e0747c256dd8097f2908fab8} 
+sqlite3\texorpdfstring{$\ast$}{*} Cartoes\+Atividades::\+banco\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conexao compartilhada com o banco de dados SQLite. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source_l00027}{27}} do arquivo \doxymbox{\hyperlink{_cartoes_atividades_8hpp_source}{Cartoes\+Atividades.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+containers/\doxymbox{\hyperlink{_cartoes_atividades_8hpp}{Cartoes\+Atividades.\+hpp}}\end{DoxyCompactItemize}

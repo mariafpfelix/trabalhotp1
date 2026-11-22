@@ -1,0 +1,263 @@
+\doxysection{Referência da Classe ICartoes\+Atividades}
+\hypertarget{class_i_cartoes_atividades}{}\label{class_i_cartoes_atividades}\index{ICartoesAtividades@{ICartoesAtividades}}
+
+
+Interface para operacoes relacionadas a cartoes de atividade.  
+
+
+
+
+{\ttfamily \+\#include $<$ICartoes\+Atividades.\+hpp$>$}
+
+Diagrama de hierarquia da classe ICartoes\+Atividades:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_cartoes_atividades}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_i_cartoes_atividades_aec17ed0989c0bba2223ddee62200fa21}{\texorpdfstring{$\sim$}{\string~}\+ICartoes\+Atividades}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_cartoes_atividades_aa3c21d9648ca8a507c641bafe93a0f80}{cadastrar}} (const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&cartao)=0
+\begin{DoxyCompactList}\small\item\em Cadastra um cartao de atividade. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \doxymbox{\hyperlink{class_i_cartoes_atividades_a945f78abb738f461d406d219b60a1908}{consultar}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)=0
+\begin{DoxyCompactList}\small\item\em Consulta um cartao pelo identificador. \end{DoxyCompactList}\item 
+virtual std::\+vector$<$ \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} $>$ \doxymbox{\hyperlink{class_i_cartoes_atividades_a4fdbaec3d5329d684a34eff0bc45db07}{listar}} ()=0
+\begin{DoxyCompactList}\small\item\em Lista todos os cartoes cadastrados. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_cartoes_atividades_ae0df13c9bbc4aee96297509de49ea613}{atualizar}} (const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&cartao)=0
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um cartao. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_cartoes_atividades_ab76f2ff278af6bd4f2606086a9b8acc8}{remover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)=0
+\begin{DoxyCompactList}\small\item\em Remove um cartao pelo identificador. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_i_cartoes_atividades_a576b1055e9777f2078a3729bcff06e30}{mover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador, const \doxymbox{\hyperlink{class_estado}{Estado}} \&novo\+Estado, const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&momento)=0
+\begin{DoxyCompactList}\small\item\em Move um cartao para outro estado. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_i_cartoes_atividades_af59acb545fbd7e0c3fd406347a9d2586}{calcular\+WIP}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&quadro)=0
+\begin{DoxyCompactList}\small\item\em Calcula o WIP atual de um quadro. \end{DoxyCompactList}\item 
+virtual double \doxymbox{\hyperlink{class_i_cartoes_atividades_a4095d2daf27674c65083fbd92c7a8e0f}{calcular\+Lead\+Time\+Medio}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&quadro)=0
+\begin{DoxyCompactList}\small\item\em Calcula o lead time medio de um quadro. \end{DoxyCompactList}\item 
+virtual double \doxymbox{\hyperlink{class_i_cartoes_atividades_aa638a3e0af342978aef96818a2f4f82c}{calcular\+Cycle\+Time\+Medio}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&quadro)=0
+\begin{DoxyCompactList}\small\item\em Calcula o cycle time medio de um quadro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Interface para operacoes relacionadas a cartoes de atividade. 
+
+Define o CRUD de cartoes, a movimentacao entre estados e o calculo dos indicadores do quadro (WIP, lead time e cycle time). 
+
+Definição na linha \doxymbox{\hyperlink{_i_cartoes_atividades_8hpp_source_l00019}{19}} do arquivo \doxymbox{\hyperlink{_i_cartoes_atividades_8hpp_source}{ICartoes\+Atividades.\+hpp}}.
+
+
+
+\label{class_i_cartoes_atividades_doc-constructors}
+\Hypertarget{class_i_cartoes_atividades_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_i_cartoes_atividades_aec17ed0989c0bba2223ddee62200fa21}\index{ICartoesAtividades@{ICartoesAtividades}!````~ICartoesAtividades@{\texorpdfstring{$\sim$}{\string~}ICartoesAtividades}}
+\index{````~ICartoesAtividades@{\texorpdfstring{$\sim$}{\string~}ICartoesAtividades}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ICartoesAtividades()}{\string~ICartoesAtividades()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_aec17ed0989c0bba2223ddee62200fa21} 
+virtual ICartoes\+Atividades::\+\texorpdfstring{$\sim$}{\string~}\+ICartoes\+Atividades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual. 
+
+
+
+\label{class_i_cartoes_atividades_doc-func-members}
+\Hypertarget{class_i_cartoes_atividades_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_i_cartoes_atividades_ae0df13c9bbc4aee96297509de49ea613}\index{ICartoesAtividades@{ICartoesAtividades}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_ae0df13c9bbc4aee96297509de49ea613} 
+virtual void ICartoes\+Atividades::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Atualiza os dados de um cartao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cartao} & Cartao com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_a639ab9631a7d3380669c7b3646163882}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_aa3c21d9648ca8a507c641bafe93a0f80}\index{ICartoesAtividades@{ICartoesAtividades}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_aa3c21d9648ca8a507c641bafe93a0f80} 
+virtual void ICartoes\+Atividades::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} \&}]{cartao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Cadastra um cartao de atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cartao} & Cartao a ser cadastrado. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_a63561b52fddd1cb38e271cef51f122a4}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_aa638a3e0af342978aef96818a2f4f82c}\index{ICartoesAtividades@{ICartoesAtividades}!calcularCycleTimeMedio@{calcularCycleTimeMedio}}
+\index{calcularCycleTimeMedio@{calcularCycleTimeMedio}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{calcularCycleTimeMedio()}{calcularCycleTimeMedio()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_aa638a3e0af342978aef96818a2f4f82c} 
+virtual double ICartoes\+Atividades::\+calcular\+Cycle\+Time\+Medio (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calcula o cycle time medio de um quadro. 
+
+Cycle time e o tempo entre o inicio da execucao e a conclusao.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cycle time medio, em minutos, dos cartoes FEITO. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_a806f9478bad7a3f1fe53d0b516abad07}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_a4095d2daf27674c65083fbd92c7a8e0f}\index{ICartoesAtividades@{ICartoesAtividades}!calcularLeadTimeMedio@{calcularLeadTimeMedio}}
+\index{calcularLeadTimeMedio@{calcularLeadTimeMedio}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{calcularLeadTimeMedio()}{calcularLeadTimeMedio()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_a4095d2daf27674c65083fbd92c7a8e0f} 
+virtual double ICartoes\+Atividades::\+calcular\+Lead\+Time\+Medio (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calcula o lead time medio de um quadro. 
+
+Lead time e o tempo entre a entrada do cartao e sua conclusao.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Lead time medio, em minutos, dos cartoes FEITO. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_aa0e904964987877d77077c5ca9cd7605}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_af59acb545fbd7e0c3fd406347a9d2586}\index{ICartoesAtividades@{ICartoesAtividades}!calcularWIP@{calcularWIP}}
+\index{calcularWIP@{calcularWIP}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{calcularWIP()}{calcularWIP()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_af59acb545fbd7e0c3fd406347a9d2586} 
+virtual int ICartoes\+Atividades::\+calcular\+WIP (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calcula o WIP atual de um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Quantidade de cartoes no estado FAZENDO. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_a7cc4ddd6722e9bcca367a4448092d341}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_a945f78abb738f461d406d219b60a1908}\index{ICartoesAtividades@{ICartoesAtividades}!consultar@{consultar}}
+\index{consultar@{consultar}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_a945f78abb738f461d406d219b60a1908} 
+virtual \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} ICartoes\+Atividades::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Consulta um cartao pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cartao encontrado. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_abc241add4c0ab1c7b0c683d7a0a60b49}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_a4fdbaec3d5329d684a34eff0bc45db07}\index{ICartoesAtividades@{ICartoesAtividades}!listar@{listar}}
+\index{listar@{listar}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_a4fdbaec3d5329d684a34eff0bc45db07} 
+virtual std::\+vector$<$ \doxymbox{\hyperlink{class_cartao_atividade}{Cartao\+Atividade}} $>$ ICartoes\+Atividades::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Lista todos os cartoes cadastrados. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor com os cartoes cadastrados. 
+\end{DoxyReturn}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_ac4b125b6c6d4ac714fe510fee68afbeb}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_a576b1055e9777f2078a3729bcff06e30}\index{ICartoesAtividades@{ICartoesAtividades}!mover@{mover}}
+\index{mover@{mover}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{mover()}{mover()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_a576b1055e9777f2078a3729bcff06e30} 
+virtual void ICartoes\+Atividades::\+mover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{, }\item[{const \doxymbox{\hyperlink{class_estado}{Estado}} \&}]{novo\+Estado}{, }\item[{const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&}]{momento}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Move um cartao para outro estado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+{\em novo\+Estado} & \doxylink{class_estado}{Estado} de destino (FAZENDO ou FEITO). \\
+\hline
+{\em momento} & Data e hora da movimentacao. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_a46248510c468a48224bd4108accdf445}{Servico\+Cartoes\+Atividades}}.
+
+\Hypertarget{class_i_cartoes_atividades_ab76f2ff278af6bd4f2606086a9b8acc8}\index{ICartoesAtividades@{ICartoesAtividades}!remover@{remover}}
+\index{remover@{remover}!ICartoesAtividades@{ICartoesAtividades}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_i_cartoes_atividades_ab76f2ff278af6bd4f2606086a9b8acc8} 
+virtual void ICartoes\+Atividades::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove um cartao pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do cartao. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \doxymbox{\hyperlink{class_servico_cartoes_atividades_a59050c0b05b4f137286b69060215e099}{Servico\+Cartoes\+Atividades}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+interfaces/\doxymbox{\hyperlink{_i_cartoes_atividades_8hpp}{ICartoes\+Atividades.\+hpp}}\end{DoxyCompactItemize}

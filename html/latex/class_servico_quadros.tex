@@ -1,0 +1,218 @@
+\doxysection{Referência da Classe Servico\+Quadros}
+\hypertarget{class_servico_quadros}{}\label{class_servico_quadros}\index{ServicoQuadros@{ServicoQuadros}}
+
+
+Implementa os servicos relacionados aos quadros.  
+
+
+
+
+{\ttfamily \+\#include $<$Servico\+Quadros.\+hpp$>$}
+
+Diagrama de hierarquia da classe Servico\+Quadros:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_servico_quadros}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_servico_quadros_adaef2cc06687af39bd6b83cda833e2c0}{Servico\+Quadros}} (\doxymbox{\hyperlink{class_quadros}{Quadros}} \&quadros)
+\begin{DoxyCompactList}\small\item\em Inicializa o servico com o container de quadros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_servico_quadros_a2bb9ed731c3ed5a39e1cfff5984e3307}{cadastrar}} (const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro) override
+\begin{DoxyCompactList}\small\item\em Cadastra um quadro. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_quadro}{Quadro}} \doxymbox{\hyperlink{class_servico_quadros_a28a04f0c16eb9d672cfefa0dcb9a1fd0}{consultar}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador) override
+\begin{DoxyCompactList}\small\item\em Consulta um quadro pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ \doxymbox{\hyperlink{class_servico_quadros_aef2602527c7eaf56f6d416f88a535eea}{listar}} () override
+\begin{DoxyCompactList}\small\item\em Lista todos os quadros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_servico_quadros_a546757b51195b23bf895ee7808b51dac}{atualizar}} (const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro) override
+\begin{DoxyCompactList}\small\item\em Atualiza um quadro. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_servico_quadros_a1b67e78a6bd82a121de40d06964f30cc}{remover}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador) override
+\begin{DoxyCompactList}\small\item\em Remove um quadro pelo identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \doxymbox{\hyperlink{class_i_quadros}{IQuadros}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \doxymbox{\hyperlink{class_i_quadros_af4447d86d763937c0bbc10609d2f88e7}{\texorpdfstring{$\sim$}{\string~}\+IQuadros}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_quadros}{Quadros}} \& \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}
+\begin{DoxyCompactList}\small\item\em Referencia ao container responsavel pela persistencia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementa os servicos relacionados aos quadros. 
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00015}{15}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+
+
+\label{class_servico_quadros_doc-constructors}
+\Hypertarget{class_servico_quadros_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_servico_quadros_adaef2cc06687af39bd6b83cda833e2c0}\index{ServicoQuadros@{ServicoQuadros}!ServicoQuadros@{ServicoQuadros}}
+\index{ServicoQuadros@{ServicoQuadros}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{ServicoQuadros()}{ServicoQuadros()}}
+{\footnotesize\ttfamily \label{class_servico_quadros_adaef2cc06687af39bd6b83cda833e2c0} 
+Servico\+Quadros::\+\+Servico\+Quadros (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_quadros}{Quadros}} \&}]{quadros}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Inicializa o servico com o container de quadros. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadros} & Referencia ao container. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00029}{29}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+
+
+\label{class_servico_quadros_doc-func-members}
+\Hypertarget{class_servico_quadros_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_servico_quadros_a546757b51195b23bf895ee7808b51dac}\index{ServicoQuadros@{ServicoQuadros}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_servico_quadros_a546757b51195b23bf895ee7808b51dac} 
+void Servico\+Quadros::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & Entidade \doxylink{class_quadro}{Quadro} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \doxymbox{\hyperlink{class_i_quadros_a654d155051e9a81c931dc24c6ec1f0a7}{IQuadros}}.
+
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00066}{66}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+\Hypertarget{class_servico_quadros_a2bb9ed731c3ed5a39e1cfff5984e3307}\index{ServicoQuadros@{ServicoQuadros}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_servico_quadros_a2bb9ed731c3ed5a39e1cfff5984e3307} 
+void Servico\+Quadros::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Cadastra um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em quadro} & Entidade \doxylink{class_quadro}{Quadro} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \doxymbox{\hyperlink{class_i_quadros_a9debffb502365e17ae6c887fa1532452}{IQuadros}}.
+
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00038}{38}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+\Hypertarget{class_servico_quadros_a28a04f0c16eb9d672cfefa0dcb9a1fd0}\index{ServicoQuadros@{ServicoQuadros}!consultar@{consultar}}
+\index{consultar@{consultar}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_servico_quadros_a28a04f0c16eb9d672cfefa0dcb9a1fd0} 
+\doxymbox{\hyperlink{class_quadro}{Quadro}} Servico\+Quadros::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Consulta um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Entidade encontrada. 
+\end{DoxyReturn}
+
+
+Implementa \doxymbox{\hyperlink{class_i_quadros_af7df3301339c13db82597df9e8dd7799}{IQuadros}}.
+
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00048}{48}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+\Hypertarget{class_servico_quadros_aef2602527c7eaf56f6d416f88a535eea}\index{ServicoQuadros@{ServicoQuadros}!listar@{listar}}
+\index{listar@{listar}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_servico_quadros_aef2602527c7eaf56f6d416f88a535eea} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ Servico\+Quadros::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Lista todos os quadros. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor com os registros encontrados. 
+\end{DoxyReturn}
+
+
+Implementa \doxymbox{\hyperlink{class_i_quadros_a66395009265255fa256d8aad5e5cd489}{IQuadros}}.
+
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00057}{57}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+\Hypertarget{class_servico_quadros_a1b67e78a6bd82a121de40d06964f30cc}\index{ServicoQuadros@{ServicoQuadros}!remover@{remover}}
+\index{remover@{remover}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_servico_quadros_a1b67e78a6bd82a121de40d06964f30cc} 
+void Servico\+Quadros::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \doxymbox{\hyperlink{class_i_quadros_a6e38c9b43a629a5d4700b581cdfffd4e}{IQuadros}}.
+
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00075}{75}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+
+
+\label{class_servico_quadros_doc-variable-members}
+\Hypertarget{class_servico_quadros_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}\index{ServicoQuadros@{ServicoQuadros}!repositorio@{repositorio}}
+\index{repositorio@{repositorio}!ServicoQuadros@{ServicoQuadros}}
+\doxysubsubsection{\texorpdfstring{repositorio}{repositorio}}
+{\footnotesize\ttfamily \label{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81} 
+\doxymbox{\hyperlink{class_quadros}{Quadros}}\& Servico\+Quadros::\+repositorio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referencia ao container responsavel pela persistencia. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_servico_quadros_8hpp_source_l00022}{22}} do arquivo \doxymbox{\hyperlink{_servico_quadros_8hpp_source}{Servico\+Quadros.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+servicos/\doxymbox{\hyperlink{_servico_quadros_8hpp}{Servico\+Quadros.\+hpp}}\end{DoxyCompactItemize}

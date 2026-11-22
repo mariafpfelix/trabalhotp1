@@ -1,0 +1,292 @@
+\doxysection{Servico\+Cartoes\+Atividades.\+hpp}
+\hypertarget{_servico_cartoes_atividades_8hpp_source}{}\label{_servico_cartoes_atividades_8hpp_source}\index{servicos/ServicoCartoesAtividades.hpp@{servicos/ServicoCartoesAtividades.hpp}}
+\doxymbox{\hyperlink{_servico_cartoes_atividades_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ SERVICOCARTOESATIVIDADES\_HPP}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SERVICOCARTOESATIVIDADES\_HPP}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_i_cartoes_atividades_8hpp}{../interfaces/ICartoesAtividades.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_cartoes_atividades_8hpp}{../containers/CartoesAtividades.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_quadros_8hpp}{../containers/Quadros.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00028}\doxymbox{\hyperlink{class_servico_cartoes_atividades}{00028}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_servico_cartoes_atividades_ab8f5ff4f30a2e5809f1dce950a9517c6}{ServicoCartoesAtividades}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_i_cartoes_atividades}{ICartoesAtividades}}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00030}00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00034}\doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{00034}}\ \ \ \ \ \doxymbox{\hyperlink{class_cartoes_atividades}{CartoesAtividades}}\ \&\doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00039}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a0926c642517a940a0ed37cc7535ad3c4}{00039}}\ \ \ \ \ \doxymbox{\hyperlink{class_quadros}{Quadros}}\ \&\doxymbox{\hyperlink{class_servico_cartoes_atividades_a0926c642517a940a0ed37cc7535ad3c4}{repositorioQuadros}};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00049}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a1ef9f185f5512ee2962863940170b19b}{00049}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a1ef9f185f5512ee2962863940170b19b}{validarLimiteWIP}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao,}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&ignorarIdentificador\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_quadro}{Quadro}}\ quadro\ =\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a0926c642517a940a0ed37cc7535ad3c4}{repositorioQuadros}}.\doxymbox{\hyperlink{class_quadros_ab835ed40405b3bfd0f70e530c63ceef7}{consultar}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_a0120655fcec3d1cecd699b73a26ac08d}{getQuadro}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ limite\ =\ quadro.\doxymbox{\hyperlink{class_quadro_a3805bdc6a8d5c520107bbf9c1164bd7d}{getLimite}}().\doxymbox{\hyperlink{class_limite_ae3513251940018c33b8a072f91343f00}{getValor}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ std::vector<CartaoAtividade>\ cartoes\ =\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8}{listar}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&existente\ :\ cartoes)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mesmoQuadro\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ existente.getQuadro().getIdentificador()\ ==}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cartao.\doxymbox{\hyperlink{class_cartao_atividade_a0120655fcec3d1cecd699b73a26ac08d}{getQuadro}}().\doxymbox{\hyperlink{class_identificador_a2ee16740185087d0f1d87702caa7d776}{getIdentificador}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ estaFazendo\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ existente.getEstado().getEstado()\ ==\ \textcolor{stringliteral}{"{}FAZENDO"{}};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ naoIgnorar\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ existente.getIdentificador().getIdentificador()\ !=}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ignorarIdentificador;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mesmoQuadro\ \&\&\ estaFazendo\ \&\&\ naoIgnorar)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quantidade++;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (quantidade\ >=\ limite)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Limite\ de\ WIP\ do\ quadro\ atingido."{}});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00091}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a2384fe127044c8136e4a9910226cf4e9}{00091}}\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a2384fe127044c8136e4a9910226cf4e9}{converterParaMinutos}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_timestamp}{Timestamp}}\ \&timestamp)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ std::string\ valor\ =\ timestamp.\doxymbox{\hyperlink{class_timestamp_aea0993104ecbba77b07f4c8b2a6330ff}{getTimestamp}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dia\ =\ std::stoi(valor.substr(0,\ 2));}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ std::string\ mes\ =\ valor.substr(3,\ 3);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ano\ =\ std::stoi(valor.substr(7,\ 4));}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ hora\ =\ std::stoi(valor.substr(12,\ 2));}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minuto\ =\ std::stoi(valor.substr(15,\ 2));}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numeroMes;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}JAN"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}FEV"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}MAR"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}ABR"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 3;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}MAI"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}JUN"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}JUL"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 6;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}AGO"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 7;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}SET"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 8;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}OUT"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 9;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}NOV"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mes\ ==\ \textcolor{stringliteral}{"{}DEZ"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ numeroMes\ =\ 11;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Mes\ invalido."{}});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00132}00132\ \ \ \ \ \ \ \ \ std::tm\ data\ =\ \{\};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00133}00133\ \ \ \ \ \ \ \ \ data.tm\_mday\ =\ dia;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00134}00134\ \ \ \ \ \ \ \ \ data.tm\_mon\ =\ numeroMes;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00135}00135\ \ \ \ \ \ \ \ \ data.tm\_year\ =\ ano\ -\/\ 1900;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00136}00136\ \ \ \ \ \ \ \ \ data.tm\_hour\ =\ hora;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00137}00137\ \ \ \ \ \ \ \ \ data.tm\_min\ =\ minuto;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00138}00138\ \ \ \ \ \ \ \ \ data.tm\_isdst\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00140}00140\ \ \ \ \ \ \ \ \ std::time\_t\ resultado\ =\ std::mktime(\&data);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (resultado\ ==\ \textcolor{keyword}{static\_cast<}std::time\_t\textcolor{keyword}{>}(-\/1))}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Nao\ foi\ possivel\ converter\ a\ data."{}});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\textcolor{keyword}{>}(resultado\ /\ 60);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00159}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a7d04135e4a70d7d53fe5d20e4b91fda4}{00159}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a7d04135e4a70d7d53fe5d20e4b91fda4}{calcularTempoMedio}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro,}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ ciclo)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00162}00162\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00163}00163\ \ \ \ \ \ \ \ \ std::vector<CartaoAtividade>\ cartoes\ =\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8}{listar}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ soma\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao\ :\ cartoes)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mesmoQuadro\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cartao.getQuadro().getIdentificador()\ ==}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quadro.\doxymbox{\hyperlink{class_identificador_a2ee16740185087d0f1d87702caa7d776}{getIdentificador}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ concluido\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cartao.getEstado().getEstado()\ ==\ \textcolor{stringliteral}{"{}FEITO"{}};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mesmoQuadro\ ||\ !concluido)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_timestamp}{Timestamp}}\ inicio;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ciclo)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inicio\ =\ cartao.getInicio();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inicio\ =\ cartao.getEntrada();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ momentoInicial\ =\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a2384fe127044c8136e4a9910226cf4e9}{converterParaMinutos}}(inicio);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ momentoFinal\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a2384fe127044c8136e4a9910226cf4e9}{converterParaMinutos}}(cartao.getTermino());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (momentoFinal\ <\ momentoInicial)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Data\ de\ conclusao\ anterior\ a\ data\ inicial."{}});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ soma\ +=\ momentoFinal\ -\/\ momentoInicial;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ quantidade++;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (quantidade\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{double}\textcolor{keyword}{>}(soma)\ /\ quantidade;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00213}00213\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00215}00215\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00221}\doxymbox{\hyperlink{class_servico_cartoes_atividades_ab8f5ff4f30a2e5809f1dce950a9517c6}{00221}}\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_ab8f5ff4f30a2e5809f1dce950a9517c6}{ServicoCartoesAtividades}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_cartoes_atividades}{CartoesAtividades}}\ \&cartoes,}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_quadros}{Quadros}}\ \&quadros)\ :\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}(cartoes),\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a0926c642517a940a0ed37cc7535ad3c4}{repositorioQuadros}}(quadros)\ \{\}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00230}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a63561b52fddd1cb38e271cef51f122a4}{00230}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a63561b52fddd1cb38e271cef51f122a4}{cadastrar}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00231}00231\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cartao.\doxymbox{\hyperlink{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7}{getEstado}}().\doxymbox{\hyperlink{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}{getEstado}}()\ !=\ \textcolor{stringliteral}{"{}A\ FAZER"{}})}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Todo\ cartao\ deve\ ser\ cadastrado\ em\ A\ FAZER."{}});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a557926a33560bf5025bb3865d9b32380}{inserir}}(cartao);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00239}00239\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00240}00240\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00246}\doxymbox{\hyperlink{class_servico_cartoes_atividades_abc241add4c0ab1c7b0c683d7a0a60b49}{00246}}\ \ \ \ \ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_abc241add4c0ab1c7b0c683d7a0a60b49}{consultar}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00248}00248\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_ac8b58b4b65958a0a50808a487dce0e07}{consultar}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00250}00250\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00256}\doxymbox{\hyperlink{class_servico_cartoes_atividades_ac4b125b6c6d4ac714fe510fee68afbeb}{00256}}\ \ \ \ \ std::vector<CartaoAtividade>\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_ac4b125b6c6d4ac714fe510fee68afbeb}{listar}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00257}00257\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8}{listar}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00259}00259\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00270}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a639ab9631a7d3380669c7b3646163882}{00270}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a639ab9631a7d3380669c7b3646163882}{atualizar}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00271}00271\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ atual\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_ac8b58b4b65958a0a50808a487dce0e07}{consultar}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_a061c877a8ee369b37965cf81a8a47919}{getIdentificador}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (atual.\doxymbox{\hyperlink{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7}{getEstado}}().\doxymbox{\hyperlink{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}{getEstado}}()\ !=}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ cartao.\doxymbox{\hyperlink{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7}{getEstado}}().\doxymbox{\hyperlink{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}{getEstado}}())}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00277}00277\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Utilize\ o\ metodo\ mover\ para\ alterar\ o\ estado."{}});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00280}00280\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preserva\ os\ dados\ que\ nao\ podem\ ser\ alterados.}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ atualizado\ =\ atual;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00285}00285\ \ \ \ \ \ \ \ \ atualizado.\doxymbox{\hyperlink{class_cartao_atividade_ac4aa7f9e490ffc4e8badf5add359e62b}{setNome}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_aa23abadc7296fbfcf9b734d0f24cb725}{getNome}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00286}00286\ \ \ \ \ \ \ \ \ atualizado.\doxymbox{\hyperlink{class_cartao_atividade_aa7da0df6768fc447f3763c512209bdb7}{setDescricao}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_a3fe280474380788a0406b591244ab753}{getDescricao}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00287}00287\ \ \ \ \ \ \ \ \ atualizado.\doxymbox{\hyperlink{class_cartao_atividade_a0548d9b7afbfc629ecc6b06dff7ef9cf}{setPrioridade}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_af305714ad4c78b19e025724e191d9d56}{getPrioridade}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00288}00288\ \ \ \ \ \ \ \ \ atualizado.\doxymbox{\hyperlink{class_cartao_atividade_a9374e883030fe562fe1c728b091ba24b}{setTamanho}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_ab9e6c21462b743093f5b367fc051661b}{getTamanho}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00289}00289\ \ \ \ \ \ \ \ \ atualizado.\doxymbox{\hyperlink{class_cartao_atividade_a35b0eb5c2b88a917ffdbe628a6e9148e}{setDesenvolvedor}}(cartao.\doxymbox{\hyperlink{class_cartao_atividade_a671af4d0eb834a592c50914193e47f12}{getDesenvolvedor}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00290}00290\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00291}00291\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_aba2f3b73348c585e88cc210f6c1032e1}{atualizar}}(atualizado);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00292}00292\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00298}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a59050c0b05b4f137286b69060215e099}{00298}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a59050c0b05b4f137286b69060215e099}{remover}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00299}00299\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00300}00300\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a42dea8e73d65f2c4dc813b838fdab37f}{remover}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00301}00301\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00310}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a46248510c468a48224bd4108accdf445}{00310}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a46248510c468a48224bd4108accdf445}{mover}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00311}00311\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador,}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00312}00312\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_estado}{Estado}}\ \&novoEstado,}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00313}00313\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_timestamp}{Timestamp}}\ \&momento)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00314}00314\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00315}00315\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ cartao\ =\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_ac8b58b4b65958a0a50808a487dce0e07}{consultar}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00317}00317\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ entrandoEmFazendo\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ cartao.\doxymbox{\hyperlink{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7}{getEstado}}().\doxymbox{\hyperlink{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}{getEstado}}()\ ==\ \textcolor{stringliteral}{"{}A\ FAZER"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ novoEstado.\doxymbox{\hyperlink{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}{getEstado}}()\ ==\ \textcolor{stringliteral}{"{}FAZENDO"{}};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00321}00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entrandoEmFazendo)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00322}00322\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a1ef9f185f5512ee2962863940170b19b}{validarLimiteWIP}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cartao,}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ identificador.\doxymbox{\hyperlink{class_identificador_a2ee16740185087d0f1d87702caa7d776}{getIdentificador}}());}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00326}00326\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00327}00327\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00328}00328\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a5cf5ee9e49f1ffc9b19f6e88c952ec6d}{mover}}(identificador,\ novoEstado,\ momento);}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00329}00329\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00336}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a7cc4ddd6722e9bcca367a4448092d341}{00336}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a7cc4ddd6722e9bcca367a4448092d341}{calcularWIP}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00337}00337\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00338}00338\ \ \ \ \ \ \ \ \ std::vector<CartaoAtividade>\ cartoes\ =\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aea6dbb06d2b8521175cdeeac4d2cce68}{repositorio}}.\doxymbox{\hyperlink{class_cartoes_atividades_a7d47753aa0a06127772fb7a8835462a8}{listar}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00339}00339\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00342}00342\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_cartao_atividade}{CartaoAtividade}}\ \&cartao\ :\ cartoes)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00343}00343\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mesmoQuadro\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cartao.getQuadro().getIdentificador()\ ==}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quadro.\doxymbox{\hyperlink{class_identificador_a2ee16740185087d0f1d87702caa7d776}{getIdentificador}}();}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00347}00347\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ estaFazendo\ =}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cartao.getEstado().getEstado()\ ==\ \textcolor{stringliteral}{"{}FAZENDO"{}};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mesmoQuadro\ \&\&\ estaFazendo)}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quantidade++;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00355}00355\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00356}00356\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00357}00357\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ quantidade;}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00358}00358\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00365}\doxymbox{\hyperlink{class_servico_cartoes_atividades_aa0e904964987877d77077c5ca9cd7605}{00365}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_aa0e904964987877d77077c5ca9cd7605}{calcularLeadTimeMedio}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00366}00366\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00367}00367\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00368}00368\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a7d04135e4a70d7d53fe5d20e4b91fda4}{calcularTempoMedio}}(quadro,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00369}00369\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00376}\doxymbox{\hyperlink{class_servico_cartoes_atividades_a806f9478bad7a3f1fe53d0b516abad07}{00376}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a806f9478bad7a3f1fe53d0b516abad07}{calcularCycleTimeMedio}}(}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00377}00377\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&quadro)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00378}00378\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00379}00379\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_servico_cartoes_atividades_a7d04135e4a70d7d53fe5d20e4b91fda4}{calcularTempoMedio}}(quadro,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00380}00380\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00381}00381\ \};}
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{_servico_cartoes_atividades_8hpp_source_l00383}00383\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

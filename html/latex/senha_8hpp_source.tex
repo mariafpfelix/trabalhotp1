@@ -1,0 +1,57 @@
+\doxysection{senha.\+hpp}
+\hypertarget{senha_8hpp_source}{}\label{senha_8hpp_source}\index{dominio/senha.hpp@{dominio/senha.hpp}}
+\doxymbox{\hyperlink{senha_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ SENHA\_HPP}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SENHA\_HPP}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00022}\doxymbox{\hyperlink{class_senha}{00022}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_senha}{Senha}}\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00023}00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00024}\doxymbox{\hyperlink{class_senha_a841e155ed90605b1fe3d3dc377aaf6ba}{00024}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_senha_a841e155ed90605b1fe3d3dc377aaf6ba}{valor}};\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00026}00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00033}\doxymbox{\hyperlink{class_senha_a679e76e6be0327c663a51be9dd74247d}{00033}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_senha_a679e76e6be0327c663a51be9dd74247d}{setSenha}}(\textcolor{keywordtype}{string}\ novaSenha)\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novaSenha.length()\ !=\ 5)\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ invalid\_argument(\textcolor{stringliteral}{"{}Senha\ invalida"{}});}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ temLetra\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ temNumero\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{char}\ c\ :\ novaSenha)\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((c\ >=\ \textcolor{charliteral}{'A'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'Z'})\ ||}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (c\ >=\ \textcolor{charliteral}{'a'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'z'}))\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temLetra\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (c\ >=\ \textcolor{charliteral}{'0'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'9'})\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temNumero\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ invalid\_argument(\textcolor{stringliteral}{"{}Senha\ invalida"{}});}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!temLetra\ ||\ !temNumero)\ \{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ invalid\_argument(\textcolor{stringliteral}{"{}Senha\ invalida"{}});}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_senha_a841e155ed90605b1fe3d3dc377aaf6ba}{valor}}\ =\ novaSenha;}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00067}\doxymbox{\hyperlink{class_senha_a1cc904431d0a8287d0b22dee3e9d34ae}{00067}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_senha_a1cc904431d0a8287d0b22dee3e9d34ae}{getSenha}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_senha_a841e155ed90605b1fe3d3dc377aaf6ba}{valor}};}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00070}00070\ \};}
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{senha_8hpp_source_l00072}00072\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,102 @@
+\doxysection{Referência da Classe Papel}
+\hypertarget{class_papel}{}\label{class_papel}\index{Papel@{Papel}}
+
+
+Dominio que representa o papel de uma pessoa no sistema.  
+
+
+
+
+{\ttfamily \+\#include $<$papel.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_papel_a22d8c4d5cb1146828a9a69ebb8183ac5}{set\+Papel}} (string novo\+Papel)
+\begin{DoxyCompactList}\small\item\em Valida e armazena o papel informado. \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_papel_abb37844cbd149bcd5673f5382d6893b4}{get\+Papel}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o papel armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_papel_a5e87ad0b6685c8e9e7e2851da450985d}{valor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_papel}{Papel} armazenado apos validacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Dominio que representa o papel de uma pessoa no sistema. 
+
+Valores validos: "{}\+GESTOR"{} ou "{}\+DESENVOLVEDOR"{}. O papel determina quais operacoes a pessoa pode realizar. 
+
+Definição na linha \doxymbox{\hyperlink{papel_8hpp_source_l00020}{20}} do arquivo \doxymbox{\hyperlink{papel_8hpp_source}{papel.\+hpp}}.
+
+
+
+\label{class_papel_doc-func-members}
+\Hypertarget{class_papel_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_papel_abb37844cbd149bcd5673f5382d6893b4}\index{Papel@{Papel}!getPapel@{getPapel}}
+\index{getPapel@{getPapel}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{getPapel()}{getPapel()}}
+{\footnotesize\ttfamily \label{class_papel_abb37844cbd149bcd5673f5382d6893b4} 
+string Papel::\+get\+Papel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o papel armazenado. 
+
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_papel}{Papel} valido previamente definido. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{papel_8hpp_source_l00045}{45}} do arquivo \doxymbox{\hyperlink{papel_8hpp_source}{papel.\+hpp}}.
+
+\Hypertarget{class_papel_a22d8c4d5cb1146828a9a69ebb8183ac5}\index{Papel@{Papel}!setPapel@{setPapel}}
+\index{setPapel@{setPapel}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{setPapel()}{setPapel()}}
+{\footnotesize\ttfamily \label{class_papel_a22d8c4d5cb1146828a9a69ebb8183ac5} 
+void Papel::\+set\+Papel (\begin{DoxyParamCaption}\item[{string}]{novo\+Papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida e armazena o papel informado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Papel} & \doxylink{class_papel}{Papel} a ser validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se o valor nao for "{}\+GESTOR"{} nem "{}\+DESENVOLVEDOR"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{papel_8hpp_source_l00031}{31}} do arquivo \doxymbox{\hyperlink{papel_8hpp_source}{papel.\+hpp}}.
+
+
+
+\label{class_papel_doc-variable-members}
+\Hypertarget{class_papel_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_papel_a5e87ad0b6685c8e9e7e2851da450985d}\index{Papel@{Papel}!valor@{valor}}
+\index{valor@{valor}!Papel@{Papel}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily \label{class_papel_a5e87ad0b6685c8e9e7e2851da450985d} 
+string Papel::\+valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_papel}{Papel} armazenado apos validacao. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{papel_8hpp_source_l00022}{22}} do arquivo \doxymbox{\hyperlink{papel_8hpp_source}{papel.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+dominio/\doxymbox{\hyperlink{papel_8hpp}{papel.\+hpp}}\end{DoxyCompactItemize}

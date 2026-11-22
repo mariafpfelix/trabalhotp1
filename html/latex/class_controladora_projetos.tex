@@ -1,0 +1,286 @@
+\doxysection{Referência da Classe Controladora\+Projetos}
+\hypertarget{class_controladora_projetos}{}\label{class_controladora_projetos}\index{ControladoraProjetos@{ControladoraProjetos}}
+
+
+Controla as operações relacionadas aos projetos.  
+
+
+
+
+{\ttfamily \+\#include $<$Controladora\+Projetos.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_controladora_projetos_a2786c834786a285b34e1f6b6b4e79b22}{Controladora\+Projetos}} (\doxymbox{\hyperlink{class_i_projetos}{IProjetos}} \&servico\+Projetos)
+\begin{DoxyCompactList}\small\item\em Construtor da controladora de projetos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_projetos_a02d9dd8e502113761715428a258e22bc}{cadastrar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&projeto)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo projeto. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_projeto}{Projeto}} \doxymbox{\hyperlink{class_controladora_projetos_a20667563a198f3e6b9e399a8da5fb18c}{consultar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Consulta um projeto pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_projeto}{Projeto}} $>$ \doxymbox{\hyperlink{class_controladora_projetos_a7ce1387326cb4d17a2fa31ebecc470ff}{listar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Lista os projetos cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_projetos_a461af5f5457cae50633dad09c693294b}{atualizar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&projeto)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um projeto. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_projetos_a47e9e19e30ae5f046a905f8e49f8d91d}{remover}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um projeto pelo identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_controladora_projetos_aa026fd0a3024fd32c416cd4926887017}{exigir\+Gestor}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuário possui papel de gestor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_projetos_a302399c07474a767e539a918527e9ec2}{exigir\+Usuario\+Valido}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuário possui um papel válido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_i_projetos}{IProjetos}} \& \doxymbox{\hyperlink{class_controladora_projetos_a523da81ee2c879f2bf3660fe4be909b2}{servico}}
+\begin{DoxyCompactList}\small\item\em Referência para a interface do serviço de projetos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controla as operações relacionadas aos projetos. 
+
+Responsável por verificar as permissões dos usuários e encaminhar as operações para o serviço de projetos.
+
+O gestor pode cadastrar, consultar, atualizar, remover e listar projetos.
+
+O desenvolvedor pode consultar e listar projetos. 
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00027}{27}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+
+
+\label{class_controladora_projetos_doc-constructors}
+\Hypertarget{class_controladora_projetos_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_controladora_projetos_a2786c834786a285b34e1f6b6b4e79b22}\index{ControladoraProjetos@{ControladoraProjetos}!ControladoraProjetos@{ControladoraProjetos}}
+\index{ControladoraProjetos@{ControladoraProjetos}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{ControladoraProjetos()}{ControladoraProjetos()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a2786c834786a285b34e1f6b6b4e79b22} 
+Controladora\+Projetos::\+\+Controladora\+Projetos (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_i_projetos}{IProjetos}} \&}]{servico\+Projetos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construtor da controladora de projetos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em servico\+Projetos} & Interface do serviço de projetos. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00068}{68}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+
+
+\label{class_controladora_projetos_doc-func-members}
+\Hypertarget{class_controladora_projetos_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_controladora_projetos_a461af5f5457cae50633dad09c693294b}\index{ControladoraProjetos@{ControladoraProjetos}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a461af5f5457cae50633dad09c693294b} 
+void Controladora\+Projetos::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&}]{projeto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de um projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em projeto} & \doxylink{class_projeto}{Projeto} com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00118}{118}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+\Hypertarget{class_controladora_projetos_a02d9dd8e502113761715428a258e22bc}\index{ControladoraProjetos@{ControladoraProjetos}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a02d9dd8e502113761715428a258e22bc} 
+void Controladora\+Projetos::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_projeto}{Projeto}} \&}]{projeto}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cadastra um novo projeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em projeto} & \doxylink{class_projeto}{Projeto} que será cadastrado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00077}{77}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+\Hypertarget{class_controladora_projetos_a20667563a198f3e6b9e399a8da5fb18c}\index{ControladoraProjetos@{ControladoraProjetos}!consultar@{consultar}}
+\index{consultar@{consultar}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a20667563a198f3e6b9e399a8da5fb18c} 
+\doxymbox{\hyperlink{class_projeto}{Projeto}} Controladora\+Projetos::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta um projeto pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do projeto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_projeto}{Projeto} encontrado. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não possua permissão. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00092}{92}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+\Hypertarget{class_controladora_projetos_aa026fd0a3024fd32c416cd4926887017}\index{ControladoraProjetos@{ControladoraProjetos}!exigirGestor@{exigirGestor}}
+\index{exigirGestor@{exigirGestor}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{exigirGestor()}{exigirGestor()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_aa026fd0a3024fd32c416cd4926887017} 
+void Controladora\+Projetos::\+exigir\+Gestor (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuário possui papel de gestor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00040}{40}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+\Hypertarget{class_controladora_projetos_a302399c07474a767e539a918527e9ec2}\index{ControladoraProjetos@{ControladoraProjetos}!exigirUsuarioValido@{exigirUsuarioValido}}
+\index{exigirUsuarioValido@{exigirUsuarioValido}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{exigirUsuarioValido()}{exigirUsuarioValido()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a302399c07474a767e539a918527e9ec2} 
+void Controladora\+Projetos::\+exigir\+Usuario\+Valido (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuário possui um papel válido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o papel não seja reconhecido. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00054}{54}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+\Hypertarget{class_controladora_projetos_a7ce1387326cb4d17a2fa31ebecc470ff}\index{ControladoraProjetos@{ControladoraProjetos}!listar@{listar}}
+\index{listar@{listar}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a7ce1387326cb4d17a2fa31ebecc470ff} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_projeto}{Projeto}} $>$ Controladora\+Projetos::\+listar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista os projetos cadastrados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vetor contendo os projetos cadastrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não possua permissão. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00106}{106}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+\Hypertarget{class_controladora_projetos_a47e9e19e30ae5f046a905f8e49f8d91d}\index{ControladoraProjetos@{ControladoraProjetos}!remover@{remover}}
+\index{remover@{remover}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a47e9e19e30ae5f046a905f8e49f8d91d} 
+void Controladora\+Projetos::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um projeto pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do projeto. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00132}{132}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+
+
+\label{class_controladora_projetos_doc-variable-members}
+\Hypertarget{class_controladora_projetos_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_controladora_projetos_a523da81ee2c879f2bf3660fe4be909b2}\index{ControladoraProjetos@{ControladoraProjetos}!servico@{servico}}
+\index{servico@{servico}!ControladoraProjetos@{ControladoraProjetos}}
+\doxysubsubsection{\texorpdfstring{servico}{servico}}
+{\footnotesize\ttfamily \label{class_controladora_projetos_a523da81ee2c879f2bf3660fe4be909b2} 
+\doxymbox{\hyperlink{class_i_projetos}{IProjetos}}\& Controladora\+Projetos::\+servico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referência para a interface do serviço de projetos. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_projetos_8hpp_source_l00033}{33}} do arquivo \doxymbox{\hyperlink{_controladora_projetos_8hpp_source}{Controladora\+Projetos.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+controladoras/\doxymbox{\hyperlink{_controladora_projetos_8hpp}{Controladora\+Projetos.\+hpp}}\end{DoxyCompactItemize}

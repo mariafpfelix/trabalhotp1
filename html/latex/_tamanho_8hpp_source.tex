@@ -1,0 +1,37 @@
+\doxysection{Tamanho.\+hpp}
+\hypertarget{_tamanho_8hpp_source}{}\label{_tamanho_8hpp_source}\index{dominio/Tamanho.hpp@{dominio/Tamanho.hpp}}
+\doxymbox{\hyperlink{_tamanho_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ TAMANHO\_HPP}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ TAMANHO\_HPP}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00018}\doxymbox{\hyperlink{class_tamanho}{00018}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_tamanho}{Tamanho}}\ \{}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00019}00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00020}\doxymbox{\hyperlink{class_tamanho_a981ac5295ad1371571f07ad2c9f76339}{00020}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_tamanho_a981ac5295ad1371571f07ad2c9f76339}{valor}};\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00029}\doxymbox{\hyperlink{class_tamanho_a59fbecfe849e8a554cca8b4661e2ff67}{00029}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_tamanho_a59fbecfe849e8a554cca8b4661e2ff67}{setTamanho}}(std::string\ novoTamanho)\ \{}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoTamanho\ !=\ \textcolor{stringliteral}{"{}GRANDE"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ novoTamanho\ !=\ \textcolor{stringliteral}{"{}MEDIO"{}}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ novoTamanho\ !=\ \textcolor{stringliteral}{"{}PEQUENO"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Tamanho\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_tamanho_a981ac5295ad1371571f07ad2c9f76339}{valor}}\ =\ novoTamanho;}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00045}\doxymbox{\hyperlink{class_tamanho_a04f6d02407c0680f867b5e1ecac6042d}{00045}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_tamanho_a04f6d02407c0680f867b5e1ecac6042d}{getTamanho}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_tamanho_a981ac5295ad1371571f07ad2c9f76339}{valor}};}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00048}00048\ \};}
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_tamanho_8hpp_source_l00050}00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

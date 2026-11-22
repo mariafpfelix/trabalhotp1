@@ -1,0 +1,233 @@
+\doxysection{Referência da Classe Controladora\+Pessoas}
+\hypertarget{class_controladora_pessoas}{}\label{class_controladora_pessoas}\index{ControladoraPessoas@{ControladoraPessoas}}
+
+
+Controla as operações relacionadas às pessoas.  
+
+
+
+
+{\ttfamily \+\#include $<$Controladora\+Pessoas.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_controladora_pessoas_aa538c65f5addf7d436334f947caa1265}{Controladora\+Pessoas}} (\doxymbox{\hyperlink{class_i_pessoas}{IPessoas}} \&servico\+Pessoas)
+\begin{DoxyCompactList}\small\item\em Construtor da controladora de pessoas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_pessoas_a523a71b0b6f3452842d6f5c277f9fcb3}{cadastrar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&pessoa)
+\begin{DoxyCompactList}\small\item\em Cadastra uma pessoa. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_pessoa}{Pessoa}} \doxymbox{\hyperlink{class_controladora_pessoas_a539d2250115174d86e1ac64efc24078b}{consultar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_email}{Email}} \&email)
+\begin{DoxyCompactList}\small\item\em Consulta uma pessoa pelo e-\/mail. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_pessoa}{Pessoa}} $>$ \doxymbox{\hyperlink{class_controladora_pessoas_a76a365e5e70b492f59ec822e65468d4c}{listar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Lista todas as pessoas cadastradas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_pessoas_a377e5833cd96ff2d776d23fef75fb9d2}{atualizar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&pessoa)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de uma pessoa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_pessoas_aee7cbab2ce48fcb6227825b0deade00d}{remover}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_email}{Email}} \&email)
+\begin{DoxyCompactList}\small\item\em Remove uma pessoa pelo e-\/mail. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_controladora_pessoas_a7903ab4228530e5c6770c2310d6f8394}{exigir\+Usuario\+Valido}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuário possui um papel válido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_i_pessoas}{IPessoas}} \& \doxymbox{\hyperlink{class_controladora_pessoas_aec1e5bd41bddf0918ca94c559cd4d85b}{servico}}
+\begin{DoxyCompactList}\small\item\em Referência para a interface do serviço de pessoas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controla as operações relacionadas às pessoas. 
+
+Encaminha as operações para o serviço de pessoas e verifica se o usuário possui um papel válido.
+
+Gestores e desenvolvedores podem cadastrar, consultar, atualizar, remover e listar pessoas. 
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00026}{26}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+
+
+\label{class_controladora_pessoas_doc-constructors}
+\Hypertarget{class_controladora_pessoas_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_controladora_pessoas_aa538c65f5addf7d436334f947caa1265}\index{ControladoraPessoas@{ControladoraPessoas}!ControladoraPessoas@{ControladoraPessoas}}
+\index{ControladoraPessoas@{ControladoraPessoas}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{ControladoraPessoas()}{ControladoraPessoas()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_aa538c65f5addf7d436334f947caa1265} 
+Controladora\+Pessoas::\+\+Controladora\+Pessoas (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_i_pessoas}{IPessoas}} \&}]{servico\+Pessoas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construtor da controladora de pessoas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em servico\+Pessoas} & Interface do serviço de pessoas. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00055}{55}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+
+
+\label{class_controladora_pessoas_doc-func-members}
+\Hypertarget{class_controladora_pessoas_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_controladora_pessoas_a377e5833cd96ff2d776d23fef75fb9d2}\index{ControladoraPessoas@{ControladoraPessoas}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_a377e5833cd96ff2d776d23fef75fb9d2} 
+void Controladora\+Pessoas::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&}]{pessoa}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de uma pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em pessoa} & \doxylink{class_pessoa}{Pessoa} com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00097}{97}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+\Hypertarget{class_controladora_pessoas_a523a71b0b6f3452842d6f5c277f9fcb3}\index{ControladoraPessoas@{ControladoraPessoas}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_a523a71b0b6f3452842d6f5c277f9fcb3} 
+void Controladora\+Pessoas::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&}]{pessoa}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cadastra uma pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em pessoa} & \doxylink{class_pessoa}{Pessoa} que será cadastrada. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00063}{63}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+\Hypertarget{class_controladora_pessoas_a539d2250115174d86e1ac64efc24078b}\index{ControladoraPessoas@{ControladoraPessoas}!consultar@{consultar}}
+\index{consultar@{consultar}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_a539d2250115174d86e1ac64efc24078b} 
+\doxymbox{\hyperlink{class_pessoa}{Pessoa}} Controladora\+Pessoas::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_email}{Email}} \&}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta uma pessoa pelo e-\/mail. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em email} & E-\/mail da pessoa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_pessoa}{Pessoa} encontrada. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00075}{75}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+\Hypertarget{class_controladora_pessoas_a7903ab4228530e5c6770c2310d6f8394}\index{ControladoraPessoas@{ControladoraPessoas}!exigirUsuarioValido@{exigirUsuarioValido}}
+\index{exigirUsuarioValido@{exigirUsuarioValido}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{exigirUsuarioValido()}{exigirUsuarioValido()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_a7903ab4228530e5c6770c2310d6f8394} 
+void Controladora\+Pessoas::\+exigir\+Usuario\+Valido (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuário possui um papel válido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o papel não seja reconhecido. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00039}{39}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+\Hypertarget{class_controladora_pessoas_a76a365e5e70b492f59ec822e65468d4c}\index{ControladoraPessoas@{ControladoraPessoas}!listar@{listar}}
+\index{listar@{listar}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_a76a365e5e70b492f59ec822e65468d4c} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_pessoa}{Pessoa}} $>$ Controladora\+Pessoas::\+listar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todas as pessoas cadastradas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vetor contendo as pessoas cadastradas. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00086}{86}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+\Hypertarget{class_controladora_pessoas_aee7cbab2ce48fcb6227825b0deade00d}\index{ControladoraPessoas@{ControladoraPessoas}!remover@{remover}}
+\index{remover@{remover}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_aee7cbab2ce48fcb6227825b0deade00d} 
+void Controladora\+Pessoas::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_email}{Email}} \&}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove uma pessoa pelo e-\/mail. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em email} & E-\/mail da pessoa. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00108}{108}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+
+
+\label{class_controladora_pessoas_doc-variable-members}
+\Hypertarget{class_controladora_pessoas_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_controladora_pessoas_aec1e5bd41bddf0918ca94c559cd4d85b}\index{ControladoraPessoas@{ControladoraPessoas}!servico@{servico}}
+\index{servico@{servico}!ControladoraPessoas@{ControladoraPessoas}}
+\doxysubsubsection{\texorpdfstring{servico}{servico}}
+{\footnotesize\ttfamily \label{class_controladora_pessoas_aec1e5bd41bddf0918ca94c559cd4d85b} 
+\doxymbox{\hyperlink{class_i_pessoas}{IPessoas}}\& Controladora\+Pessoas::\+servico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referência para a interface do serviço de pessoas. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source_l00032}{32}} do arquivo \doxymbox{\hyperlink{_controladora_pessoas_8hpp_source}{Controladora\+Pessoas.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+controladoras/\doxymbox{\hyperlink{_controladora_pessoas_8hpp}{Controladora\+Pessoas.\+hpp}}\end{DoxyCompactItemize}

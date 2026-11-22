@@ -1,0 +1,67 @@
+\doxysection{nome.\+hpp}
+\hypertarget{nome_8hpp_source}{}\label{nome_8hpp_source}\index{dominio/nome.hpp@{dominio/nome.hpp}}
+\doxymbox{\hyperlink{nome_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ NOME\_HPP}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ NOME\_HPP}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00022}\doxymbox{\hyperlink{class_nome}{00022}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_nome}{Nome}}\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00023}00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00024}\doxymbox{\hyperlink{class_nome_a368b5ede8cf23172f123c152a82de007}{00024}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_nome_a368b5ede8cf23172f123c152a82de007}{valor}};\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00026}00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00033}\doxymbox{\hyperlink{class_nome_a7c9e42e2a6e59b9df12b80a5ef641307}{00033}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_nome_a7c9e42e2a6e59b9df12b80a5ef641307}{setNome}}(std::string\ novoNome)\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoNome.empty()\ ||\ novoNome.length()\ >\ 15)\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Nome\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ primeiro\ ou\ ultimo\ caractere\ e\ espaco}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoNome[0]\ ==\ \textcolor{charliteral}{'\ '}\ ||}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ novoNome[novoNome.length()\ -\/\ 1]\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Nome\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ novoNome.length();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ novoNome[i];}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ letra\ =\ (c\ >=\ \textcolor{charliteral}{'A'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'Z'})\ ||}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (c\ >=\ \textcolor{charliteral}{'a'}\ \&\&\ c\ <=\ \textcolor{charliteral}{'z'});}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!letra\ \&\&\ c\ !=\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Nome\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Todo\ espaco\ deve\ ser\ seguido\ por\ uma\ letra}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'\ '})\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ proximo\ =\ novoNome[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ proximaLetra\ =}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (proximo\ >=\ \textcolor{charliteral}{'A'}\ \&\&\ proximo\ <=\ \textcolor{charliteral}{'Z'})\ ||}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (proximo\ >=\ \textcolor{charliteral}{'a'}\ \&\&\ proximo\ <=\ \textcolor{charliteral}{'z'});}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!proximaLetra)\ \{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Nome\ invalido"{}});}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_nome_a368b5ede8cf23172f123c152a82de007}{valor}}\ =\ novoNome;}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00079}\doxymbox{\hyperlink{class_nome_a2455723d9e86952aa9506f13d4ef884f}{00079}}\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_nome_a2455723d9e86952aa9506f13d4ef884f}{getNome}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_nome_a368b5ede8cf23172f123c152a82de007}{valor}};}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00082}00082\ \};}
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{nome_8hpp_source_l00084}00084\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

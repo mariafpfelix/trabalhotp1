@@ -1,0 +1,286 @@
+\doxysection{Referência da Classe Pessoa}
+\hypertarget{class_pessoa}{}\label{class_pessoa}\index{Pessoa@{Pessoa}}
+
+
+Representa uma pessoa cadastrada no sistema Kanban.  
+
+
+
+
+{\ttfamily \+\#include $<$Pessoa.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_pessoa_a33ce7b9e457083f78875a9bfe8df456b}{set\+Email}} (const \doxymbox{\hyperlink{class_email}{Email}} \&novo\+Email)
+\begin{DoxyCompactList}\small\item\em Define o email da pessoa. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_email}{Email}} \& \doxymbox{\hyperlink{class_pessoa_a904654f6a79a0936d0df1cd6c36a7e8d}{get\+Email}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o email da pessoa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoa_a9f87b78d1393493cb167e65ac8c63252}{set\+Nome}} (const \doxymbox{\hyperlink{class_nome}{Nome}} \&novo\+Nome)
+\begin{DoxyCompactList}\small\item\em Define o nome da pessoa. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_nome}{Nome}} \& \doxymbox{\hyperlink{class_pessoa_a6332603563e192e1f692fde126a55105}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o nome da pessoa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoa_a5c61bf857040f7397cf66cc5ac8c5944}{set\+Senha}} (const \doxymbox{\hyperlink{class_senha}{Senha}} \&nova\+Senha)
+\begin{DoxyCompactList}\small\item\em Define a senha da pessoa. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_senha}{Senha}} \& \doxymbox{\hyperlink{class_pessoa_a622b211563983aa0e520c5c02b18098a}{get\+Senha}} () const
+\begin{DoxyCompactList}\small\item\em Retorna a senha da pessoa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoa_aa011dcf17070ee1c18ade538b3e9b3a6}{set\+Papel}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&novo\+Papel)
+\begin{DoxyCompactList}\small\item\em Define o papel da pessoa no sistema. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_papel}{Papel}} \& \doxymbox{\hyperlink{class_pessoa_a54f7ae519388a447626671167f43c8b1}{get\+Papel}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o papel da pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_email}{Email}} \doxymbox{\hyperlink{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe}{email}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_email}{Email} único da pessoa. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_nome}{Nome}} \doxymbox{\hyperlink{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a}{nome}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_nome}{Nome} da pessoa. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_senha}{Senha}} \doxymbox{\hyperlink{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08}{senha}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_senha}{Senha} de acesso da pessoa. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_papel}{Papel}} \doxymbox{\hyperlink{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1}{papel}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_papel}{Papel} da pessoa no sistema. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_pessoa_a955e69ef40c4067102df81a0e980bc1d}{email\+Definido}} = false
+\begin{DoxyCompactList}\small\item\em Indica se o email já foi definido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa uma pessoa cadastrada no sistema Kanban. 
+
+Cada pessoa possui um email único, nome, senha e papel no sistema (GESTOR ou DESENVOLVEDOR). 
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00023}{23}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+
+
+\label{class_pessoa_doc-func-members}
+\Hypertarget{class_pessoa_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_pessoa_a904654f6a79a0936d0df1cd6c36a7e8d}\index{Pessoa@{Pessoa}!getEmail@{getEmail}}
+\index{getEmail@{getEmail}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getEmail()}{getEmail()}}
+{\footnotesize\ttfamily \label{class_pessoa_a904654f6a79a0936d0df1cd6c36a7e8d} 
+const \doxymbox{\hyperlink{class_email}{Email}} \& Pessoa::\+get\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o email da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+Referência constante para o email. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00074}{74}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a6332603563e192e1f692fde126a55105}\index{Pessoa@{Pessoa}!getNome@{getNome}}
+\index{getNome@{getNome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{class_pessoa_a6332603563e192e1f692fde126a55105} 
+const \doxymbox{\hyperlink{class_nome}{Nome}} \& Pessoa::\+get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o nome da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+Referência constante para o nome. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00092}{92}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a54f7ae519388a447626671167f43c8b1}\index{Pessoa@{Pessoa}!getPapel@{getPapel}}
+\index{getPapel@{getPapel}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getPapel()}{getPapel()}}
+{\footnotesize\ttfamily \label{class_pessoa_a54f7ae519388a447626671167f43c8b1} 
+const \doxymbox{\hyperlink{class_papel}{Papel}} \& Pessoa::\+get\+Papel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o papel da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+Referência constante para o papel. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00128}{128}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a622b211563983aa0e520c5c02b18098a}\index{Pessoa@{Pessoa}!getSenha@{getSenha}}
+\index{getSenha@{getSenha}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getSenha()}{getSenha()}}
+{\footnotesize\ttfamily \label{class_pessoa_a622b211563983aa0e520c5c02b18098a} 
+const \doxymbox{\hyperlink{class_senha}{Senha}} \& Pessoa::\+get\+Senha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna a senha da pessoa. 
+
+\begin{DoxyReturn}{Retorna}
+Referência constante para a senha. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00110}{110}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a33ce7b9e457083f78875a9bfe8df456b}\index{Pessoa@{Pessoa}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily \label{class_pessoa_a33ce7b9e457083f78875a9bfe8df456b} 
+void Pessoa::\+set\+Email (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_email}{Email}} \&}]{novo\+Email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o email da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Email} & \doxylink{class_email}{Email} validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Caso já tenha sido definido. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00057}{57}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a9f87b78d1393493cb167e65ac8c63252}\index{Pessoa@{Pessoa}!setNome@{setNome}}
+\index{setNome@{setNome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily \label{class_pessoa_a9f87b78d1393493cb167e65ac8c63252} 
+void Pessoa::\+set\+Nome (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_nome}{Nome}} \&}]{novo\+Nome}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o nome da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Nome} & \doxylink{class_nome}{Nome} validado. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00083}{83}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_aa011dcf17070ee1c18ade538b3e9b3a6}\index{Pessoa@{Pessoa}!setPapel@{setPapel}}
+\index{setPapel@{setPapel}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setPapel()}{setPapel()}}
+{\footnotesize\ttfamily \label{class_pessoa_aa011dcf17070ee1c18ade538b3e9b3a6} 
+void Pessoa::\+set\+Papel (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{novo\+Papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o papel da pessoa no sistema. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Papel} & \doxylink{class_papel}{Papel} validado. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00119}{119}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a5c61bf857040f7397cf66cc5ac8c5944}\index{Pessoa@{Pessoa}!setSenha@{setSenha}}
+\index{setSenha@{setSenha}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setSenha()}{setSenha()}}
+{\footnotesize\ttfamily \label{class_pessoa_a5c61bf857040f7397cf66cc5ac8c5944} 
+void Pessoa::\+set\+Senha (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_senha}{Senha}} \&}]{nova\+Senha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define a senha da pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Senha} & \doxylink{class_senha}{Senha} validada. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00101}{101}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+
+
+\label{class_pessoa_doc-variable-members}
+\Hypertarget{class_pessoa_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe}\index{Pessoa@{Pessoa}!email@{email}}
+\index{email@{email}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{email}{email}}
+{\footnotesize\ttfamily \label{class_pessoa_a1560ad3e1f1327131518dce3ce09a2fe} 
+\doxymbox{\hyperlink{class_email}{Email}} Pessoa::\+email\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_email}{Email} único da pessoa. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00029}{29}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a955e69ef40c4067102df81a0e980bc1d}\index{Pessoa@{Pessoa}!emailDefinido@{emailDefinido}}
+\index{emailDefinido@{emailDefinido}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{emailDefinido}{emailDefinido}}
+{\footnotesize\ttfamily \label{class_pessoa_a955e69ef40c4067102df81a0e980bc1d} 
+bool Pessoa::\+email\+Definido = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se o email já foi definido. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00049}{49}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a}\index{Pessoa@{Pessoa}!nome@{nome}}
+\index{nome@{nome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily \label{class_pessoa_a522b401a9c8c08aa334f75330ca0d74a} 
+\doxymbox{\hyperlink{class_nome}{Nome}} Pessoa::\+nome\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_nome}{Nome} da pessoa. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00034}{34}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1}\index{Pessoa@{Pessoa}!papel@{papel}}
+\index{papel@{papel}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{papel}{papel}}
+{\footnotesize\ttfamily \label{class_pessoa_a2261e94d9f9ad9ec34e02991ab391be1} 
+\doxymbox{\hyperlink{class_papel}{Papel}} Pessoa::\+papel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_papel}{Papel} da pessoa no sistema. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00044}{44}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+\Hypertarget{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08}\index{Pessoa@{Pessoa}!senha@{senha}}
+\index{senha@{senha}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{senha}{senha}}
+{\footnotesize\ttfamily \label{class_pessoa_a6fc2179270099091fd6a40ec5b2e1d08} 
+\doxymbox{\hyperlink{class_senha}{Senha}} Pessoa::\+senha\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_senha}{Senha} de acesso da pessoa. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoa_8hpp_source_l00039}{39}} do arquivo \doxymbox{\hyperlink{_pessoa_8hpp_source}{Pessoa.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+entidades/\doxymbox{\hyperlink{_pessoa_8hpp}{Pessoa.\+hpp}}\end{DoxyCompactItemize}

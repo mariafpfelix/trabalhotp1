@@ -1,0 +1,34 @@
+\doxysection{Limite.\+hpp}
+\hypertarget{_limite_8hpp_source}{}\label{_limite_8hpp_source}\index{dominio/Limite.hpp@{dominio/Limite.hpp}}
+\doxymbox{\hyperlink{_limite_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ LIMITE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ LIMITE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00017}\doxymbox{\hyperlink{class_limite}{00017}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_limite}{Limite}}\ \{}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00018}00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00019}\doxymbox{\hyperlink{class_limite_ae15cf079b3b993ba75726faefe09424d}{00019}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_limite_ae15cf079b3b993ba75726faefe09424d}{valor}};\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00021}00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00028}\doxymbox{\hyperlink{class_limite_ac4ec2f176d089c4f2219e423315c3ee1}{00028}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_limite_ac4ec2f176d089c4f2219e423315c3ee1}{setValor}}(\textcolor{keywordtype}{int}\ novoValor)\ \{}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novoValor\ <\ 1\ ||\ novoValor\ >\ 25)\ \{}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}O\ limite\ WIP\ deve\ estar\ entre\ 1\ e\ 25."{}}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_limite_ae15cf079b3b993ba75726faefe09424d}{valor}}\ =\ novoValor;}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00042}\doxymbox{\hyperlink{class_limite_ae3513251940018c33b8a072f91343f00}{00042}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_limite_ae3513251940018c33b8a072f91343f00}{getValor}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_limite_ae15cf079b3b993ba75726faefe09424d}{valor}};}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00045}00045\ \};}
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_limite_8hpp_source_l00047}00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,238 @@
+\doxysection{Referência da Classe Pessoas}
+\hypertarget{class_pessoas}{}\label{class_pessoas}\index{Pessoas@{Pessoas}}
+
+
+Gerencia o armazenamento de pessoas no banco de dados.  
+
+
+
+
+{\ttfamily \+\#include $<$Pessoas.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_pessoas_adbd52a8e2fd373df49d866be81c4d894}{Pessoas}} (sqlite3 \texorpdfstring{$\ast$}{*}conexao)
+\begin{DoxyCompactList}\small\item\em Construtor do container de pessoas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoas_a4fc17d864c833dcda515b61ba0a7433f}{criar\+Tabela}} ()
+\begin{DoxyCompactList}\small\item\em Cria a tabela de pessoas no banco de dados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoas_a147af8733f67f2367980a08dbed9541a}{inserir}} (const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&pessoa)
+\begin{DoxyCompactList}\small\item\em Insere uma pessoa no banco de dados. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_pessoa}{Pessoa}} \doxymbox{\hyperlink{class_pessoas_afbae414ceb47ce90d81707646f7592b9}{consultar}} (const \doxymbox{\hyperlink{class_email}{Email}} \&email)
+\begin{DoxyCompactList}\small\item\em Consulta uma pessoa pelo email. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_pessoa}{Pessoa}} $>$ \doxymbox{\hyperlink{class_pessoas_abbd546177721100b75581b12e4e1b476}{listar}} ()
+\begin{DoxyCompactList}\small\item\em Lista todas as pessoas cadastradas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoas_a24ede228e4c1dad2aac70fb280532853}{atualizar}} (const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&pessoa)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de uma pessoa. O email, que e a chave primaria, nao pode ser alterado. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_pessoas_af862a5a9c52fb2ce39a9b9a1c4dc18e1}{remover}} (const \doxymbox{\hyperlink{class_email}{Email}} \&email)
+\begin{DoxyCompactList}\small\item\em Remove uma pessoa pelo email. A exclusao sera impedida se houver projetos ou cartoes associados a essa pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+sqlite3 \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_pessoas_ada75313fe6e674524e4f6a80d47fde00}{banco}}
+\begin{DoxyCompactList}\small\item\em Conexao compartilhada com o banco de dados SQLite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia o armazenamento de pessoas no banco de dados. 
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00019}{19}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+
+
+\label{class_pessoas_doc-constructors}
+\Hypertarget{class_pessoas_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_pessoas_adbd52a8e2fd373df49d866be81c4d894}\index{Pessoas@{Pessoas}!Pessoas@{Pessoas}}
+\index{Pessoas@{Pessoas}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{Pessoas()}{Pessoas()}}
+{\footnotesize\ttfamily \label{class_pessoas_adbd52a8e2fd373df49d866be81c4d894} 
+Pessoas::\+\+Pessoas (\begin{DoxyParamCaption}\item[{sqlite3 \texorpdfstring{$\ast$}{*}}]{conexao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construtor do container de pessoas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em conexao} & Ponteiro para a conexao SQLite aberta. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se a conexao for nula. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00033}{33}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+
+
+\label{class_pessoas_doc-func-members}
+\Hypertarget{class_pessoas_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_pessoas_a24ede228e4c1dad2aac70fb280532853}\index{Pessoas@{Pessoas}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_pessoas_a24ede228e4c1dad2aac70fb280532853} 
+void Pessoas::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&}]{pessoa}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de uma pessoa. O email, que e a chave primaria, nao pode ser alterado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em pessoa} & Entidade \doxylink{class_pessoa}{Pessoa} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00299}{299}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+\Hypertarget{class_pessoas_afbae414ceb47ce90d81707646f7592b9}\index{Pessoas@{Pessoas}!consultar@{consultar}}
+\index{consultar@{consultar}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_pessoas_afbae414ceb47ce90d81707646f7592b9} 
+\doxymbox{\hyperlink{class_pessoa}{Pessoa}} Pessoas::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_email}{Email}} \&}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta uma pessoa pelo email. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & \doxylink{class_email}{Email} da pessoa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Entidade encontrada. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00156}{156}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+\Hypertarget{class_pessoas_a4fc17d864c833dcda515b61ba0a7433f}\index{Pessoas@{Pessoas}!criarTabela@{criarTabela}}
+\index{criarTabela@{criarTabela}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{criarTabela()}{criarTabela()}}
+{\footnotesize\ttfamily \label{class_pessoas_a4fc17d864c833dcda515b61ba0a7433f} 
+void Pessoas::\+criar\+Tabela (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cria a tabela de pessoas no banco de dados. 
+
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00047}{47}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+\Hypertarget{class_pessoas_a147af8733f67f2367980a08dbed9541a}\index{Pessoas@{Pessoas}!inserir@{inserir}}
+\index{inserir@{inserir}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}}
+{\footnotesize\ttfamily \label{class_pessoas_a147af8733f67f2367980a08dbed9541a} 
+void Pessoas::\+inserir (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_pessoa}{Pessoa}} \&}]{pessoa}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insere uma pessoa no banco de dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em pessoa} & Entidade \doxylink{class_pessoa}{Pessoa} com os dados a serem gravados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00079}{79}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+\Hypertarget{class_pessoas_abbd546177721100b75581b12e4e1b476}\index{Pessoas@{Pessoas}!listar@{listar}}
+\index{listar@{listar}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_pessoas_abbd546177721100b75581b12e4e1b476} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_pessoa}{Pessoa}} $>$ Pessoas::\+listar (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista todas as pessoas cadastradas. 
+
+\begin{DoxyReturn}{Retorna}
+Vetor com os registros encontrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00234}{234}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+\Hypertarget{class_pessoas_af862a5a9c52fb2ce39a9b9a1c4dc18e1}\index{Pessoas@{Pessoas}!remover@{remover}}
+\index{remover@{remover}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_pessoas_af862a5a9c52fb2ce39a9b9a1c4dc18e1} 
+void Pessoas::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_email}{Email}} \&}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove uma pessoa pelo email. A exclusao sera impedida se houver projetos ou cartoes associados a essa pessoa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em email} & \doxylink{class_email}{Email} da pessoa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Em caso de falha no banco de dados ou registro nao encontrado. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00376}{376}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+
+
+\label{class_pessoas_doc-variable-members}
+\Hypertarget{class_pessoas_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_pessoas_ada75313fe6e674524e4f6a80d47fde00}\index{Pessoas@{Pessoas}!banco@{banco}}
+\index{banco@{banco}!Pessoas@{Pessoas}}
+\doxysubsubsection{\texorpdfstring{banco}{banco}}
+{\footnotesize\ttfamily \label{class_pessoas_ada75313fe6e674524e4f6a80d47fde00} 
+sqlite3\texorpdfstring{$\ast$}{*} Pessoas::\+banco\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Conexao compartilhada com o banco de dados SQLite. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_pessoas_8hpp_source_l00025}{25}} do arquivo \doxymbox{\hyperlink{_pessoas_8hpp_source}{Pessoas.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+containers/\doxymbox{\hyperlink{_pessoas_8hpp}{Pessoas.\+hpp}}\end{DoxyCompactItemize}

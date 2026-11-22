@@ -1,0 +1,678 @@
+\doxysection{Referência da Classe Cartao\+Atividade}
+\hypertarget{class_cartao_atividade}{}\label{class_cartao_atividade}\index{CartaoAtividade@{CartaoAtividade}}
+
+
+Representa uma atividade de um quadro Kanban.  
+
+
+
+
+{\ttfamily \+\#include $<$Cartao\+Atividade.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_aa9994c5f61a4a46391099842ac027ab9}{set\+Identificador}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&novo\+Identificador)
+\begin{DoxyCompactList}\small\item\em Define o identificador do cartão. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_identificador}{Identificador}} \& \doxymbox{\hyperlink{class_cartao_atividade_a061c877a8ee369b37965cf81a8a47919}{get\+Identificador}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o identificador do cartão. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_ac4aa7f9e490ffc4e8badf5add359e62b}{set\+Nome}} (const \doxymbox{\hyperlink{class_nome}{Nome}} \&novo\+Nome)
+\begin{DoxyCompactList}\small\item\em Define o nome da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_nome}{Nome}} \& \doxymbox{\hyperlink{class_cartao_atividade_aa23abadc7296fbfcf9b734d0f24cb725}{get\+Nome}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o nome da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_aa7da0df6768fc447f3763c512209bdb7}{set\+Descricao}} (const \doxymbox{\hyperlink{class_texto}{Texto}} \&nova\+Descricao)
+\begin{DoxyCompactList}\small\item\em Define a descrição da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_texto}{Texto}} \& \doxymbox{\hyperlink{class_cartao_atividade_a3fe280474380788a0406b591244ab753}{get\+Descricao}} () const
+\begin{DoxyCompactList}\small\item\em Retorna a descrição da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_a0548d9b7afbfc629ecc6b06dff7ef9cf}{set\+Prioridade}} (const \doxymbox{\hyperlink{class_prioridade}{Prioridade}} \&nova\+Prioridade)
+\begin{DoxyCompactList}\small\item\em Define a prioridade da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_prioridade}{Prioridade}} \& \doxymbox{\hyperlink{class_cartao_atividade_af305714ad4c78b19e025724e191d9d56}{get\+Prioridade}} () const
+\begin{DoxyCompactList}\small\item\em Retorna a prioridade da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_adb815b67f4738bcfa48ebe68fdd09b67}{set\+Estado}} (const \doxymbox{\hyperlink{class_estado}{Estado}} \&novo\+Estado)
+\begin{DoxyCompactList}\small\item\em Define o estado da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_estado}{Estado}} \& \doxymbox{\hyperlink{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7}{get\+Estado}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o estado da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_a9374e883030fe562fe1c728b091ba24b}{set\+Tamanho}} (const \doxymbox{\hyperlink{class_tamanho}{Tamanho}} \&novo\+Tamanho)
+\begin{DoxyCompactList}\small\item\em Define o tamanho da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_tamanho}{Tamanho}} \& \doxymbox{\hyperlink{class_cartao_atividade_ab9e6c21462b743093f5b367fc051661b}{get\+Tamanho}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o tamanho da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_ae6a7ed4746b93a22ca3acf8bf258f039}{set\+Entrada}} (const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&nova\+Entrada)
+\begin{DoxyCompactList}\small\item\em Define o timestamp de entrada no quadro. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \& \doxymbox{\hyperlink{class_cartao_atividade_a4c3ba9d23ca6542df87c99ab08d743dd}{get\+Entrada}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o timestamp de entrada no quadro. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_ae1452fc6301a7160ea1c5480d33bf3a6}{set\+Inicio}} (const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&novo\+Inicio)
+\begin{DoxyCompactList}\small\item\em Define o timestamp de início da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \& \doxymbox{\hyperlink{class_cartao_atividade_a4dcf26ac874d1662a3c5336b14cc99e3}{get\+Inicio}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o timestamp de início da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_abd9a34c9aeedb03a5554f68d28b77e5b}{set\+Termino}} (const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&novo\+Termino)
+\begin{DoxyCompactList}\small\item\em Define o timestamp de término da atividade. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \& \doxymbox{\hyperlink{class_cartao_atividade_a232220aa595ba6d86378d8c8105218dc}{get\+Termino}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o timestamp de término da atividade. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_a35b0eb5c2b88a917ffdbe628a6e9148e}{set\+Desenvolvedor}} (const \doxymbox{\hyperlink{class_email}{Email}} \&novo\+Desenvolvedor)
+\begin{DoxyCompactList}\small\item\em Define o desenvolvedor responsável pelo cartão. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_email}{Email}} \& \doxymbox{\hyperlink{class_cartao_atividade_a671af4d0eb834a592c50914193e47f12}{get\+Desenvolvedor}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o email do desenvolvedor responsável. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cartao_atividade_aa1885ab79f4bdb39e09a1410bf7e25f9}{set\+Quadro}} (const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&novo\+Quadro)
+\begin{DoxyCompactList}\small\item\em Define o quadro ao qual o cartão pertence. \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{class_identificador}{Identificador}} \& \doxymbox{\hyperlink{class_cartao_atividade_a0120655fcec3d1cecd699b73a26ac08d}{get\+Quadro}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o identificador do quadro associado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_identificador}{Identificador}} \doxymbox{\hyperlink{class_cartao_atividade_aa3faf69120d5dce99474246ac106f438}{identificador}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_identificador}{Identificador} único do cartão de atividade. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_nome}{Nome}} \doxymbox{\hyperlink{class_cartao_atividade_a260e5e6dd4b7e78fd96b19b8cf74a3a4}{nome}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_nome}{Nome} do cartão de atividade. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_texto}{Texto}} \doxymbox{\hyperlink{class_cartao_atividade_acad8afb92fe161fb748a7fa58b1f1a78}{descricao}}
+\begin{DoxyCompactList}\small\item\em Descrição das atividades que devem ser realizadas. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_prioridade}{Prioridade}} \doxymbox{\hyperlink{class_cartao_atividade_a6368cecd51790f8217286c27f852cd17}{prioridade}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_prioridade}{Prioridade} atribuída ao cartão. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_estado}{Estado}} \doxymbox{\hyperlink{class_cartao_atividade_a5914f5a1938dc1cff5066aea5291d204}{estado}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_estado}{Estado} atual do cartão no fluxo Kanban. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_tamanho}{Tamanho}} \doxymbox{\hyperlink{class_cartao_atividade_a00f57fbed829472a8642627cdb77f834}{tamanho}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_tamanho}{Tamanho} estimado da atividade. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_timestamp}{Timestamp}} \doxymbox{\hyperlink{class_cartao_atividade_ac5637d51ba5a22994e6fefce061e3f21}{entrada}}
+\begin{DoxyCompactList}\small\item\em Data e horário de entrada do cartão na coluna A FAZER. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_timestamp}{Timestamp}} \doxymbox{\hyperlink{class_cartao_atividade_aacff86c0aae62b65e732e0d86813f4a9}{inicio}}
+\begin{DoxyCompactList}\small\item\em Data e horário de início da execução da atividade. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_timestamp}{Timestamp}} \doxymbox{\hyperlink{class_cartao_atividade_ae3eb6b7966742c596c03215aadbcceab}{termino}}
+\begin{DoxyCompactList}\small\item\em Data e horário de conclusão da atividade. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_email}{Email}} \doxymbox{\hyperlink{class_cartao_atividade_a12c6ff41acc6918df4f283a241e3b159}{desenvolvedor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_email}{Email} da pessoa responsável pelo desenvolvimento do cartão. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_identificador}{Identificador}} \doxymbox{\hyperlink{class_cartao_atividade_ae41b2f2d3b1d7d416674ac65433c6e11}{quadro}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_identificador}{Identificador} do quadro ao qual o cartão pertence. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_cartao_atividade_a65fbabad26082eb6338ce4b5ed59a69a}{identificador\+Definido}} = false
+\begin{DoxyCompactList}\small\item\em Indica se o identificador do cartão já foi definido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Representa uma atividade de um quadro Kanban. 
+
+Armazena os dados da atividade, sua prioridade, seu estado e os timestamps utilizados nos cálculos de tempo de ciclo e lead time. 
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00028}{28}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+
+
+\label{class_cartao_atividade_doc-func-members}
+\Hypertarget{class_cartao_atividade_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_cartao_atividade_a3fe280474380788a0406b591244ab753}\index{CartaoAtividade@{CartaoAtividade}!getDescricao@{getDescricao}}
+\index{getDescricao@{getDescricao}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a3fe280474380788a0406b591244ab753} 
+const \doxymbox{\hyperlink{class_texto}{Texto}} \& Cartao\+Atividade::\+get\+Descricao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna a descrição da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para a descrição da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00146}{146}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a671af4d0eb834a592c50914193e47f12}\index{CartaoAtividade@{CartaoAtividade}!getDesenvolvedor@{getDesenvolvedor}}
+\index{getDesenvolvedor@{getDesenvolvedor}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getDesenvolvedor()}{getDesenvolvedor()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a671af4d0eb834a592c50914193e47f12} 
+const \doxymbox{\hyperlink{class_email}{Email}} \& Cartao\+Atividade::\+get\+Desenvolvedor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o email do desenvolvedor responsável. 
+
+\begin{DoxyReturn}{Retorna}
+Referência constante para o email do desenvolvedor. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00258}{258}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a4c3ba9d23ca6542df87c99ab08d743dd}\index{CartaoAtividade@{CartaoAtividade}!getEntrada@{getEntrada}}
+\index{getEntrada@{getEntrada}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getEntrada()}{getEntrada()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a4c3ba9d23ca6542df87c99ab08d743dd} 
+const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \& Cartao\+Atividade::\+get\+Entrada (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o timestamp de entrada no quadro. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o timestamp de entrada no quadro. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00210}{210}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7}\index{CartaoAtividade@{CartaoAtividade}!getEstado@{getEstado}}
+\index{getEstado@{getEstado}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getEstado()}{getEstado()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a29d2944c0ee53158382378eca043f9a7} 
+const \doxymbox{\hyperlink{class_estado}{Estado}} \& Cartao\+Atividade::\+get\+Estado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o estado da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o estado da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00178}{178}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a061c877a8ee369b37965cf81a8a47919}\index{CartaoAtividade@{CartaoAtividade}!getIdentificador@{getIdentificador}}
+\index{getIdentificador@{getIdentificador}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getIdentificador()}{getIdentificador()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a061c877a8ee369b37965cf81a8a47919} 
+const \doxymbox{\hyperlink{class_identificador}{Identificador}} \& Cartao\+Atividade::\+get\+Identificador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o identificador do cartão. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o identificador do cartão. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00114}{114}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a4dcf26ac874d1662a3c5336b14cc99e3}\index{CartaoAtividade@{CartaoAtividade}!getInicio@{getInicio}}
+\index{getInicio@{getInicio}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getInicio()}{getInicio()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a4dcf26ac874d1662a3c5336b14cc99e3} 
+const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \& Cartao\+Atividade::\+get\+Inicio (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o timestamp de início da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o timestamp de início da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00226}{226}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_aa23abadc7296fbfcf9b734d0f24cb725}\index{CartaoAtividade@{CartaoAtividade}!getNome@{getNome}}
+\index{getNome@{getNome}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_aa23abadc7296fbfcf9b734d0f24cb725} 
+const \doxymbox{\hyperlink{class_nome}{Nome}} \& Cartao\+Atividade::\+get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o nome da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o nome da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00130}{130}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_af305714ad4c78b19e025724e191d9d56}\index{CartaoAtividade@{CartaoAtividade}!getPrioridade@{getPrioridade}}
+\index{getPrioridade@{getPrioridade}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getPrioridade()}{getPrioridade()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_af305714ad4c78b19e025724e191d9d56} 
+const \doxymbox{\hyperlink{class_prioridade}{Prioridade}} \& Cartao\+Atividade::\+get\+Prioridade (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna a prioridade da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para a prioridade da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00162}{162}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a0120655fcec3d1cecd699b73a26ac08d}\index{CartaoAtividade@{CartaoAtividade}!getQuadro@{getQuadro}}
+\index{getQuadro@{getQuadro}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getQuadro()}{getQuadro()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a0120655fcec3d1cecd699b73a26ac08d} 
+const \doxymbox{\hyperlink{class_identificador}{Identificador}} \& Cartao\+Atividade::\+get\+Quadro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o identificador do quadro associado. 
+
+\begin{DoxyReturn}{Retorna}
+Referência constante para o identificador do quadro. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00274}{274}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ab9e6c21462b743093f5b367fc051661b}\index{CartaoAtividade@{CartaoAtividade}!getTamanho@{getTamanho}}
+\index{getTamanho@{getTamanho}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getTamanho()}{getTamanho()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ab9e6c21462b743093f5b367fc051661b} 
+const \doxymbox{\hyperlink{class_tamanho}{Tamanho}} \& Cartao\+Atividade::\+get\+Tamanho (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o tamanho da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o tamanho da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00194}{194}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a232220aa595ba6d86378d8c8105218dc}\index{CartaoAtividade@{CartaoAtividade}!getTermino@{getTermino}}
+\index{getTermino@{getTermino}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{getTermino()}{getTermino()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a232220aa595ba6d86378d8c8105218dc} 
+const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \& Cartao\+Atividade::\+get\+Termino (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o timestamp de término da atividade. 
+
+\begin{DoxyReturn}{Retorna}
+Referencia constante para o timestamp de término da atividade. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00242}{242}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_aa7da0df6768fc447f3763c512209bdb7}\index{CartaoAtividade@{CartaoAtividade}!setDescricao@{setDescricao}}
+\index{setDescricao@{setDescricao}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setDescricao()}{setDescricao()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_aa7da0df6768fc447f3763c512209bdb7} 
+void Cartao\+Atividade::\+set\+Descricao (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_texto}{Texto}} \&}]{nova\+Descricao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define a descrição da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Descricao} & Descrição da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00138}{138}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a35b0eb5c2b88a917ffdbe628a6e9148e}\index{CartaoAtividade@{CartaoAtividade}!setDesenvolvedor@{setDesenvolvedor}}
+\index{setDesenvolvedor@{setDesenvolvedor}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setDesenvolvedor()}{setDesenvolvedor()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a35b0eb5c2b88a917ffdbe628a6e9148e} 
+void Cartao\+Atividade::\+set\+Desenvolvedor (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_email}{Email}} \&}]{novo\+Desenvolvedor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o desenvolvedor responsável pelo cartão. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Desenvolvedor} & \doxylink{class_email}{Email} da pessoa responsável. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00250}{250}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ae6a7ed4746b93a22ca3acf8bf258f039}\index{CartaoAtividade@{CartaoAtividade}!setEntrada@{setEntrada}}
+\index{setEntrada@{setEntrada}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setEntrada()}{setEntrada()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ae6a7ed4746b93a22ca3acf8bf258f039} 
+void Cartao\+Atividade::\+set\+Entrada (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&}]{nova\+Entrada}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o timestamp de entrada no quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Entrada} & \doxylink{class_timestamp}{Timestamp} de entrada no quadro. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00202}{202}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_adb815b67f4738bcfa48ebe68fdd09b67}\index{CartaoAtividade@{CartaoAtividade}!setEstado@{setEstado}}
+\index{setEstado@{setEstado}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setEstado()}{setEstado()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_adb815b67f4738bcfa48ebe68fdd09b67} 
+void Cartao\+Atividade::\+set\+Estado (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_estado}{Estado}} \&}]{novo\+Estado}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o estado da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Estado} & \doxylink{class_estado}{Estado} da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00170}{170}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_aa9994c5f61a4a46391099842ac027ab9}\index{CartaoAtividade@{CartaoAtividade}!setIdentificador@{setIdentificador}}
+\index{setIdentificador@{setIdentificador}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setIdentificador()}{setIdentificador()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_aa9994c5f61a4a46391099842ac027ab9} 
+void Cartao\+Atividade::\+set\+Identificador (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{novo\+Identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o identificador do cartão. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Identificador} & \doxylink{class_identificador}{Identificador} validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Caso já tenha sido definido. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00098}{98}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ae1452fc6301a7160ea1c5480d33bf3a6}\index{CartaoAtividade@{CartaoAtividade}!setInicio@{setInicio}}
+\index{setInicio@{setInicio}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setInicio()}{setInicio()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ae1452fc6301a7160ea1c5480d33bf3a6} 
+void Cartao\+Atividade::\+set\+Inicio (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&}]{novo\+Inicio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o timestamp de início da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Inicio} & \doxylink{class_timestamp}{Timestamp} de início da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00218}{218}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ac4aa7f9e490ffc4e8badf5add359e62b}\index{CartaoAtividade@{CartaoAtividade}!setNome@{setNome}}
+\index{setNome@{setNome}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ac4aa7f9e490ffc4e8badf5add359e62b} 
+void Cartao\+Atividade::\+set\+Nome (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_nome}{Nome}} \&}]{novo\+Nome}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o nome da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Nome} & \doxylink{class_nome}{Nome} da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00122}{122}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a0548d9b7afbfc629ecc6b06dff7ef9cf}\index{CartaoAtividade@{CartaoAtividade}!setPrioridade@{setPrioridade}}
+\index{setPrioridade@{setPrioridade}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setPrioridade()}{setPrioridade()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a0548d9b7afbfc629ecc6b06dff7ef9cf} 
+void Cartao\+Atividade::\+set\+Prioridade (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_prioridade}{Prioridade}} \&}]{nova\+Prioridade}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define a prioridade da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nova\+Prioridade} & \doxylink{class_prioridade}{Prioridade} da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00154}{154}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_aa1885ab79f4bdb39e09a1410bf7e25f9}\index{CartaoAtividade@{CartaoAtividade}!setQuadro@{setQuadro}}
+\index{setQuadro@{setQuadro}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setQuadro()}{setQuadro()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_aa1885ab79f4bdb39e09a1410bf7e25f9} 
+void Cartao\+Atividade::\+set\+Quadro (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{novo\+Quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o quadro ao qual o cartão pertence. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Quadro} & \doxylink{class_identificador}{Identificador} do quadro associado. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00266}{266}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a9374e883030fe562fe1c728b091ba24b}\index{CartaoAtividade@{CartaoAtividade}!setTamanho@{setTamanho}}
+\index{setTamanho@{setTamanho}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setTamanho()}{setTamanho()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a9374e883030fe562fe1c728b091ba24b} 
+void Cartao\+Atividade::\+set\+Tamanho (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_tamanho}{Tamanho}} \&}]{novo\+Tamanho}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o tamanho da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Tamanho} & \doxylink{class_tamanho}{Tamanho} da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00186}{186}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_abd9a34c9aeedb03a5554f68d28b77e5b}\index{CartaoAtividade@{CartaoAtividade}!setTermino@{setTermino}}
+\index{setTermino@{setTermino}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{setTermino()}{setTermino()}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_abd9a34c9aeedb03a5554f68d28b77e5b} 
+void Cartao\+Atividade::\+set\+Termino (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_timestamp}{Timestamp}} \&}]{novo\+Termino}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o timestamp de término da atividade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Termino} & \doxylink{class_timestamp}{Timestamp} de término da atividade. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00234}{234}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+
+
+\label{class_cartao_atividade_doc-variable-members}
+\Hypertarget{class_cartao_atividade_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_cartao_atividade_acad8afb92fe161fb748a7fa58b1f1a78}\index{CartaoAtividade@{CartaoAtividade}!descricao@{descricao}}
+\index{descricao@{descricao}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{descricao}{descricao}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_acad8afb92fe161fb748a7fa58b1f1a78} 
+\doxymbox{\hyperlink{class_texto}{Texto}} Cartao\+Atividade::\+descricao\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Descrição das atividades que devem ser realizadas. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00043}{43}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a12c6ff41acc6918df4f283a241e3b159}\index{CartaoAtividade@{CartaoAtividade}!desenvolvedor@{desenvolvedor}}
+\index{desenvolvedor@{desenvolvedor}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{desenvolvedor}{desenvolvedor}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a12c6ff41acc6918df4f283a241e3b159} 
+\doxymbox{\hyperlink{class_email}{Email}} Cartao\+Atividade::\+desenvolvedor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_email}{Email} da pessoa responsável pelo desenvolvimento do cartão. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00078}{78}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ac5637d51ba5a22994e6fefce061e3f21}\index{CartaoAtividade@{CartaoAtividade}!entrada@{entrada}}
+\index{entrada@{entrada}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{entrada}{entrada}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ac5637d51ba5a22994e6fefce061e3f21} 
+\doxymbox{\hyperlink{class_timestamp}{Timestamp}} Cartao\+Atividade::\+entrada\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data e horário de entrada do cartão na coluna A FAZER. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00063}{63}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a5914f5a1938dc1cff5066aea5291d204}\index{CartaoAtividade@{CartaoAtividade}!estado@{estado}}
+\index{estado@{estado}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{estado}{estado}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a5914f5a1938dc1cff5066aea5291d204} 
+\doxymbox{\hyperlink{class_estado}{Estado}} Cartao\+Atividade::\+estado\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_estado}{Estado} atual do cartão no fluxo Kanban. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00053}{53}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_aa3faf69120d5dce99474246ac106f438}\index{CartaoAtividade@{CartaoAtividade}!identificador@{identificador}}
+\index{identificador@{identificador}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{identificador}{identificador}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_aa3faf69120d5dce99474246ac106f438} 
+\doxymbox{\hyperlink{class_identificador}{Identificador}} Cartao\+Atividade::\+identificador\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_identificador}{Identificador} único do cartão de atividade. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00033}{33}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a65fbabad26082eb6338ce4b5ed59a69a}\index{CartaoAtividade@{CartaoAtividade}!identificadorDefinido@{identificadorDefinido}}
+\index{identificadorDefinido@{identificadorDefinido}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{identificadorDefinido}{identificadorDefinido}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a65fbabad26082eb6338ce4b5ed59a69a} 
+bool Cartao\+Atividade::\+identificador\+Definido = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indica se o identificador do cartão já foi definido. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00088}{88}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_aacff86c0aae62b65e732e0d86813f4a9}\index{CartaoAtividade@{CartaoAtividade}!inicio@{inicio}}
+\index{inicio@{inicio}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{inicio}{inicio}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_aacff86c0aae62b65e732e0d86813f4a9} 
+\doxymbox{\hyperlink{class_timestamp}{Timestamp}} Cartao\+Atividade::\+inicio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data e horário de início da execução da atividade. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00068}{68}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a260e5e6dd4b7e78fd96b19b8cf74a3a4}\index{CartaoAtividade@{CartaoAtividade}!nome@{nome}}
+\index{nome@{nome}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a260e5e6dd4b7e78fd96b19b8cf74a3a4} 
+\doxymbox{\hyperlink{class_nome}{Nome}} Cartao\+Atividade::\+nome\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_nome}{Nome} do cartão de atividade. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00038}{38}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a6368cecd51790f8217286c27f852cd17}\index{CartaoAtividade@{CartaoAtividade}!prioridade@{prioridade}}
+\index{prioridade@{prioridade}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{prioridade}{prioridade}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a6368cecd51790f8217286c27f852cd17} 
+\doxymbox{\hyperlink{class_prioridade}{Prioridade}} Cartao\+Atividade::\+prioridade\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_prioridade}{Prioridade} atribuída ao cartão. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00048}{48}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ae41b2f2d3b1d7d416674ac65433c6e11}\index{CartaoAtividade@{CartaoAtividade}!quadro@{quadro}}
+\index{quadro@{quadro}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{quadro}{quadro}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ae41b2f2d3b1d7d416674ac65433c6e11} 
+\doxymbox{\hyperlink{class_identificador}{Identificador}} Cartao\+Atividade::\+quadro\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_identificador}{Identificador} do quadro ao qual o cartão pertence. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00083}{83}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_a00f57fbed829472a8642627cdb77f834}\index{CartaoAtividade@{CartaoAtividade}!tamanho@{tamanho}}
+\index{tamanho@{tamanho}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{tamanho}{tamanho}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_a00f57fbed829472a8642627cdb77f834} 
+\doxymbox{\hyperlink{class_tamanho}{Tamanho}} Cartao\+Atividade::\+tamanho\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_tamanho}{Tamanho} estimado da atividade. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00058}{58}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+\Hypertarget{class_cartao_atividade_ae3eb6b7966742c596c03215aadbcceab}\index{CartaoAtividade@{CartaoAtividade}!termino@{termino}}
+\index{termino@{termino}!CartaoAtividade@{CartaoAtividade}}
+\doxysubsubsection{\texorpdfstring{termino}{termino}}
+{\footnotesize\ttfamily \label{class_cartao_atividade_ae3eb6b7966742c596c03215aadbcceab} 
+\doxymbox{\hyperlink{class_timestamp}{Timestamp}} Cartao\+Atividade::\+termino\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Data e horário de conclusão da atividade. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_cartao_atividade_8hpp_source_l00073}{73}} do arquivo \doxymbox{\hyperlink{_cartao_atividade_8hpp_source}{Cartao\+Atividade.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+entidades/\doxymbox{\hyperlink{_cartao_atividade_8hpp}{Cartao\+Atividade.\+hpp}}\end{DoxyCompactItemize}

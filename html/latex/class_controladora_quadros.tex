@@ -1,0 +1,286 @@
+\doxysection{Referência da Classe Controladora\+Quadros}
+\hypertarget{class_controladora_quadros}{}\label{class_controladora_quadros}\index{ControladoraQuadros@{ControladoraQuadros}}
+
+
+Controla as operações relacionadas aos quadros.  
+
+
+
+
+{\ttfamily \+\#include $<$Controladora\+Quadros.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_controladora_quadros_a797f04b00ba06c0e0e9bc79baf1a8086}{Controladora\+Quadros}} (\doxymbox{\hyperlink{class_i_quadros}{IQuadros}} \&servico\+Quadros)
+\begin{DoxyCompactList}\small\item\em Construtor da controladora de quadros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_quadros_a3635cd3f2fab722424f70145de9f48b0}{cadastrar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Cadastra um novo quadro. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_quadro}{Quadro}} \doxymbox{\hyperlink{class_controladora_quadros_a9466c4f91e385c711a43c101b7a76af8}{consultar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Consulta um quadro pelo identificador. \end{DoxyCompactList}\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ \doxymbox{\hyperlink{class_controladora_quadros_a77f45b3f6417e0d60e2e8ac13ec427a6}{listar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Lista os quadros cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_quadros_a48f20c3d399ca1cc27449d33bc8f3398}{atualizar}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&quadro)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um quadro. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_quadros_ae863a347a331a3c3f6e2f23b4ff65a81}{remover}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel, const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&identificador)
+\begin{DoxyCompactList}\small\item\em Remove um quadro pelo identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_controladora_quadros_a34871fc286c2a43c8914abec3d3e0620}{exigir\+Gestor}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuário possui papel de gestor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_controladora_quadros_aac1b708dd4d5956c5e35a4a4c89ed0de}{exigir\+Usuario\+Valido}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Verifica se o usuário possui um papel válido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_i_quadros}{IQuadros}} \& \doxymbox{\hyperlink{class_controladora_quadros_a173046438b2709c9a259770925cb6f99}{servico}}
+\begin{DoxyCompactList}\small\item\em Referência para a interface do serviço de quadros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controla as operações relacionadas aos quadros. 
+
+Responsável por verificar as permissões dos usuários e encaminhar as operações para o serviço de quadros.
+
+O gestor pode cadastrar, consultar, atualizar, remover e listar quadros.
+
+O desenvolvedor pode consultar e listar quadros. 
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00027}{27}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+
+
+\label{class_controladora_quadros_doc-constructors}
+\Hypertarget{class_controladora_quadros_doc-constructors}
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_controladora_quadros_a797f04b00ba06c0e0e9bc79baf1a8086}\index{ControladoraQuadros@{ControladoraQuadros}!ControladoraQuadros@{ControladoraQuadros}}
+\index{ControladoraQuadros@{ControladoraQuadros}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{ControladoraQuadros()}{ControladoraQuadros()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a797f04b00ba06c0e0e9bc79baf1a8086} 
+Controladora\+Quadros::\+\+Controladora\+Quadros (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_i_quadros}{IQuadros}} \&}]{servico\+Quadros}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construtor da controladora de quadros. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em servico\+Quadros} & Interface do serviço de quadros. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00068}{68}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+
+
+\label{class_controladora_quadros_doc-func-members}
+\Hypertarget{class_controladora_quadros_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_controladora_quadros_a48f20c3d399ca1cc27449d33bc8f3398}\index{ControladoraQuadros@{ControladoraQuadros}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a48f20c3d399ca1cc27449d33bc8f3398} 
+void Controladora\+Quadros::\+atualizar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza os dados de um quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em quadro} & \doxylink{class_quadro}{Quadro} com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00118}{118}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+\Hypertarget{class_controladora_quadros_a3635cd3f2fab722424f70145de9f48b0}\index{ControladoraQuadros@{ControladoraQuadros}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a3635cd3f2fab722424f70145de9f48b0} 
+void Controladora\+Quadros::\+cadastrar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_quadro}{Quadro}} \&}]{quadro}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cadastra um novo quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em quadro} & \doxylink{class_quadro}{Quadro} que será cadastrado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00077}{77}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+\Hypertarget{class_controladora_quadros_a9466c4f91e385c711a43c101b7a76af8}\index{ControladoraQuadros@{ControladoraQuadros}!consultar@{consultar}}
+\index{consultar@{consultar}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{consultar()}{consultar()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a9466c4f91e385c711a43c101b7a76af8} 
+\doxymbox{\hyperlink{class_quadro}{Quadro}} Controladora\+Quadros::\+consultar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Consulta um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_quadro}{Quadro} encontrado. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não possua permissão. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00092}{92}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+\Hypertarget{class_controladora_quadros_a34871fc286c2a43c8914abec3d3e0620}\index{ControladoraQuadros@{ControladoraQuadros}!exigirGestor@{exigirGestor}}
+\index{exigirGestor@{exigirGestor}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{exigirGestor()}{exigirGestor()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a34871fc286c2a43c8914abec3d3e0620} 
+void Controladora\+Quadros::\+exigir\+Gestor (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuário possui papel de gestor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00040}{40}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+\Hypertarget{class_controladora_quadros_aac1b708dd4d5956c5e35a4a4c89ed0de}\index{ControladoraQuadros@{ControladoraQuadros}!exigirUsuarioValido@{exigirUsuarioValido}}
+\index{exigirUsuarioValido@{exigirUsuarioValido}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{exigirUsuarioValido()}{exigirUsuarioValido()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_aac1b708dd4d5956c5e35a4a4c89ed0de} 
+void Controladora\+Quadros::\+exigir\+Usuario\+Valido (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se o usuário possui um papel válido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o papel não seja reconhecido. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00054}{54}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+\Hypertarget{class_controladora_quadros_a77f45b3f6417e0d60e2e8ac13ec427a6}\index{ControladoraQuadros@{ControladoraQuadros}!listar@{listar}}
+\index{listar@{listar}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{listar()}{listar()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a77f45b3f6417e0d60e2e8ac13ec427a6} 
+std::\+vector$<$ \doxymbox{\hyperlink{class_quadro}{Quadro}} $>$ Controladora\+Quadros::\+listar (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Lista os quadros cadastrados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vetor contendo os quadros cadastrados. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não possua permissão. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00106}{106}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+\Hypertarget{class_controladora_quadros_ae863a347a331a3c3f6e2f23b4ff65a81}\index{ControladoraQuadros@{ControladoraQuadros}!remover@{remover}}
+\index{remover@{remover}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_ae863a347a331a3c3f6e2f23b4ff65a81} 
+void Controladora\+Quadros::\+remover (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{, }\item[{const \doxymbox{\hyperlink{class_identificador}{Identificador}} \&}]{identificador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove um quadro pelo identificador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuário autenticado. \\
+\hline
+{\em identificador} & \doxylink{class_identificador}{Identificador} do quadro. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+runtime\+\_\+error} & Caso o usuário não seja gestor. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00132}{132}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+
+
+\label{class_controladora_quadros_doc-variable-members}
+\Hypertarget{class_controladora_quadros_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_controladora_quadros_a173046438b2709c9a259770925cb6f99}\index{ControladoraQuadros@{ControladoraQuadros}!servico@{servico}}
+\index{servico@{servico}!ControladoraQuadros@{ControladoraQuadros}}
+\doxysubsubsection{\texorpdfstring{servico}{servico}}
+{\footnotesize\ttfamily \label{class_controladora_quadros_a173046438b2709c9a259770925cb6f99} 
+\doxymbox{\hyperlink{class_i_quadros}{IQuadros}}\& Controladora\+Quadros::\+servico\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referência para a interface do serviço de quadros. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_controladora_quadros_8hpp_source_l00033}{33}} do arquivo \doxymbox{\hyperlink{_controladora_quadros_8hpp_source}{Controladora\+Quadros.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+controladoras/\doxymbox{\hyperlink{_controladora_quadros_8hpp}{Controladora\+Quadros.\+hpp}}\end{DoxyCompactItemize}

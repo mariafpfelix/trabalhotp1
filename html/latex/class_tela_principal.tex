@@ -1,0 +1,219 @@
+\doxysection{Referência da Classe Tela\+Principal}
+\hypertarget{class_tela_principal}{}\label{class_tela_principal}\index{TelaPrincipal@{TelaPrincipal}}
+
+
+Responsavel pela interacao com o usuario no console.  
+
+
+
+
+{\ttfamily \+\#include $<$Tela\+Principal.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_tela_principal_acdf1b294a49ca3eff97062de3db273ad}{set\+Papel\+Usuario}} (const \doxymbox{\hyperlink{class_papel}{Papel}} \&papel)
+\begin{DoxyCompactList}\small\item\em Define o papel da pessoa autenticada. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_a039e75bbb006835288a8a848bac5b4dc}{exibir\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o menu principal conforme o papel do usuario. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_tela_principal_a3d946075046a107431c2c1b34097a861}{ler\+Opcao}} ()
+\begin{DoxyCompactList}\small\item\em Le a opcao escolhida pelo usuario. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_a3a3cdf742fbeb330d75b7208c5313cd7}{exibir\+Pessoas}} (const std::\+vector$<$ \doxymbox{\hyperlink{class_pessoa}{Pessoa}} $>$ \&pessoas)
+\begin{DoxyCompactList}\small\item\em Exibe a lista de pessoas cadastradas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_a18d7f1a5640affa729e8ac4fadf3139f}{exibir\+Menu\+Pessoas}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o menu de gerenciamento de pessoas. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_a5a56b1a0fb1f78d4cfb89c979166664f}{exibir\+Menu\+Projetos}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o menu de gerenciamento de projetos. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_ac1eca9b8b379d95463543623cbc61ea4}{exibir\+Projetos}} (const std::\+vector$<$ \doxymbox{\hyperlink{class_projeto}{Projeto}} $>$ \&projetos)
+\begin{DoxyCompactList}\small\item\em Exibe a lista de projetos cadastrados. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_af15b85c39cf54308b47e4ce03a10f848}{exibir\+Menu\+Quadros}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o menu de gerenciamento de quadros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_tela_principal_aecfe86e8c0a057d432bc9ed91d37c235}{exibir\+Menu\+Cartoes}} () const
+\begin{DoxyCompactList}\small\item\em Exibe o menu de cartoes de atividade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_papel}{Papel}} \doxymbox{\hyperlink{class_tela_principal_ae3b8bff13514b00a013e7b8f76481663}{papel\+Usuario}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_papel}{Papel} do usuario autenticado (GESTOR ou DESENVOLVEDOR). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Responsavel pela interacao com o usuario no console. 
+
+Exibe os menus do sistema Kanban, le as opcoes digitadas e mostra as listagens de pessoas e projetos. O menu principal se adapta ao papel do usuario autenticado. 
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00024}{24}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+
+
+\label{class_tela_principal_doc-func-members}
+\Hypertarget{class_tela_principal_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_tela_principal_a039e75bbb006835288a8a848bac5b4dc}\index{TelaPrincipal@{TelaPrincipal}!exibirMenu@{exibirMenu}}
+\index{exibirMenu@{exibirMenu}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirMenu()}{exibirMenu()}}
+{\footnotesize\ttfamily \label{class_tela_principal_a039e75bbb006835288a8a848bac5b4dc} 
+void Tela\+Principal::\+exibir\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe o menu principal conforme o papel do usuario. 
+
+Para o gestor, a opcao 4 aparece como "{}\+Gerenciar cartoes"{}; para o desenvolvedor, como "{}\+Consultar cartoes"{}. 
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00048}{48}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_aecfe86e8c0a057d432bc9ed91d37c235}\index{TelaPrincipal@{TelaPrincipal}!exibirMenuCartoes@{exibirMenuCartoes}}
+\index{exibirMenuCartoes@{exibirMenuCartoes}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirMenuCartoes()}{exibirMenuCartoes()}}
+{\footnotesize\ttfamily \label{class_tela_principal_aecfe86e8c0a057d432bc9ed91d37c235} 
+void Tela\+Principal::\+exibir\+Menu\+Cartoes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe o menu de cartoes de atividade. 
+
+Inclui CRUD de cartoes, movimentacao entre estados e consulta dos indicadores do quadro (WIP, lead time e cycle time). 
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00201}{201}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_a18d7f1a5640affa729e8ac4fadf3139f}\index{TelaPrincipal@{TelaPrincipal}!exibirMenuPessoas@{exibirMenuPessoas}}
+\index{exibirMenuPessoas@{exibirMenuPessoas}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirMenuPessoas()}{exibirMenuPessoas()}}
+{\footnotesize\ttfamily \label{class_tela_principal_a18d7f1a5640affa729e8ac4fadf3139f} 
+void Tela\+Principal::\+exibir\+Menu\+Pessoas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe o menu de gerenciamento de pessoas. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00115}{115}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_a5a56b1a0fb1f78d4cfb89c979166664f}\index{TelaPrincipal@{TelaPrincipal}!exibirMenuProjetos@{exibirMenuProjetos}}
+\index{exibirMenuProjetos@{exibirMenuProjetos}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirMenuProjetos()}{exibirMenuProjetos()}}
+{\footnotesize\ttfamily \label{class_tela_principal_a5a56b1a0fb1f78d4cfb89c979166664f} 
+void Tela\+Principal::\+exibir\+Menu\+Projetos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe o menu de gerenciamento de projetos. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00130}{130}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_af15b85c39cf54308b47e4ce03a10f848}\index{TelaPrincipal@{TelaPrincipal}!exibirMenuQuadros@{exibirMenuQuadros}}
+\index{exibirMenuQuadros@{exibirMenuQuadros}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirMenuQuadros()}{exibirMenuQuadros()}}
+{\footnotesize\ttfamily \label{class_tela_principal_af15b85c39cf54308b47e4ce03a10f848} 
+void Tela\+Principal::\+exibir\+Menu\+Quadros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe o menu de gerenciamento de quadros. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00183}{183}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_a3a3cdf742fbeb330d75b7208c5313cd7}\index{TelaPrincipal@{TelaPrincipal}!exibirPessoas@{exibirPessoas}}
+\index{exibirPessoas@{exibirPessoas}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirPessoas()}{exibirPessoas()}}
+{\footnotesize\ttfamily \label{class_tela_principal_a3a3cdf742fbeb330d75b7208c5313cd7} 
+void Tela\+Principal::\+exibir\+Pessoas (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{class_pessoa}{Pessoa}} $>$ \&}]{pessoas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe a lista de pessoas cadastradas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em pessoas} & Vetor de pessoas cadastradas. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00087}{87}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_ac1eca9b8b379d95463543623cbc61ea4}\index{TelaPrincipal@{TelaPrincipal}!exibirProjetos@{exibirProjetos}}
+\index{exibirProjetos@{exibirProjetos}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{exibirProjetos()}{exibirProjetos()}}
+{\footnotesize\ttfamily \label{class_tela_principal_ac1eca9b8b379d95463543623cbc61ea4} 
+void Tela\+Principal::\+exibir\+Projetos (\begin{DoxyParamCaption}\item[{const std::\+vector$<$ \doxymbox{\hyperlink{class_projeto}{Projeto}} $>$ \&}]{projetos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe a lista de projetos cadastrados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em projetos} & Vetor de projetos cadastrados. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00146}{146}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_a3d946075046a107431c2c1b34097a861}\index{TelaPrincipal@{TelaPrincipal}!lerOpcao@{lerOpcao}}
+\index{lerOpcao@{lerOpcao}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{lerOpcao()}{lerOpcao()}}
+{\footnotesize\ttfamily \label{class_tela_principal_a3d946075046a107431c2c1b34097a861} 
+int Tela\+Principal::\+ler\+Opcao (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Le a opcao escolhida pelo usuario. 
+
+\begin{DoxyReturn}{Retorna}
+Numero da opcao selecionada. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00076}{76}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+\Hypertarget{class_tela_principal_acdf1b294a49ca3eff97062de3db273ad}\index{TelaPrincipal@{TelaPrincipal}!setPapelUsuario@{setPapelUsuario}}
+\index{setPapelUsuario@{setPapelUsuario}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{setPapelUsuario()}{setPapelUsuario()}}
+{\footnotesize\ttfamily \label{class_tela_principal_acdf1b294a49ca3eff97062de3db273ad} 
+void Tela\+Principal::\+set\+Papel\+Usuario (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_papel}{Papel}} \&}]{papel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define o papel da pessoa autenticada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em papel} & \doxylink{class_papel}{Papel} do usuario. \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00037}{37}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+
+
+\label{class_tela_principal_doc-variable-members}
+\Hypertarget{class_tela_principal_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_tela_principal_ae3b8bff13514b00a013e7b8f76481663}\index{TelaPrincipal@{TelaPrincipal}!papelUsuario@{papelUsuario}}
+\index{papelUsuario@{papelUsuario}!TelaPrincipal@{TelaPrincipal}}
+\doxysubsubsection{\texorpdfstring{papelUsuario}{papelUsuario}}
+{\footnotesize\ttfamily \label{class_tela_principal_ae3b8bff13514b00a013e7b8f76481663} 
+\doxymbox{\hyperlink{class_papel}{Papel}} Tela\+Principal::\+papel\+Usuario\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_papel}{Papel} do usuario autenticado (GESTOR ou DESENVOLVEDOR). 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_tela_principal_8hpp_source_l00030}{30}} do arquivo \doxymbox{\hyperlink{_tela_principal_8hpp_source}{Tela\+Principal.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+apresentacao/\doxymbox{\hyperlink{_tela_principal_8hpp}{Tela\+Principal.\+hpp}}\end{DoxyCompactItemize}

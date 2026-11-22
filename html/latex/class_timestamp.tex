@@ -1,0 +1,136 @@
+\doxysection{Referência da Classe Timestamp}
+\hypertarget{class_timestamp}{}\label{class_timestamp}\index{Timestamp@{Timestamp}}
+
+
+Dominio que representa uma data e hora.  
+
+
+
+
+{\ttfamily \+\#include $<$timestamp.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_timestamp_ac41a97b053bb23ab90753752903a4ec2}{set\+Timestamp}} (std::\+string novo\+Timestamp)
+\begin{DoxyCompactList}\small\item\em Valida e armazena o timestamp informado. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_timestamp_aea0993104ecbba77b07f4c8b2a6330ff}{get\+Timestamp}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o timestamp armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{class_timestamp_a7f5fe184a8cf8cf9847c98ddb0c32da9}{bissexto}} (int ano) const
+\begin{DoxyCompactList}\small\item\em Verifica se um ano e bissexto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_timestamp_ae7038cb6acf3a2a50457fe3fd3aa3c38}{valor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_timestamp}{Timestamp} armazenado apos validacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Dominio que representa uma data e hora. 
+
+Formato: DD-\/\+MMM-\/\+AAAA-\/\+HH:MM (17 caracteres). Exemplo: "{}05-\/\+MAR-\/2025-\/14:\+30"{}.
+\begin{DoxyItemize}
+\item DD: dia valido para o mes (considera anos bissextos).
+\item MMM: JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV ou DEZ.
+\item AAAA: ano de 2000 a 2099.
+\item HH: hora de 00 a 23.
+\item MM: minuto de 00 a 59. 
+\end{DoxyItemize}
+
+Definição na linha \doxymbox{\hyperlink{timestamp_8hpp_source_l00022}{22}} do arquivo \doxymbox{\hyperlink{timestamp_8hpp_source}{timestamp.\+hpp}}.
+
+
+
+\label{class_timestamp_doc-func-members}
+\Hypertarget{class_timestamp_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_timestamp_a7f5fe184a8cf8cf9847c98ddb0c32da9}\index{Timestamp@{Timestamp}!bissexto@{bissexto}}
+\index{bissexto@{bissexto}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{bissexto()}{bissexto()}}
+{\footnotesize\ttfamily \label{class_timestamp_a7f5fe184a8cf8cf9847c98ddb0c32da9} 
+bool Timestamp::\+bissexto (\begin{DoxyParamCaption}\item[{int}]{ano}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verifica se um ano e bissexto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ano} & Ano a ser verificado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o ano for bissexto; false caso contrario. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{timestamp_8hpp_source_l00032}{32}} do arquivo \doxymbox{\hyperlink{timestamp_8hpp_source}{timestamp.\+hpp}}.
+
+\Hypertarget{class_timestamp_aea0993104ecbba77b07f4c8b2a6330ff}\index{Timestamp@{Timestamp}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily \label{class_timestamp_aea0993104ecbba77b07f4c8b2a6330ff} 
+std::\+string Timestamp::\+get\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o timestamp armazenado. 
+
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_timestamp}{Timestamp} valido previamente definido. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{timestamp_8hpp_source_l00136}{136}} do arquivo \doxymbox{\hyperlink{timestamp_8hpp_source}{timestamp.\+hpp}}.
+
+\Hypertarget{class_timestamp_ac41a97b053bb23ab90753752903a4ec2}\index{Timestamp@{Timestamp}!setTimestamp@{setTimestamp}}
+\index{setTimestamp@{setTimestamp}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{setTimestamp()}{setTimestamp()}}
+{\footnotesize\ttfamily \label{class_timestamp_ac41a97b053bb23ab90753752903a4ec2} 
+void Timestamp::\+set\+Timestamp (\begin{DoxyParamCaption}\item[{std::\+string}]{novo\+Timestamp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida e armazena o timestamp informado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Timestamp} & Data e hora no formato DD-\/\+MMM-\/\+AAAA-\/\+HH:MM. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se o formato, o dia, o mes, o ano, a hora ou o minuto forem invalidos. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{timestamp_8hpp_source_l00045}{45}} do arquivo \doxymbox{\hyperlink{timestamp_8hpp_source}{timestamp.\+hpp}}.
+
+
+
+\label{class_timestamp_doc-variable-members}
+\Hypertarget{class_timestamp_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_timestamp_ae7038cb6acf3a2a50457fe3fd3aa3c38}\index{Timestamp@{Timestamp}!valor@{valor}}
+\index{valor@{valor}!Timestamp@{Timestamp}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily \label{class_timestamp_ae7038cb6acf3a2a50457fe3fd3aa3c38} 
+std::\+string Timestamp::\+valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_timestamp}{Timestamp} armazenado apos validacao. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{timestamp_8hpp_source_l00025}{25}} do arquivo \doxymbox{\hyperlink{timestamp_8hpp_source}{timestamp.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+dominio/\doxymbox{\hyperlink{timestamp_8hpp}{timestamp.\+hpp}}\end{DoxyCompactItemize}

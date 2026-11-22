@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema Kanban: Código-Fonte de servicos/ServicoProjetos.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Sistema Kanban<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Busca" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_servico_projetos_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ServicoProjetos.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_servico_projetos_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef SERVICOPROJETOS_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define SERVICOPROJETOS_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_i_projetos_8hpp.html">../interfaces/IProjetos.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_projetos_8hpp.html">../containers/Projetos.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_servico_projetos.html">   15</a></span><span class="keyword">class </span><a class="code hl_function" href="class_servico_projetos.html#a82ce4ce9b53b27ed6bc5f3af741b09b4">ServicoProjetos</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_projetos.html">IProjetos</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">   22</a></span>    <a class="code hl_class" href="class_projetos.html">Projetos</a> &amp;<a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#a82ce4ce9b53b27ed6bc5f3af741b09b4">   29</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="class_servico_projetos.html#a82ce4ce9b53b27ed6bc5f3af741b09b4">ServicoProjetos</a>(<a class="code hl_class" href="class_projetos.html">Projetos</a> &amp;projetos)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        : <a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>(projetos)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#a397328dec39a897844dd65228534bf38">   38</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_servico_projetos.html#a397328dec39a897844dd65228534bf38">cadastrar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a> &amp;projeto)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>.<a class="code hl_function" href="class_projetos.html#a9e1b556d06e7363ce2efaed8af723ed1">inserir</a>(projeto);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#a55d5dceffe30f0154eb867a5bb6aea8a">   48</a></span>    <a class="code hl_class" href="class_projeto.html">Projeto</a> <a class="code hl_function" href="class_servico_projetos.html#a55d5dceffe30f0154eb867a5bb6aea8a">consultar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_identificador.html">Identificador</a> &amp;identificador)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>.<a class="code hl_function" href="class_projetos.html#ae32a644bee128144d5f0bd2099323589">consultar</a>(identificador);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#a0b2f9e4ad99377662d831293b8dea20a">   57</a></span>    std::vector&lt;Projeto&gt; <a class="code hl_function" href="class_servico_projetos.html#a0b2f9e4ad99377662d831293b8dea20a">listar</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>.<a class="code hl_function" href="class_projetos.html#a06edeb093b034c87cfd271a1548247e9">listar</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#a3d5bd3280eb928f576f4e4d1bb5af38b">   66</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_servico_projetos.html#a3d5bd3280eb928f576f4e4d1bb5af38b">atualizar</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_projeto.html">Projeto</a> &amp;projeto)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>.<a class="code hl_function" href="class_projetos.html#af614a08e9f983e7d99dc6b82ff211762">atualizar</a>(projeto);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_servico_projetos.html#a8f9ffd4a2b010ae7bdf09f7e53ad158c">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_servico_projetos.html#a8f9ffd4a2b010ae7bdf09f7e53ad158c">remover</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_identificador.html">Identificador</a> &amp;identificador)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_variable" href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">repositorio</a>.<a class="code hl_function" href="class_projetos.html#ac0c7f9f67bc08ec3ccc88e1f58fc190b">remover</a>(identificador);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_i_projetos_8hpp_html"><div class="ttname"><a href="_i_projetos_8hpp.html">IProjetos.hpp</a></div><div class="ttdoc">Interface do servico de projetos.</div></div>
+<div class="ttc" id="a_projetos_8hpp_html"><div class="ttname"><a href="_projetos_8hpp.html">Projetos.hpp</a></div><div class="ttdoc">Container de persistencia de projetos (SQLite).</div></div>
+<div class="ttc" id="aclass_i_projetos_html"><div class="ttname"><a href="class_i_projetos.html">IProjetos</a></div><div class="ttdoc">Interface para operacoes relacionadas a projetos.</div><div class="ttdef"><b>Definição</b> <a href="_i_projetos_8hpp_source.html#l00016">IProjetos.hpp:16</a></div></div>
+<div class="ttc" id="aclass_identificador_html"><div class="ttname"><a href="class_identificador.html">Identificador</a></div><div class="ttdoc">Dominio que representa o identificador de projetos, quadros e cartoes.</div><div class="ttdef"><b>Definição</b> <a href="identificador_8hpp_source.html#l00019">identificador.hpp:19</a></div></div>
+<div class="ttc" id="aclass_projeto_html"><div class="ttname"><a href="class_projeto.html">Projeto</a></div><div class="ttdoc">Representa um projeto cadastrado no sistema Kanban.</div><div class="ttdef"><b>Definição</b> <a href="_projeto_8hpp_source.html#l00024">Projeto.hpp:24</a></div></div>
+<div class="ttc" id="aclass_projetos_html"><div class="ttname"><a href="class_projetos.html">Projetos</a></div><div class="ttdoc">Gerencia o armazenamento de projetos no banco SQLite.</div><div class="ttdef"><b>Definição</b> <a href="_projetos_8hpp_source.html#l00019">Projetos.hpp:19</a></div></div>
+<div class="ttc" id="aclass_projetos_html_a06edeb093b034c87cfd271a1548247e9"><div class="ttname"><a href="class_projetos.html#a06edeb093b034c87cfd271a1548247e9">Projetos::listar</a></div><div class="ttdeci">std::vector&lt; Projeto &gt; listar()</div><div class="ttdoc">Lista todos os projetos cadastrados.</div><div class="ttdef"><b>Definição</b> <a href="_projetos_8hpp_source.html#l00293">Projetos.hpp:293</a></div></div>
+<div class="ttc" id="aclass_projetos_html_a9e1b556d06e7363ce2efaed8af723ed1"><div class="ttname"><a href="class_projetos.html#a9e1b556d06e7363ce2efaed8af723ed1">Projetos::inserir</a></div><div class="ttdeci">void inserir(const Projeto &amp;projeto)</div><div class="ttdoc">Insere um projeto no banco de dados.</div><div class="ttdef"><b>Definição</b> <a href="_projetos_8hpp_source.html#l00089">Projetos.hpp:89</a></div></div>
+<div class="ttc" id="aclass_projetos_html_ac0c7f9f67bc08ec3ccc88e1f58fc190b"><div class="ttname"><a href="class_projetos.html#ac0c7f9f67bc08ec3ccc88e1f58fc190b">Projetos::remover</a></div><div class="ttdeci">void remover(const Identificador &amp;identificador)</div><div class="ttdoc">Remove um projeto pelo identificador.</div><div class="ttdef"><b>Definição</b> <a href="_projetos_8hpp_source.html#l00490">Projetos.hpp:490</a></div></div>
+<div class="ttc" id="aclass_projetos_html_ae32a644bee128144d5f0bd2099323589"><div class="ttname"><a href="class_projetos.html#ae32a644bee128144d5f0bd2099323589">Projetos::consultar</a></div><div class="ttdeci">Projeto consultar(const Identificador &amp;identificador)</div><div class="ttdoc">Consulta um projeto pelo identificador.</div><div class="ttdef"><b>Definição</b> <a href="_projetos_8hpp_source.html#l00187">Projetos.hpp:187</a></div></div>
+<div class="ttc" id="aclass_projetos_html_af614a08e9f983e7d99dc6b82ff211762"><div class="ttname"><a href="class_projetos.html#af614a08e9f983e7d99dc6b82ff211762">Projetos::atualizar</a></div><div class="ttdeci">void atualizar(const Projeto &amp;projeto)</div><div class="ttdoc">Atualiza os dados de um projeto existente.</div><div class="ttdef"><b>Definição</b> <a href="_projetos_8hpp_source.html#l00392">Projetos.hpp:392</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_a0b2f9e4ad99377662d831293b8dea20a"><div class="ttname"><a href="class_servico_projetos.html#a0b2f9e4ad99377662d831293b8dea20a">ServicoProjetos::listar</a></div><div class="ttdeci">std::vector&lt; Projeto &gt; listar() override</div><div class="ttdoc">Lista todos os projetos.</div><div class="ttdef"><b>Definição</b> <a href="#l00057">ServicoProjetos.hpp:57</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_a397328dec39a897844dd65228534bf38"><div class="ttname"><a href="class_servico_projetos.html#a397328dec39a897844dd65228534bf38">ServicoProjetos::cadastrar</a></div><div class="ttdeci">void cadastrar(const Projeto &amp;projeto) override</div><div class="ttdoc">Cadastra um projeto.</div><div class="ttdef"><b>Definição</b> <a href="#l00038">ServicoProjetos.hpp:38</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_a3d5bd3280eb928f576f4e4d1bb5af38b"><div class="ttname"><a href="class_servico_projetos.html#a3d5bd3280eb928f576f4e4d1bb5af38b">ServicoProjetos::atualizar</a></div><div class="ttdeci">void atualizar(const Projeto &amp;projeto) override</div><div class="ttdoc">Atualiza um projeto.</div><div class="ttdef"><b>Definição</b> <a href="#l00066">ServicoProjetos.hpp:66</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_a55d5dceffe30f0154eb867a5bb6aea8a"><div class="ttname"><a href="class_servico_projetos.html#a55d5dceffe30f0154eb867a5bb6aea8a">ServicoProjetos::consultar</a></div><div class="ttdeci">Projeto consultar(const Identificador &amp;identificador) override</div><div class="ttdoc">Consulta um projeto pelo identificador.</div><div class="ttdef"><b>Definição</b> <a href="#l00048">ServicoProjetos.hpp:48</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_a82ce4ce9b53b27ed6bc5f3af741b09b4"><div class="ttname"><a href="class_servico_projetos.html#a82ce4ce9b53b27ed6bc5f3af741b09b4">ServicoProjetos::ServicoProjetos</a></div><div class="ttdeci">ServicoProjetos(Projetos &amp;projetos)</div><div class="ttdoc">Inicializa o servico com o container de projetos.</div><div class="ttdef"><b>Definição</b> <a href="#l00029">ServicoProjetos.hpp:29</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_a8f9ffd4a2b010ae7bdf09f7e53ad158c"><div class="ttname"><a href="class_servico_projetos.html#a8f9ffd4a2b010ae7bdf09f7e53ad158c">ServicoProjetos::remover</a></div><div class="ttdeci">void remover(const Identificador &amp;identificador) override</div><div class="ttdoc">Remove um projeto pelo identificador.</div><div class="ttdef"><b>Definição</b> <a href="#l00075">ServicoProjetos.hpp:75</a></div></div>
+<div class="ttc" id="aclass_servico_projetos_html_aea51acd05739b6a890fc6c4eb521b1fe"><div class="ttname"><a href="class_servico_projetos.html#aea51acd05739b6a890fc6c4eb521b1fe">ServicoProjetos::repositorio</a></div><div class="ttdeci">Projetos &amp; repositorio</div><div class="ttdoc">Referencia ao container responsavel pela persistencia.</div><div class="ttdef"><b>Definição</b> <a href="#l00022">ServicoProjetos.hpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_fa49581e8216608203c933f0c6512d3f.html">servicos</a></li><li class="navelem"><a href="_servico_projetos_8hpp.html">ServicoProjetos.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

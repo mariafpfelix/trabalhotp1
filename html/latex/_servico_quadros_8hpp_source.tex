@@ -1,0 +1,53 @@
+\doxysection{Servico\+Quadros.\+hpp}
+\hypertarget{_servico_quadros_8hpp_source}{}\label{_servico_quadros_8hpp_source}\index{servicos/ServicoQuadros.hpp@{servicos/ServicoQuadros.hpp}}
+\doxymbox{\hyperlink{_servico_quadros_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ SERVICOQUADROS\_HPP}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SERVICOQUADROS\_HPP}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_i_quadros_8hpp}{../interfaces/IQuadros.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_quadros_8hpp}{../containers/Quadros.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00015}\doxymbox{\hyperlink{class_servico_quadros}{00015}}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_servico_quadros_adaef2cc06687af39bd6b83cda833e2c0}{ServicoQuadros}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_i_quadros}{IQuadros}}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00018}00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00022}\doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{00022}}\ \ \ \ \ \doxymbox{\hyperlink{class_quadros}{Quadros}}\ \&\doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}};}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00024}00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00029}\doxymbox{\hyperlink{class_servico_quadros_adaef2cc06687af39bd6b83cda833e2c0}{00029}}\ \ \ \ \ \textcolor{keyword}{explicit}\ \doxymbox{\hyperlink{class_servico_quadros_adaef2cc06687af39bd6b83cda833e2c0}{ServicoQuadros}}(\doxymbox{\hyperlink{class_quadros}{Quadros}}\ \&quadros)}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00030}00030\ \ \ \ \ \ \ \ \ :\ \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}(quadros)}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00038}\doxymbox{\hyperlink{class_servico_quadros_a2bb9ed731c3ed5a39e1cfff5984e3307}{00038}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_quadros_a2bb9ed731c3ed5a39e1cfff5984e3307}{cadastrar}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_quadro}{Quadro}}\ \&quadro)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00039}00039\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}.\doxymbox{\hyperlink{class_quadros_abb008842adf2918bc33ec75d62723b9f}{inserir}}(quadro);}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00048}\doxymbox{\hyperlink{class_servico_quadros_a28a04f0c16eb9d672cfefa0dcb9a1fd0}{00048}}\ \ \ \ \ \doxymbox{\hyperlink{class_quadro}{Quadro}}\ \doxymbox{\hyperlink{class_servico_quadros_a28a04f0c16eb9d672cfefa0dcb9a1fd0}{consultar}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00049}00049\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}.\doxymbox{\hyperlink{class_quadros_ab835ed40405b3bfd0f70e530c63ceef7}{consultar}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00057}\doxymbox{\hyperlink{class_servico_quadros_aef2602527c7eaf56f6d416f88a535eea}{00057}}\ \ \ \ \ std::vector<Quadro>\ \doxymbox{\hyperlink{class_servico_quadros_aef2602527c7eaf56f6d416f88a535eea}{listar}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00058}00058\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}.\doxymbox{\hyperlink{class_quadros_a571f1bed0df26dc80ac715bd0cebb270}{listar}}();}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00066}\doxymbox{\hyperlink{class_servico_quadros_a546757b51195b23bf895ee7808b51dac}{00066}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_quadros_a546757b51195b23bf895ee7808b51dac}{atualizar}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_quadro}{Quadro}}\ \&quadro)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00067}00067\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}.\doxymbox{\hyperlink{class_quadros_a1f6bba5d5f2400619d3c04778829998f}{atualizar}}(quadro);}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00075}\doxymbox{\hyperlink{class_servico_quadros_a1b67e78a6bd82a121de40d06964f30cc}{00075}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_servico_quadros_a1b67e78a6bd82a121de40d06964f30cc}{remover}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_identificador}{Identificador}}\ \&identificador)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00076}00076\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_servico_quadros_a8b330ee62455d0e14831f833133c4c81}{repositorio}}.\doxymbox{\hyperlink{class_quadros_a14001be133a7dbcd12dbccee1eabccd4}{remover}}(identificador);}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00079}00079\ \};}
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_servico_quadros_8hpp_source_l00081}00081\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

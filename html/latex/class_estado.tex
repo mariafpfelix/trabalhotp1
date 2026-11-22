@@ -1,0 +1,102 @@
+\doxysection{Referência da Classe Estado}
+\hypertarget{class_estado}{}\label{class_estado}\index{Estado@{Estado}}
+
+
+Dominio que representa o estado de um cartao de atividade.  
+
+
+
+
+{\ttfamily \+\#include $<$Estado.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_estado_a05dd8002ebdbf2ee0e69a64ef095824c}{set\+Estado}} (std::\+string novo\+Estado)
+\begin{DoxyCompactList}\small\item\em Valida e armazena o estado informado. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}{get\+Estado}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o estado armazenado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_estado_accd8b9a621b4108738855a081793781e}{valor}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_estado}{Estado} armazenado apos validacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Dominio que representa o estado de um cartao de atividade. 
+
+Valores validos: "{}\+A FAZER"{}, "{}\+FAZENDO"{} ou "{}\+FEITO"{}. 
+
+Definição na linha \doxymbox{\hyperlink{_estado_8hpp_source_l00017}{17}} do arquivo \doxymbox{\hyperlink{_estado_8hpp_source}{Estado.\+hpp}}.
+
+
+
+\label{class_estado_doc-func-members}
+\Hypertarget{class_estado_doc-func-members}
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e}\index{Estado@{Estado}!getEstado@{getEstado}}
+\index{getEstado@{getEstado}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{getEstado()}{getEstado()}}
+{\footnotesize\ttfamily \label{class_estado_acbaf342dbbfd8860c12e8cca36bd9e5e} 
+std::\+string Estado::\+get\+Estado (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o estado armazenado. 
+
+\begin{DoxyReturn}{Retorna}
+\doxylink{class_estado}{Estado} valido previamente definido. 
+\end{DoxyReturn}
+
+
+Definição na linha \doxymbox{\hyperlink{_estado_8hpp_source_l00046}{46}} do arquivo \doxymbox{\hyperlink{_estado_8hpp_source}{Estado.\+hpp}}.
+
+\Hypertarget{class_estado_a05dd8002ebdbf2ee0e69a64ef095824c}\index{Estado@{Estado}!setEstado@{setEstado}}
+\index{setEstado@{setEstado}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{setEstado()}{setEstado()}}
+{\footnotesize\ttfamily \label{class_estado_a05dd8002ebdbf2ee0e69a64ef095824c} 
+void Estado::\+set\+Estado (\begin{DoxyParamCaption}\item[{std::\+string}]{novo\+Estado}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Valida e armazena o estado informado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em novo\+Estado} & \doxylink{class_estado}{Estado} a ser validado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std::\+invalid\+\_\+argument} & Se o valor nao for "{}\+A FAZER"{}, "{}\+FAZENDO"{} ou "{}\+FEITO"{}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definição na linha \doxymbox{\hyperlink{_estado_8hpp_source_l00029}{29}} do arquivo \doxymbox{\hyperlink{_estado_8hpp_source}{Estado.\+hpp}}.
+
+
+
+\label{class_estado_doc-variable-members}
+\Hypertarget{class_estado_doc-variable-members}
+\doxysubsection{Atributos}
+\Hypertarget{class_estado_accd8b9a621b4108738855a081793781e}\index{Estado@{Estado}!valor@{valor}}
+\index{valor@{valor}!Estado@{Estado}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily \label{class_estado_accd8b9a621b4108738855a081793781e} 
+std::\+string Estado::\+valor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{class_estado}{Estado} armazenado apos validacao. 
+
+
+
+Definição na linha \doxymbox{\hyperlink{_estado_8hpp_source_l00020}{20}} do arquivo \doxymbox{\hyperlink{_estado_8hpp_source}{Estado.\+hpp}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo:\begin{DoxyCompactItemize}
+\item 
+dominio/\doxymbox{\hyperlink{_estado_8hpp}{Estado.\+hpp}}\end{DoxyCompactItemize}
