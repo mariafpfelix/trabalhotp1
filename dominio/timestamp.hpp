@@ -1,0 +1,142 @@
+/**
+ * @file timestamp.hpp
+ * @brief Declaracao do dominio Timestamp.
+ */
+
+#ifndef TIMESTAMP_HPP
+#define TIMESTAMP_HPP
+
+#include <string>
+#include <stdexcept>
+
+/**
+ * @brief Dominio que representa uma data e hora.
+ *
+ * Formato: DD-MMM-AAAA-HH:MM (17 caracteres). Exemplo: "05-MAR-2025-14:30".
+ * - DD: dia valido para o mes (considera anos bissextos).
+ * - MMM: JAN, FEV, MAR, ABR, MAI, JUN, JUL, AGO, SET, OUT, NOV ou DEZ.
+ * - AAAA: ano de 2000 a 2099.
+ * - HH: hora de 00 a 23.
+ * - MM: minuto de 00 a 59.
+ */
+class Timestamp
+{
+private:
+    std::string valor; ///< Timestamp armazenado apos validacao.
+
+    /**
+     * @brief Verifica se um ano e bissexto.
+     * @param ano Ano a ser verificado.
+     * @return true se o ano for bissexto; false caso contrario.
+     */
+    bool bissexto(int ano) const
+    {
+        return (ano % 400 == 0) ||
+               (ano % 4 == 0 && ano % 100 != 0);
+    }
+
+public:
+    /**
+     * @brief Valida e armazena o timestamp informado.
+     * @param novoTimestamp Data e hora no formato DD-MMM-AAAA-HH:MM.
+     * @throw std::invalid_argument Se o formato, o dia, o mes, o ano,
+     *        a hora ou o minuto forem invalidos.
+     */
+    void setTimestamp(std::string novoTimestamp)
+    {
+
+        if (novoTimestamp.length() != 17)
+        {
+            throw std::invalid_argument("Timestamp invalido");
+        }
+
+        // Verifica os separadores
+        if (novoTimestamp[2] != '-' ||
+            novoTimestamp[6] != '-' ||
+            novoTimestamp[11] != '-' ||
+            novoTimestamp[14] != ':')
+        {
+
+            throw std::invalid_argument("Formato invalido");
+        }
+
+        // Posicoes que devem conter digitos
+        int posicoes[] = {
+            0, 1, 7, 8, 9, 10, 12, 13, 15, 16};
+
+        for (int pos : posicoes)
+        {
+            char c = novoTimestamp[pos];
+
+            if (c < '0' || c > '9')
+            {
+                throw std::invalid_argument("Timestamp invalido");
+            }
+        }
+
+        int dia = std::stoi(novoTimestamp.substr(0, 2));
+        std::string mes = novoTimestamp.substr(3, 3);
+
+        int ano = std::stoi(novoTimestamp.substr(7, 4));
+        if (ano < 2000 || ano > 2099)
+        {
+            throw std::invalid_argument("Ano invalido");
+        }
+
+        int hora = std::stoi(novoTimestamp.substr(12, 2));
+        int minuto = std::stoi(novoTimestamp.substr(15, 2));
+
+        std::string meses[] = {
+            "JAN", "FEV", "MAR", "ABR",
+            "MAI", "JUN", "JUL", "AGO",
+            "SET", "OUT", "NOV", "DEZ"};
+
+        int diasMes[] = {
+            31, 28, 31, 30, 31, 30,
+            31, 31, 30, 31, 30, 31};
+
+        int indiceMes = -1;
+
+        for (int i = 0; i < 12; i++)
+        {
+            if (mes == meses[i])
+            {
+                indiceMes = i;
+                break;
+            }
+        }
+
+        if (indiceMes == -1 ||
+            ano == 0 ||
+            hora > 23 ||
+            minuto > 59)
+        {
+
+            throw std::invalid_argument("Timestamp invalido");
+        }
+
+        // Fevereiro tem 29 dias em ano bissexto
+        if (indiceMes == 1 && bissexto(ano))
+        {
+            diasMes[1] = 29;
+        }
+
+        if (dia < 1 || dia > diasMes[indiceMes])
+        {
+            throw std::invalid_argument("Data invalida");
+        }
+
+        valor = novoTimestamp;
+    }
+
+    /**
+     * @brief Retorna o timestamp armazenado.
+     * @return Timestamp valido previamente definido.
+     */
+    std::string getTimestamp() const
+    {
+        return valor;
+    }
+};
+
+#endif
